@@ -1,5 +1,18 @@
+@import 'abstracts/animations';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'layout/header';
+@import 'layout/forms';
+@import 'layout/footer';
+
+@import 'components/buttons';
+
+@import 'pages/home';
+
 .container {
-  padding: 0 2rem;
+  padding: 0 12rem;
+  background-color: #0070f3;
 }
 
 .main {

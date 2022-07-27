@@ -1,0 +1,22 @@
+@mixin centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	/* Safari 4+ */
+	-moz-transform: translate(-50%, -50%);
+	/* Fx 5+ */
+	-o-transform: translate(-50%, -50%);
+	/* Opera 12+ */
+	-ms-transform: translate(-50%, -50%);
+	/*IE11 & Microsoft Edge*/
+	transform: translate(-50%, -50%);
+	/* IE 10+, Fx 29+ */
+	z-index: 9;
+}
+
+@mixin centerBlock {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
