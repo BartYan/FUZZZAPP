@@ -1,0 +1,23 @@
+.explorer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    min-height: 360px;
+    transform: translate(-96.7%,0);
+    &__head {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        font-size: 4rem;
+        letter-spacing: -8px;
+        font-weight: bold;
+        transform: rotate(270deg) translate(-110px,100px);
+        transition: all 0.3s ease-in-out;
+    }
+    &__head:hover {
+        color: $red;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,44 @@
+.nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 12px;
+    &__logo {
+        transform: none;
+        transition: all 0.3s ease-in-out;
+    }
+    &__logo:hover {
+        transform: scale(1.1);
+    }
+    &__appBox {
+        text-align: right;
+    }
+    &__chordzapp {
+        margin-top: -15px;
+        height: 35px;
+        font-size: 1.7rem;
+        letter-spacing: -3px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+    }
+    &__chordzapp:hover {
+        font-size: 1.8rem;
+        color: $red;
+    }
+    &__quizapp {
+        margin-top: 0px;
+        font-size: 1.7rem;
+        letter-spacing: -3px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+    }
+    &__quizapp:hover {
+        font-size: 1.8rem;
+        color: $yellow;
+    }
+
+}

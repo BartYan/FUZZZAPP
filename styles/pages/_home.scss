@@ -1,0 +1,29 @@
+.hero {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__header {
+        width: 42%;
+        &_box {
+            width: fit-content;
+        }
+        &_title {
+            font-size: 7rem;
+            margin: 0;
+            span {
+                color: $yellow;
+            }
+        }
+        &_subtitle {text-align: center; letter-spacing:17px;}
+        &_desc {font-family: Agrandir; text-align: justify; font-size: 1.5rem; margin: 2rem 0 0 0;}
+    }
+    &__image {
+        width: 50%;
+        &_fuzzer {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
