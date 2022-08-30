@@ -1,23 +1,150 @@
 .explorer {
+    font-family: 'Pompiere', cursive;
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    width: fit-content;
     min-height: 360px;
-    transform: translate(-96.7%,0);
+    transition: all 0.5s ease-in-out;
     &__head {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: block;
-        font-size: 4rem;
-        letter-spacing: -8px;
-        font-weight: bold;
-        transform: rotate(270deg) translate(-110px,100px);
-        transition: all 0.3s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        height: 100%;
     }
     &__head:hover {
-        color: $red;
+        .explorer__arrow {
+            left: 15px
+        }
+        .explorer__title {
+            transform: rotate(268deg) translate(-100px,-110px);
+        }
+    }
+    &__arrow {
+        position: absolute;
+        bottom: 20px;
+        left: -200px;
+        transition: all 0.3s ease-in-out;
+    }
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 25px;
+        display: block;
+        font-size: 6rem;
+        letter-spacing: -8px;
+        font-weight: bold;
+        transform: rotate(270deg) translate(-100px,-110px);
+        transition: all 0.3s ease-in-out;
+    }
+    &__title:hover {
+        // color: $blue;
         cursor: pointer;
+        .explorer__arrow {
+            right: -15px
+        }
+    }
+    &__head_les {
+        transition: all 0.5s ease-in-out;
+        height: 100%;
+    }
+    &__head_les:hover {
+        .explorer__arrow_les {
+            right: 30px;
+        }
+        .explorer__title_les {
+            transform: rotate(268deg) translate(-47px,5px);
+        }
+    }
+    &__arrow_les {
+        position: absolute;
+        top: 0;
+        right: -200px;
+        transform: rotate(180deg);
+        transition: all 0.3s ease-in-out;
+    }
+    &__title_les {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        display: block;
+        font-size: 6rem;
+        letter-spacing: -8px;
+        font-weight: bold;
+        transform: rotate(270deg) translate(-50px,20px);
+        transition: all 0.3s ease-in-out;
+    }
+    &__title_les:hover {
+        cursor: pointer;
+        .explorer__arrow {
+            right: -15px
+        }
+    }
+    &__menu {
+        width: 100%;
+        height: fit-content;
+        // min-height: 360px;
+        padding: 0 7rem 2rem 0;
+        transform: translate(-110%,0);
+        transition: all 0.5s ease-in-out;
+        background-color: #fff;
+        border-radius: 0 25px 0 0;
+        overflow-x: hidden;
+        &_list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            list-style: none;
+            svg{path{transition: all 0.3s ease-in-out;}}
+            li {
+                max-width: 350px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 1.4rem 0 1.4rem 1.4rem;
+                padding: 0 1.5rem;
+                text-align: left;
+                border-radius: 15px;
+                transition: all 0.5s ease-in-out;
+                .menu_item_header {
+                    display: flex;
+                    align-items: center;
+                    padding: 1.5rem 0 1.5rem;
+                    h5 {
+                        padding: 0 0 0 1rem;
+                        font-family: Helvetica, sans-serif;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
+                }
+                p {
+                    font-family: Agrandir;
+                    text-align: justify;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    &__blue:hover {background-color:#e2f1f4; svg{path{fill:$blue}}}
+    &__red:hover {background-color:#f9e4e4; svg{path{fill:$red}}}
+    &__yellow:hover {background-color:#f6f1d7; svg{path{fill:$yellow}}}
+    &__grey:hover {background-color:#eae6e7; svg{path{fill:$grey}}}
+    // &__blue:hover {background-color:#91D5DD}
+    // &__red:hover {background-color:#ff7979}
+    // &__yellow:hover {background-color:#FED00E}
+    // &__grey:hover {background-color:#B7B2B4}
+}
+.explorer__expand {
+    font-family: 'Pompiere', cursive;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    min-height: 360px;
+    transform: translate(0,0);
+    transition: all 0.5s ease-in-out;
+    .explorer__menu {
+        transform: translate(0,0);
+        transition: all 0.5s ease-in-out;
     }
 }

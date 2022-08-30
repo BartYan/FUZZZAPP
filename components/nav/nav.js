@@ -18,7 +18,7 @@ const Nav = () => {
                 </Link>
                 <Link href={`/`}>
                     <a>
-                        <p className={styles.nav__quizapp}>QUIZAPP</p>
+                        <p className={styles.nav__quizapp}>QUIZHORDZAPP</p>
                     </a>
                 </Link>
             </div>
