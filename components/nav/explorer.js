@@ -63,7 +63,7 @@ const Explorer = () => {
                             </li>
                         </a>
                     </Link>
-                    <Link href={`/`}>
+                    <Link href={`/chordzapp`}>
                         <a>
                             <li className={styles.explorer__red}>
                                 <div className={styles.menu_item_header}>

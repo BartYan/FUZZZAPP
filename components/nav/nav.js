@@ -11,7 +11,7 @@ const Nav = () => {
                 </a>
             </Link>
             <div className={styles.nav__appBox}>
-                <Link href={`/`}>
+                <Link href={`/chordzapp`}>
                     <a>
                         <p className={styles.nav__chordzapp}>CHORDZAPP</p>
                     </a>
