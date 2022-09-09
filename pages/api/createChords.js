@@ -1,20 +1,16 @@
 const Airtable = require('airtable');
 const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE_KEY);
 
-const scalesTable = base('scales');
+const chordsTable = base('chords');
 
-console.log(scalesTable)
-
-const createScales = async (req, res) => {
-        const findScalesRecords = await scalesTable.select({
+const createChords = async (req, res) => {
+        const findChordsRecords = await chordsTable.select({
             // maxRecords: 3,
             // view: "Grid view",
             // filterByFormula: `id=0`
         }).firstPage();  
-
-        // console.log('Check out Scales', findScalesRecords)
-        if (findScalesRecords.length !== 0) {
-            const records = findScalesRecords.map(record => {
+        if (findChordsRecords.length !== 0) {
+            const records = findChordsRecords.map(record => {
                 return {
                     ...record.fields
                 }
@@ -26,4 +22,4 @@ const createScales = async (req, res) => {
         }
         
 }
-export default createScales;
+export default createChords;
