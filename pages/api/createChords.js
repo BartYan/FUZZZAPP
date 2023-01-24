@@ -1,25 +1,24 @@
-const Airtable = require('airtable');
-const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE_KEY);
-
-const chordsTable = base('chords');
+import { chordsTable, getMinifiedRecords } from '../../lib/airtable';
 
 const createChords = async (req, res) => {
+    // find records 
+    try {
         const findChordsRecords = await chordsTable.select({
             // maxRecords: 3,
             // view: "Grid view",
             // filterByFormula: `id=0`
         }).firstPage();  
         if (findChordsRecords.length !== 0) {
-            const records = findChordsRecords.map(record => {
-                return {
-                    ...record.fields
-                }
-            })
+            const records = getMinifiedRecords(findChordsRecords)
             res.json(records)
-            console.log(records)
+            console.log('records', records)
         } else {
             res.json({message: 'nothing'});
         }
-        
+    } catch (err) {
+        console.error('Error finding Chords', err);
+        res.status(500)
+        res.json({ message: "Error finding Chords"})
+    }
 }
 export default createChords;

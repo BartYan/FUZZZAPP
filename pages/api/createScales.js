@@ -1,29 +1,25 @@
-const Airtable = require('airtable');
-const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE_KEY);
-
-const scalesTable = base('scales');
-
-console.log(scalesTable)
+import { scalesTable, getMinifiedRecords } from '../../lib/airtable';
 
 const createScales = async (req, res) => {
+    // find records 
+    try {
         const findScalesRecords = await scalesTable.select({
             // maxRecords: 3,
             // view: "Grid view",
             // filterByFormula: `id=0`
         }).firstPage();  
-
-        // console.log('Check out Scales', findScalesRecords)
         if (findScalesRecords.length !== 0) {
-            const records = findScalesRecords.map(record => {
-                return {
-                    ...record.fields
-                }
-            })
+            const records = getMinifiedRecords(findScalesRecords)
             res.json(records)
-            console.log(records)
+            console.log('records', records)
         } else {
             res.json({message: 'nothing'});
         }
+    } catch(err){
+        console.error('Error scales', err);
+        res.status(500);
+        res.json({message: 'Something went wrong with scales', err});
+    }
         
 }
 export default createScales;

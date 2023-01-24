@@ -1,0 +1,67 @@
+.chordzapp {
+    min-height: 100vh;
+    width: 100%;
+
+    &__baner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6rem 0 0;
+        h1 {
+            font-size: $font-size-big;
+            line-height: 65%;
+        }
+        
+    }
+
+    .appContainer {
+        /* Required properties */
+        position: relative;
+        background: $white;
+    
+        /* Use  your own styles here */
+        margin: 8rem auto;
+        width: 90%;
+        height: 123px; 
+
+        border-radius: 25px;
+
+        &:before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: -1.5rem;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 25px;
+
+            // background: linear-gradient(to top left, #ff3d00 0%, #0400ff 100% );
+            // background: linear-gradient(-45deg, #FFF000 6%, #ED008C 112% );
+            // background: linear-gradient(-45deg, #ffe32c 6%, #52acff 112% );
+            background: linear-gradient(-45deg, #45caff 6%, #ff1b6b 112% );
+            transform: translate3d(0px, 20px, 0) scale(0.95);
+            filter: blur(20px);
+            opacity: var(0.7);
+            transition: opacity 0.3s;
+        }
+        &::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: inherit;
+            border-radius: 25px;
+
+        }
+    }
+  
+}
+        
+
+
+
