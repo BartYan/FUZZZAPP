@@ -1,43 +1,41 @@
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import styles from '../styles/Home.module.scss';
+import { useState, useEffect } from 'react'
+import Head from 'next/head'
+import styles from '../styles/Home.module.scss'
 
-import Nav from '../components/nav/nav';
-import Explorer from '../components/nav/explorer';
+import Nav from '../components/nav/nav'
+import Explorer from '../components/nav/explorer'
+import useChords from './hooks/useChords'
+import Panel from '../components/chordzapp/Panel/Panel'
+import Guitar from '../components/chordzapp/Guitar/Guitar'
 
 export default function Chordzapp() {
+    const { chords, scales } = useChords()
 
-  const [chords, setChords] = useState([]);
-  useEffect(()=> {
-    fetch('/api/createChords')
-    .then(response => response.json())
-    .then(data => setChords(data));
-    (error) => {
-      setChords(error);
-    }
-  }, []);
-  useEffect(()=> {
-    console.log('chords', chords);
-  }, [chords]);
+    // useEffect(()=> {
+    //   console.log('chords chordzapp', chords);
+    //   console.log('scales chordzapp', scales);
+    // }, [chords]);
 
+    return (
+        <>
+            <Head>
+                <title>Chordzapp - chords learning tool</title>
+                <meta
+                    name="description"
+                    content="Chordzapp - chords learning tool! Application for musicians and guitar players"
+                />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <Nav />
 
-  return (
-    <>
-      <Head>
-        <title>Chordzapp - chords learning tool</title>
-        <meta name="description" content="Chordzapp - chords learning tool! Application for musicians and guitar players" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Nav/>
+            <main className={styles.chordzapp}>
+                <div className={styles.chordzapp__baner}>
+                    <h1>Chordzapp</h1>
+                </div>
+                <Panel chords={chords} scales={scales} />
+                <Guitar />
 
-      <main className={styles.chordzapp}>
-        <div className={styles.chordzapp__baner}>
-            <h1>Chordzapp</h1>
-        </div>
-        <div className={styles.appContainer}>
-        </div>
-
-        {/* {chords && (
+                {/* {chords && (
           chords.map((chord, index) => {
             return (
               <p>
@@ -47,9 +45,8 @@ export default function Chordzapp() {
           })
         )} */}
 
-
-      <Explorer/>
-      </main>
-    </>
-  )
+                {/* <Explorer/> */}
+            </main>
+        </>
+    )
 }
