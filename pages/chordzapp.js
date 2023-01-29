@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 
@@ -10,11 +9,6 @@ import Guitar from '../components/chordzapp/Guitar/Guitar'
 
 export default function Chordzapp() {
     const { chords, scales } = useChords()
-
-    // useEffect(()=> {
-    //   console.log('chords chordzapp', chords);
-    //   console.log('scales chordzapp', scales);
-    // }, [chords]);
 
     return (
         <>
@@ -34,16 +28,6 @@ export default function Chordzapp() {
                 </div>
                 <Panel chords={chords} scales={scales} />
                 <Guitar />
-
-                {/* {chords && (
-          chords.map((chord, index) => {
-            return (
-              <p>
-                {chord.name}
-              </p>
-            )
-          })
-        )} */}
 
                 {/* <Explorer/> */}
             </main>

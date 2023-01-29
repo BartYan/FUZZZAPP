@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from '../../../styles/Home.module.scss'
 
 export default function SelectorKey(props) {
-    const { chords, scales } = props;
+    const { scales } = props;
 
     const [majorFlag, setMajorFlag] = useState(false);
     const [listActiveKey, setListActiveKey] = useState(false);
@@ -22,34 +22,30 @@ export default function SelectorKey(props) {
 
     const handleNextKey = (next) => {
         if(majorFlag && majorScale) {
-           let actualIndexKey = majorScale.indexOf(selectedKey);
-           let newKey = next ? ++actualIndexKey : --actualIndexKey;
-           console.log(newKey)
-           if(newKey > (majorScale.length - 1) || newKey < 0) {
-                newKey = next ? 0 : majorScale.length - 1
-           }
-           setSelectedKey(majorScale[newKey])
+            let actualIndexKey = majorScale.indexOf(selectedKey);
+            let newKey = next ? ++actualIndexKey : --actualIndexKey;
+
+            if(newKey > (majorScale.length - 1) || newKey < 0) {
+                    newKey = next ? 0 : majorScale.length - 1
+            }
+            setSelectedKey(majorScale[newKey])
         }
     }
 
     useEffect(()=> {
-        console.log('major panel', majorScale)
         if(scales) {
             setMajorFlag(true)
             setMajorScale(scales[0].notes)
             setMinorScale(scales[1].notes)
         }
       }, [scales, majorScale]);
-    useEffect(()=> {
-        console.log('major panel', majorScale)
-      }, []);
     
     return ( 
         <div className={styles.panel__selector}>
             <div className={styles.panel__selector_row}>
                 <div className={styles.panel__selected}>
                     <span
-                        className={styles.panel__selected_key}
+                        className={styles.panel__selected_value}
                         onClick={() => handleListActiveKey()}
                     >
                         {selectedKey}
@@ -66,6 +62,7 @@ export default function SelectorKey(props) {
                                       <li
                                           className={styles.panel__selected_li}
                                           onClick={() => handleKey(note)}
+                                          key={note}
                                       >
                                           {note}
                                       </li>
@@ -77,6 +74,7 @@ export default function SelectorKey(props) {
                                       <li
                                           className={styles.panel__selected_li}
                                           onClick={() => handleKey(note)}
+                                          key={note}
                                       >
                                           {note}
                                       </li>
@@ -90,7 +88,7 @@ export default function SelectorKey(props) {
                     <button onClick={() => handleListActiveKey()}>list</button>
                 </div>
             </div>
-            <p>key</p>
+            <p className={styles.panel__item_description}>key</p>
         </div>
     )
 }

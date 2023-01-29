@@ -67,9 +67,9 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        &_key {
+        &_value {
             font-size: 2rem;
-            width: 4rem;
+            width: 8rem;
         }
         &_list {
             position: absolute;
@@ -94,4 +94,48 @@
         }
     }
     //Panel item with buttons the end
+
+    //Panel knobs
+    &__knob {
+        &_options {
+            display: flex;
+            justify-content: space-between;
+            p {
+                padding: 1rem 2rem;
+            }
+        }
+        &_el {
+            display: flex;
+            justify-content: center;
+            span {
+                position: relative;
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                border: 2px solid $black;
+                cursor: pointer;
+
+                &:before {
+                    content: '';
+                    height: 2px;
+                    width: 1rem;
+                    position: absolute;
+                    top: 7px;
+                    left: 0px;
+                    background-color: $black;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        &_modeOn {
+            transform: rotate(90deg);
+        }
+    }
+    //Panel knobs the end
+
+    &__item_description {
+        width: 100%;
+        text-align: center;
+    }
 }
