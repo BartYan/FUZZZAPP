@@ -1,9 +1,11 @@
 import '../styles/globals.scss'
 import styles from '../styles/Home.module.scss';
+import { store } from '../store';
+import { Provider } from 'react-redux';
 
 function MyApp({ Component, pageProps }) {
   return (
-  <>
+  <Provider store={store}>
     <Component {...pageProps} />
     <footer className={styles.footer}>
           <a
@@ -14,7 +16,7 @@ function MyApp({ Component, pageProps }) {
             fuzzzapp footer
           </a>
     </footer>
-  </>
+  </Provider>
   )
 }
 

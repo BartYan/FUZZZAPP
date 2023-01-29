@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react'
 import styles from '../../../styles/Home.module.scss'
 
 export default function SelectorKey(props) {
+    // SHOULD BE REDUX 
+    const [majorFlag, setMajorFlag] = useState(false);
+
     const { scales } = props;
 
-    const [majorFlag, setMajorFlag] = useState(false);
     const [listActiveKey, setListActiveKey] = useState(false);
 
     const [majorScale, setMajorScale] = useState();
