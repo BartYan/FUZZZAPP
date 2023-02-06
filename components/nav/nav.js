@@ -16,9 +16,9 @@ const Nav = () => {
                         <p className={styles.nav__chordzapp}>CHORDZAPP</p>
                     </a>
                 </Link>
-                <Link href={`/`}>
+                <Link href={`/blog`}>
                     <a>
-                        <p className={styles.nav__quizapp}>QUIZHORDZAPP</p>
+                        <p className={styles.nav__quizapp}>BLOG</p>
                     </a>
                 </Link>
             </div>

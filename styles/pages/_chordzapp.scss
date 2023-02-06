@@ -1,21 +1,4 @@
 .chordzapp {
-    min-height: 100vh;
-    width: 100%;
-
-    &__baner {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 6rem 0 0;
-        h1 {
-            font-size: $font-size-big;
-            line-height: 65%;
-        }
-    }
-
+    width: 80%;
+    margin: 0 auto 0 0;
 }
-        
-
-
-
