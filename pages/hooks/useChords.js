@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react'
 
+import { useSelector, useDispatch } from 'react-redux';
+import { selectMajorFlag, swapKey } from '../../slices/chordsSlice';
+
 const useChords = (callback) => {
     const [chords, setChords] = useState()
     const [scales, setScales] = useState()
-    //Get chords from API
 
+    const majorFlag = useSelector(selectMajorFlag);
+    const dispatch = useDispatch();
+
+    //Get chords from API
     useEffect(() => {
         fetch('/api/createChords')
             .then((response) => response.json())

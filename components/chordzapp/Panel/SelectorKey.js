@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
+import { selectMajorFlag } from '../../../slices/chordsSlice';
 import styles from '../../../styles/Home.module.scss'
 
 export default function SelectorKey(props) {
-    // SHOULD BE REDUX 
-    const [majorFlag, setMajorFlag] = useState(false);
-
-    const { scales } = props;
-
+    // SHOULD BE REDUX
+    const { apiScales } = props;
+    const majorFlag = useSelector(selectMajorFlag);
+    
+    const [scale, setScale] = useState();
     const [listActiveKey, setListActiveKey] = useState(false);
-
-    const [majorScale, setMajorScale] = useState();
-    const [minorScale, setMinorScale] = useState();
-
     const [selectedKey, setSelectedKey] = useState('C');
 
     const handleListActiveKey = (e) => {
@@ -23,24 +22,27 @@ export default function SelectorKey(props) {
     }
 
     const handleNextKey = (next) => {
-        if(majorFlag && majorScale) {
-            let actualIndexKey = majorScale.indexOf(selectedKey);
+        if(scale) {
+            let actualIndexKey = scale.indexOf(selectedKey);
             let newKey = next ? ++actualIndexKey : --actualIndexKey;
 
-            if(newKey > (majorScale.length - 1) || newKey < 0) {
-                    newKey = next ? 0 : majorScale.length - 1
+            if(newKey > (scale.length - 1) || newKey < 0) {
+                    newKey = next ? 0 : scale.length - 1
             }
-            setSelectedKey(majorScale[newKey])
+            setSelectedKey(scale[newKey])
         }
     }
 
     useEffect(()=> {
-        if(scales) {
-            setMajorFlag(true)
-            setMajorScale(scales[0].notes)
-            setMinorScale(scales[1].notes)
+        if(apiScales && majorFlag) {
+            setScale(apiScales[0].notes)
         }
-      }, [scales, majorScale]);
+        if (apiScales && !majorFlag) {
+            setScale(apiScales[1].notes)
+        }
+        console.log('majorFlag', majorFlag)
+        console.log('maping scale', scale)
+      }, [apiScales, scale, majorFlag]);
     
     return ( 
         <div className={styles.panel__selector}>
@@ -57,31 +59,19 @@ export default function SelectorKey(props) {
                             listActiveKey ? styles.list__active : null
                         }`}
                     >
-                        {majorFlag
-                            ? scales &&
-                              majorScale.map((note, index) => {
-                                  return (
-                                      <li
-                                          className={styles.panel__selected_li}
-                                          onClick={() => handleKey(note)}
-                                          key={note}
-                                      >
-                                          {note}
-                                      </li>
-                                  )
-                              })
-                            : minorScale &&
-                              minorScale.map((note, index) => {
-                                  return (
-                                      <li
-                                          className={styles.panel__selected_li}
-                                          onClick={() => handleKey(note)}
-                                          key={note}
-                                      >
-                                          {note}
-                                      </li>
-                                  )
-                              })}
+                        {scale &&
+                            scale.map((note, index) => {
+                                return (
+                                    <li
+                                        className={styles.panel__selected_li}
+                                        onClick={() => handleKey(note)}
+                                        key={note}
+                                    >
+                                        {note}
+                                    </li>
+                                )
+                            })
+                        }
                     </ul>
                 </div>
                 <div className={styles.panel__buttons}>

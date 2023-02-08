@@ -21,8 +21,8 @@ export default function Panel(props) {
                 <button onClick={()=>dispatch(decrement())}>
                     decrement
                 </button> */}
-                <SelectorKey scales={scales}/>
-                <SelectorChords chords={chords}/>
+                <SelectorKey apiScales={scales}/>
+                <SelectorChords apiChords={chords}/>
                 <KnobMarks/>
 
             </div>

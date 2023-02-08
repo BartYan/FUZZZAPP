@@ -1,8 +1,12 @@
-import { useState, useEffect } from 'react'
-import styles from '../../../styles/Home.module.scss'
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
+import styles from '../../../styles/Home.module.scss';
+import { setMajorKey, setMinorKey } from '../../../slices/chordsSlice';
 
 export default function SelectorChords(props) {
-    const { chords } = props;
+    const { apiChords } = props;
+    const dispatch = useDispatch();
 
     const [listActive, setListActive] = useState(false);
     const [selectedChord, setSelectedChord] = useState('major');
@@ -18,10 +22,10 @@ export default function SelectorChords(props) {
     }
 
     const handleNextChord = (next) => {
-        if(chords) {
+        if(apiChords) {
             let names = []
             let halfTones = []
-            chords.forEach((el) => {
+            apiChords.forEach((el) => {
                 names.push(el.name)
                 halfTones.push(el.halfTones)
             });
@@ -38,8 +42,13 @@ export default function SelectorChords(props) {
     }
 
     useEffect(()=> {
-        console.log('selectedChordHalfTones', selectedChordHalfTones)
-        console.log('selectedChord', selectedChord)
+        if ( selectedChord == 'major' ) {
+            dispatch(setMajorKey())
+        } else if( selectedChord == 'minor' ) {
+            dispatch(setMinorKey())
+        }
+        // console.log('selectedChordHalfTones', selectedChordHalfTones)
+        // console.log('selectedChord', selectedChord) 
       }, [selectedChord, selectedChordHalfTones]);
     
     return ( 
@@ -58,8 +67,8 @@ export default function SelectorChords(props) {
                         }`}
                     >
                         {
-                            chords &&
-                            chords.map((chord, index) => {
+                            apiChords &&
+                            apiChords.map((chord, index) => {
                                 return (
                                     <li
                                         className={styles.panel__selected_li}
@@ -67,7 +76,7 @@ export default function SelectorChords(props) {
                                         key={chord.id}
                                     >
                                         {chord.name}
-                                        {` (${chord.intervals.join(', ')})`}
+                                        {`(${chord.intervals.join(', ')})`}
                                     </li>
                                 )
                             })
