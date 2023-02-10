@@ -1,33 +1,33 @@
 import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import styles from '../../../styles/Home.module.scss';
-import { setMajorKey, setMinorKey } from '../../../slices/chordsSlice';
+import { setMajorKey, setMinorKey, halfTones, setHalfTones } from '../../../slices/chordsSlice';
 
 export default function SelectorChords(props) {
     const { apiChords } = props;
     const dispatch = useDispatch();
 
+    const halfTonesRedux = useSelector(halfTones);
     const [listActive, setListActive] = useState(false);
     const [selectedChord, setSelectedChord] = useState('major');
-    const [selectedChordHalfTones,  setSelectedChordHalfTones] = useState();
 
     const handleListActive = (e) => {
         setListActive(!listActive);
     }
     const handleChord = (chord) => {
         setSelectedChord(chord.name);
-        setSelectedChordHalfTones(chord.halfTones);
         setListActive(!listActive);
+        dispatch(setHalfTones(chord.halfTones))
     }
 
     const handleNextChord = (next) => {
         if(apiChords) {
             let names = []
-            let halfTones = []
+            let halfTonesApi = []
             apiChords.forEach((el) => {
                 names.push(el.name)
-                halfTones.push(el.halfTones)
+                halfTonesApi.push(el.halfTones)
             });
 
             let actualIndex = names.indexOf(selectedChord);
@@ -37,7 +37,7 @@ export default function SelectorChords(props) {
                 newIndex = next ? 0 : names.length - 1
             }
             setSelectedChord(names[newIndex])
-            setSelectedChordHalfTones(halfTones[newIndex])
+            dispatch(setHalfTones(halfTonesApi[newIndex]))
         }
     }
 
@@ -47,9 +47,9 @@ export default function SelectorChords(props) {
         } else if( selectedChord == 'minor' ) {
             dispatch(setMinorKey())
         }
-        // console.log('selectedChordHalfTones', selectedChordHalfTones)
-        // console.log('selectedChord', selectedChord) 
-      }, [selectedChord, selectedChordHalfTones]);
+        // console.log('selectedChord', selectedChord);
+        // console.log('halfTonesRedux', halfTonesRedux);
+      }, [selectedChord, halfTones]);
     
     return ( 
         <div className={styles.panel__selector}>

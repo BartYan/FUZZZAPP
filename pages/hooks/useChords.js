@@ -30,8 +30,8 @@ const useChords = (callback) => {
     }, [])
 
     useEffect(() => {
-        console.log('chords', chords)
-        console.log('scales', scales)
+        // console.log('chords', chords)
+        // console.log('scales', scales)
     }, [chords, scales])
 
     // FEATURES:

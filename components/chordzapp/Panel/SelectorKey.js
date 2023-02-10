@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { selectMajorFlag } from '../../../slices/chordsSlice';
+import { selectMajorFlag, setCurrChord, halfTones } from '../../../slices/chordsSlice';
 import styles from '../../../styles/Home.module.scss'
 
 export default function SelectorKey(props) {
     // SHOULD BE REDUX
     const { apiScales } = props;
     const majorFlag = useSelector(selectMajorFlag);
+    const halfTonesRedux = useSelector(halfTones);
+    const dispatch = useDispatch();
     
     const [scale, setScale] = useState();
     const [listActiveKey, setListActiveKey] = useState(false);
     const [selectedKey, setSelectedKey] = useState('C');
+    
+    const [chordSounds, setchordSounds] = useState();
 
     const handleListActiveKey = (e) => {
         setListActiveKey(!listActiveKey);
@@ -33,16 +37,34 @@ export default function SelectorKey(props) {
         }
     }
 
-    useEffect(()=> {
+    const handleFilterSounds = () => {
+        if(scale) {
+            const indexEnd = scale.indexOf(selectedKey);
+            let oldScale = [...scale];
+            let slicedSounds = oldScale.splice(0, indexEnd);
+            let newScale = oldScale.concat(slicedSounds);
+
+            let newChordSounds = []
+
+            halfTonesRedux.forEach(el => {
+                newChordSounds.push(newScale[el]);
+            });
+
+            console.log(' newChordSounds', newChordSounds);
+            dispatch(setCurrChord(newChordSounds))
+        }
+    }
+
+    useEffect(() => {
         if(apiScales && majorFlag) {
-            setScale(apiScales[0].notes)
+            setScale(apiScales[0].notes);
         }
         if (apiScales && !majorFlag) {
-            setScale(apiScales[1].notes)
+            setScale(apiScales[1].notes);
         }
-        console.log('majorFlag', majorFlag)
-        console.log('maping scale', scale)
-      }, [apiScales, scale, majorFlag]);
+
+        handleFilterSounds()
+      }, [apiScales, scale, majorFlag, selectedKey, halfTonesRedux]);
     
     return ( 
         <div className={styles.panel__selector}>
