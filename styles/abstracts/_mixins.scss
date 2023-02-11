@@ -26,3 +26,15 @@
 	flex-grow: $grow;
 	border: 2px solid rgba(0, 0, 0, 0.2);
 }
+
+@mixin fretNum($content: '') {
+	position: relative; 
+    &:before{
+        content: $content;
+        position: absolute; 
+        top: -1rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+		font-size: 0.8rem;
+    } 
+}

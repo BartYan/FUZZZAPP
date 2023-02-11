@@ -3,11 +3,12 @@
     width: 100%;
     min-width: 1200px;
     overflow: auto;
+
     .guitar {
         display: flex;
         width: 90%;
         height: 250px;
-        margin: 0 auto;
+        margin: 2rem auto;
         background-color: $white;
     
         &__fret {
@@ -30,35 +31,45 @@
                 }
                 //Dot
                 span {
-                    display: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     height: 32px;
                     width: 32px;
                     border-radius: 50%;
-                    background-color: $yellow;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: opacity $transition-medium;
+
+                    &.dotVisible {opacity: 1;}
+
+                    &[data-color="blue"] {background-color: $blue;}
+                    &[data-color="yellow"] {background-color: $yellow;}
+                    &[data-color="red"] {background-color: $red;}
                 }
             }
     
             &:nth-child(1) { @include fret($grow:14); }
             &:nth-child(2) { @include fret($grow:13); }
-            &:nth-child(3) { @include fret($grow:12); }
+            &:nth-child(3) { @include fret($grow:12); @include fretNum($content: 'III'); }
             &:nth-child(4) { @include fret($grow:11); }
-            &:nth-child(5) { @include fret($grow:10); }
+            &:nth-child(5) { @include fret($grow:10); @include fretNum($content: 'V'); }
             &:nth-child(6) { @include fret($grow:9); }
-            &:nth-child(7) { @include fret($grow:9); }
+            &:nth-child(7) { @include fret($grow:9); @include fretNum($content: 'VII'); }
             &:nth-child(8) { @include fret($grow:8); }
-            &:nth-child(9) { @include fret($grow:8); }
+            &:nth-child(9) { @include fret($grow:8); @include fretNum($content: 'IX'); }
             &:nth-child(10) { @include fret($grow:7); }
             &:nth-child(11) { @include fret($grow:7); }
-            &:nth-child(12) { @include fret($grow:7); }
+            &:nth-child(12) { @include fret($grow:7); @include fretNum($content: 'XII'); }
             &:nth-child(13) { @include fret($grow:6); }
             &:nth-child(14) { @include fret($grow:6); }
-            &:nth-child(15) { @include fret($grow:6); }
+            &:nth-child(15) { @include fret($grow:6); @include fretNum($content: 'XV');}
         }
     
     
     }
 }
+

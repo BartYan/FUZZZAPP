@@ -1,11 +1,19 @@
 import { useState } from 'react'
-import styles from '../../../styles/Home.module.scss'
+import { useDispatch } from 'react-redux';
+
+import styles from '../../../styles/Home.module.scss';
+import { swapMark } from '../../../slices/chordsSlice';
 
 export default function Knob(props) {
 
     const [mode, setMode] = useState(false);
+    const dispatch = useDispatch();
 
-    const handleMode = (e) => setMode(!mode);
+    const handleMode = (e) => {
+        setMode(!mode)
+        dispatch(swapMark());
+    }
+    
     
     return ( 
         <div className={styles.panel__knob}>

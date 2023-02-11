@@ -65,7 +65,12 @@ export default function SelectorKey(props) {
 
         handleFilterSounds()
       }, [apiScales, scale, majorFlag, selectedKey, halfTonesRedux]);
-    
+
+    //Set setSelectedKey('C') with every chord change
+    useEffect(()=> {
+        setSelectedKey('C')
+    }, [majorFlag]);
+
     return ( 
         <div className={styles.panel__selector}>
             <div className={styles.panel__selector_row}>

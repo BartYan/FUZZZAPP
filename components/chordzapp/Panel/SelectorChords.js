@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import styles from '../../../styles/Home.module.scss';
-import { setMajorKey, setMinorKey, halfTones, setHalfTones } from '../../../slices/chordsSlice';
+import { setMajorKey, setMinorKey, setIntervals, halfTones, setHalfTones } from '../../../slices/chordsSlice';
 
 export default function SelectorChords(props) {
     const { apiChords } = props;
@@ -18,16 +18,19 @@ export default function SelectorChords(props) {
     const handleChord = (chord) => {
         setSelectedChord(chord.name);
         setListActive(!listActive);
-        dispatch(setHalfTones(chord.halfTones))
+        dispatch(setHalfTones(chord.halfTones));
+        dispatch(setIntervals(chord.intervals));
     }
 
     const handleNextChord = (next) => {
         if(apiChords) {
             let names = []
             let halfTonesApi = []
+            let intervalsApi = []
             apiChords.forEach((el) => {
                 names.push(el.name)
                 halfTonesApi.push(el.halfTones)
+                intervalsApi.push(el.intervals)
             });
 
             let actualIndex = names.indexOf(selectedChord);
@@ -38,6 +41,7 @@ export default function SelectorChords(props) {
             }
             setSelectedChord(names[newIndex])
             dispatch(setHalfTones(halfTonesApi[newIndex]))
+            dispatch(setIntervals(intervalsApi[newIndex]))
         }
     }
 
