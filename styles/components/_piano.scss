@@ -1,0 +1,46 @@
+.piano__container {
+    margin: 4rem auto;
+    width: 100%;
+    min-width: 1200px;
+    overflow: auto;
+
+    .piano {
+        display: flex;
+        width: fit-content;
+        border-radius: 25px;
+        // display: flex;
+        // width: 90%;
+        // height: 250px;
+        margin: 2rem auto;
+        // background-color: $white;
+    }
+    .double {
+      position: relative;
+    }
+    .white {
+      position: relative;
+      border: 2px solid #000;
+      width: 78px;
+      height: 240px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .white:hover {
+      background-color: rgb(225, 225, 225);
+    }
+    .black {
+      position: absolute;
+      top: 0;
+      right: -20px;
+      width: 40px;
+      height: 170px;
+      background-color: #000;
+      z-index: 100;
+      border-radius: 0 0 15px 15px;
+      cursor: pointer;
+    }
+    .black:hover {
+      background-color: rgb(158, 184, 255);
+    }
+}
+

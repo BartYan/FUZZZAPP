@@ -5,6 +5,7 @@ import AsideNav from '../components/nav/asideNav';
 import useChords from './hooks/useChords';
 import Panel from '../components/chordzapp/Panel/Panel';
 import Guitar from '../components/chordzapp/Guitar/Guitar';
+import Piano from '../components/chordzapp/Piano/Piano';
 
 export default function Chordzapp() {
     const { chords, scales } = useChords()
@@ -28,6 +29,7 @@ export default function Chordzapp() {
                     <main className={styles.chordzapp}>
                         <Panel chords={chords} scales={scales} />
                         <Guitar />
+                        <Piano />
                     </main>
                 </div>
             </div>
