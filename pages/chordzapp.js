@@ -8,9 +8,7 @@ import Guitar from '../components/chordzapp/Guitar/Guitar';
 import Piano from '../components/chordzapp/Piano/Piano';
 
 export default function Chordzapp() {
-    const { chords, scales } = useChords()
-
-    
+    const { chords, scales } = useChords();
 
     return (
         <>

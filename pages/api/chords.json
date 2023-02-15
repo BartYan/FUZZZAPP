@@ -1,0 +1,23 @@
+[
+    {
+      "id": "2",
+      "intervals": [ "1", "3b", "5", "7b" ],
+      "symbols": "Cm7, C-",
+      "halfTones": [ "0", "3", "7", "10" ],
+      "name": "minor seven"
+    },
+    {
+      "id": "1",
+      "intervals": [ "1", "3b", "5" ],
+      "symbols": "Cm, C mol, c, C minor, C min,",
+      "halfTones": [ "0", "3", "7" ],
+      "name": "minor"
+    },
+    {
+      "id": "0",
+      "intervals": [ "1", "3", "5" ],
+      "symbols": "C, C dur, CM, C major, C maj,",
+      "halfTones": [ "0", "4", "7" ],
+      "name": "major"
+    }
+]

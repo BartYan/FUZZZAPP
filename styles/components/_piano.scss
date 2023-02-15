@@ -8,11 +8,7 @@
         display: flex;
         width: fit-content;
         border-radius: 25px;
-        // display: flex;
-        // width: 90%;
-        // height: 250px;
         margin: 2rem auto;
-        // background-color: $white;
     }
     .double {
       position: relative;
@@ -24,10 +20,11 @@
       height: 240px;
       background-color: #fff;
       cursor: pointer;
+      // &:hover {
+      //   background-color: rgb(225, 225, 225);
+      // }
     }
-    .white:hover {
-      background-color: rgb(225, 225, 225);
-    }
+
     .black {
       position: absolute;
       top: 0;
@@ -38,9 +35,19 @@
       z-index: 100;
       border-radius: 0 0 15px 15px;
       cursor: pointer;
+      // &:hover {
+      //   background-color: rgb(158, 184, 255);
+      // }
     }
-    .black:hover {
-      background-color: rgb(158, 184, 255);
+
+    .white,
+    .black {
+      //Dot
+      span {
+        @include dot;
+        top: auto;
+        bottom: 0;
+      }
     }
 }
 

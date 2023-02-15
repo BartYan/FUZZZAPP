@@ -14,8 +14,7 @@ export default function SelectorKey(props) {
     const [scale, setScale] = useState();
     const [listActiveKey, setListActiveKey] = useState(false);
     const [selectedKey, setSelectedKey] = useState('C');
-    
-    const [chordSounds, setchordSounds] = useState();
+
 
     const handleListActiveKey = (e) => {
         setListActiveKey(!listActiveKey);

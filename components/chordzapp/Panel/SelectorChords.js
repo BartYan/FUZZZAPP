@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import styles from '../../../styles/Home.module.scss';
 import { setMajorKey, setMinorKey, setIntervals, halfTones, setHalfTones } from '../../../slices/chordsSlice';
@@ -8,7 +8,6 @@ export default function SelectorChords(props) {
     const { apiChords } = props;
     const dispatch = useDispatch();
 
-    const halfTonesRedux = useSelector(halfTones);
     const [listActive, setListActive] = useState(false);
     const [selectedChord, setSelectedChord] = useState('major');
 
@@ -51,8 +50,6 @@ export default function SelectorChords(props) {
         } else if( selectedChord == 'minor' ) {
             dispatch(setMinorKey())
         }
-        // console.log('selectedChord', selectedChord);
-        // console.log('halfTonesRedux', halfTonesRedux);
       }, [selectedChord, halfTones]);
     
     return ( 

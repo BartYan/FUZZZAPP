@@ -1,42 +1,20 @@
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import styles from '../../../styles/Home.module.scss';
-import { marksFlag, currChordSounds, intervals, halfTones } from '../../../slices/chordsSlice';
+import { marksFlag, currChordSounds } from '../../../slices/chordsSlice';
+
+import useChords from '../../../pages/hooks/useChords';
 
 export default function Fret(props) {
 
   const {E, A, D, G, B, id} = props;
 
   const chordSoundsRedux = useSelector(currChordSounds);
-  const intervalsRedux = useSelector(intervals);
-  const halftonesRedux = useSelector(halfTones);
   const marksFlagsRedux = useSelector(marksFlag);
 
-  const soundCheck = (fretSounds) => {
-    let sound = false;
-    let interval = false;
-    let color = '';
-    let fretSoundsArr = fretSounds.split(' ');
-
-    fretSoundsArr.forEach(el => {
-      if (chordSoundsRedux.includes(el)) {
-        // if sound is on specific guitar string
-        sound = el
-        // if interval, find sound index from sounds and take same index from intervals
-        interval = intervalsRedux[chordSoundsRedux.indexOf(el)];
-        // set color via index
-        if (chordSoundsRedux.indexOf(el) == 0) {
-          color = 'yellow';
-        } else if (chordSoundsRedux.indexOf(el) == 1) {
-          color = 'blue';
-        } else if (chordSoundsRedux.indexOf(el) == 2) {
-          color = 'red';
-        }
-      }
-    });
-
-    return [sound, color, interval]
-  }
+  const {
+    soundCheck
+  } = useChords();
 
   useEffect(()=> {
     console.log(soundCheck(E))

@@ -31,24 +31,7 @@
                 }
                 //Dot
                 span {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 32px;
-                    width: 32px;
-                    border-radius: 50%;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    opacity: 0;
-                    transition: opacity $transition-medium;
-
-                    &.dotVisible {opacity: 1;}
-
-                    &[data-color="blue"] {background-color: $blue;}
-                    &[data-color="yellow"] {background-color: $yellow;}
-                    &[data-color="red"] {background-color: $red;}
+                    @include dot;
                 }
             }
     
