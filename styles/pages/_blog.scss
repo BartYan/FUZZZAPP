@@ -1,0 +1,16 @@
+.blog {
+    &__posts {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    &__card {
+        width: 15rem;
+        padding: 1rem;
+        border: 1px solid $purple;
+        border-radius: $radius-small;
+        background-color: $white;
+    }
+}

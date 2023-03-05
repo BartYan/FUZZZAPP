@@ -6,7 +6,48 @@ import Nav from '../components/nav/nav';
 import Explorer from '../components/nav/explorer';
 import Hero from '../components/layout/hero';
 
-export default function Home() {
+const URL = process.env.STRAPIBASEURL;
+
+export async function getStaticProps(context) {
+  const fetchParams = {
+    method: "post",
+    headers: {
+      "content-type": "application/json"
+    },
+    body: JSON.stringify({
+      query: `
+      {
+        blogposts{
+          data{
+            attributes{
+              splash{
+                data{
+                  attributes{
+                    url
+                  }
+                }
+              }
+              title
+              blogbody
+              description
+              slug
+            }
+          }
+        }
+      }`
+    })
+  }
+
+  const res = await fetch(`http://localhost:1337/graphql`, fetchParams);
+  const data = await res.json();
+
+  return {
+    props: data,
+  };
+}
+
+export default function Home({data}) {
+  console.log('data', data)
   return (
     <>
       <Head>
