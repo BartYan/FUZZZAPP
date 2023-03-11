@@ -1,0 +1,32 @@
+@keyframes pageTransition {        
+    // initial={{ x: 300, opacity: 0 }}
+    // animate={{ x: 0, opacity: 1 }}
+    // exit={{ x: 300, opacity: 0 }}
+    0%   {transform: translate(300px, 0); opacity: 0;}
+    // 50%  {transform: translate(0, 0);}
+    60%  {transform: translate(-10px, 0); }
+    90%  {transform: translate(10px, 0); }
+    // 90%  {transform: translate(5px, 0); }
+    100% {transform: translate(0, 0); opacity: 1;}
+}
+// aternate page transition for moving color divs
+.slide_in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: $yellow;
+    transform-origin: left;
+    z-index: 99999;
+}
+.slide_out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: $yellow;
+    transform-origin: right;
+    z-index: 99999;
+}

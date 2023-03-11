@@ -4,24 +4,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $tablet-lg) {
+        width: 90%;
+        margin: 4rem auto 0;
+        flex-direction: column-reverse;
+    }
     &__header {
         width: 42%;
+        @media (max-width: $tablet-lg) {
+            width: 100%;
+        }
         &_box {
             width: fit-content;
         }
         &_title {
             font-size: $h1-size;
             margin: 0;
+            @media (max-width: $phone) {
+                font-size: $font-h-small;
+            }
             span {
                 color: $yellow;
             }
         }
-        &_subtitle {text-align: center; letter-spacing:17px;}
+        &_subtitle {
+            text-align: center; 
+            letter-spacing:17px;
+            @media (max-width: $phone) {
+                font-size: $font-subTitle-small;
+            }
+        }
         &_desc {font-family: Agrandir; text-align: justify; font-size: 1.5rem; margin: 2rem 0 0 0;}
     }
     &__image {
         width: 100%;
-        svg{width: 100%;}
+        @media (max-width: $tablet-lg) {
+            margin: 4rem auto;
+            height: fit-content;
+        }
+        svg{
+            width: 100%;
+            @media (max-width: $tablet-lg) {
+                height: fit-content;
+            }
+        }
         &_fuzzer {
             width: 100%;
             height: auto;

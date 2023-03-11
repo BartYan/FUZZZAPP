@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-
+import withTransition from "../HOC/withTransition";
 import Nav from '../components/nav/nav';
 import Explorer from '../components/nav/explorer';
 import Hero from '../components/layout/hero';
@@ -46,7 +46,7 @@ export async function getStaticProps(context) {
   };
 }
 
-export default function Home({data}) {
+const Home = ({data}) => {
   console.log('data', data)
   return (
     <>
@@ -64,3 +64,5 @@ export default function Home({data}) {
     </>
   )
 }
+
+export default withTransition(Home);

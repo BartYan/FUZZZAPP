@@ -1,13 +1,14 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.scss'
 
+import styles from '../styles/Home.module.scss'
+import withTransition from "../HOC/withTransition";
 import AsideNav from '../components/nav/asideNav';
 import useChords from './hooks/useChords';
 import Panel from '../components/chordzapp/Panel/Panel';
 import Guitar from '../components/chordzapp/Guitar/Guitar';
 import Piano from '../components/chordzapp/Piano/Piano';
 
-export default function Chordzapp() {
+const Chordzapp = () => {
     const { chords, scales } = useChords();
 
     return (
@@ -34,3 +35,5 @@ export default function Chordzapp() {
         </>
     )
 }
+
+export default withTransition(Chordzapp);

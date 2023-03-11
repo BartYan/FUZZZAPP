@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-
+import withTransition from "../HOC/withTransition";
 import Nav from '../components/nav/nav';
 import Explorer from '../components/nav/explorer';
 import BlogCard from '../components/blog/BlogCard';
@@ -46,12 +46,12 @@ export async function getStaticProps(context) {
   };
 }
 
-export default function Home({blogposts}) {
+const Blog = ({blogposts}) => {
+    console.log('blogposts', blogposts);
     const posts = blogposts.data;
-    // console.log('posts', posts)
 
     return (
-        <>
+      <main className={styles.blog}>
         <Head>
             <title>Fuzzzapp - it's more then play</title>
             <meta name="description" content="Fuzzzapp - it's more then play! Application for musicians and guitar players" />
@@ -72,6 +72,8 @@ export default function Home({blogposts}) {
             </div>
             <Explorer/>
         </main>
-        </>
+      </main>
     )
 }
+// export default withTransition(Blog);
+export default Blog;

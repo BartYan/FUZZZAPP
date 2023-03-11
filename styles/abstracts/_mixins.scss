@@ -59,3 +59,14 @@
     &[data-color="red"] {background-color: $red;}
     &[data-color="purple"] {background-color: $purple;}
 }
+
+@mixin nav-item {
+    height: 3rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+@mixin nav-item-hover($color) {
+    font-size: 2.6rem;
+    color: $color;
+}

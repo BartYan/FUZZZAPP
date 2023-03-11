@@ -11,6 +11,9 @@ $purple: #a29bfe;
 // Typo
 $h1-size: 7rem;
 $font-size-big: 14rem;
+$font-normal: 1rem;
+$font-h-small: 3rem;
+$font-subTitle-small: 1rem;
 
 // Radio
 $radius-big: 25px;
@@ -19,3 +22,12 @@ $radius-small: 15px;
 // Transitions
 $transition-fast: 0.3s ease-in-out;
 $transition-medium: 0.5s ease-in-out;
+
+//media queries
+$phone-sm: 325px;
+$phone: 450px;
+$tablet: 768px;
+$tablet-lg: 1024px;
+$laptop: 1280px;
+$laptop-lg: 1440px;
+$desktop: 1920px;

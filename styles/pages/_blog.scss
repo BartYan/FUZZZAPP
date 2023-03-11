@@ -1,4 +1,7 @@
 .blog {
+    animation-name: pageTransition;
+    animation-duration: 0.4s;
+    transition: transform 0.4 ease-in, opacity 1 ease-in-out;
     &__posts {
         width: 90%;
         display: flex;

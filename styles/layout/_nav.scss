@@ -20,25 +20,16 @@
     }
     &__chordzapp {
         margin-top: -12px;
-        height: 35px;
-        font-size: 2.5rem;
-        // letter-spacing: -3px;
-        font-weight: bold;
-        transition: all 0.3s ease-in-out;
+        @include nav-item;
+        &:hover { @include nav-item-hover($red) }
     }
-    &__chordzapp:hover {
-        font-size: 2.6rem;
-        color: $red;
+    &__blog {
+        @include nav-item;
+        &:hover { @include nav-item-hover($yellow) }
     }
-    &__quizapp {
-        margin-top: 12px;
-        font-size: 2.5rem;
-        font-weight: bold;
-        transition: all 0.3s ease-in-out;
-    }
-    &__quizapp:hover {
-        font-size: 2.6rem;
-        color: $yellow;
+    &__teacher {
+        @include nav-item;
+        &:hover { @include nav-item-hover($purple) }
     }
 
 }

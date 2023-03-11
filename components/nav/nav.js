@@ -18,7 +18,12 @@ const Nav = () => {
                 </Link>
                 <Link href={`/blog`}>
                     <a>
-                        <p className={styles.nav__quizapp}>BLOG</p>
+                        <p className={styles.nav__blog}>BLOG</p>
+                    </a>
+                </Link>
+                <Link href={`/virtual-teacher`}>
+                    <a>
+                        <p className={styles.nav__teacher}>AI TEACHER</p>
                     </a>
                 </Link>
             </div>

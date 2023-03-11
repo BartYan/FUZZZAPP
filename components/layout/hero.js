@@ -23,10 +23,10 @@ const Hero = () => {
         gsap.set([all, notes, notesTwo, thunder, ...waves.children, ...moves.children, ...electrics.children], {autoAlpha: 0});
         // gsap.set({notes, notesTwo}, {transformOrigin: '50% 100%'});
         const tl = gsap.timeline({defaults: {ease: 'power2.inOut'}});
-        const tl2 = gsap.timeline({defaults: {ease: 'power2.inOut'}, repeat:-1, repeatDelay: 2,yoyo:true});
-        const tl3 = gsap.timeline({defaults: {ease: 'power2.inOut'}, repeat:-1,yoyo:true});
+        const tl2 = gsap.timeline({defaults: {ease: 'power2.inOut'}, repeat:-1, repeatDelay: 2, yoyo:true});
+        const tl3 = gsap.timeline({defaults: {ease: 'power2.inOut'}, repeat:-1, yoyo:true});
         
-        tl.fromTo(all, {x: '-=50'}, {duration: 1, x: '+=100', autoAlpha: 1})
+        tl.fromTo(all, {x: '-=50'}, {duration: 1, x: '+=50', autoAlpha: 1})
           .fromTo(notes, {y: '+=100'}, {duration: 1, autoAlpha: 1, y: '-=200'}, '-=0.25')
           .fromTo(notesTwo, {scaleX: 0}, {duration: 0.4, autoAlpha: 1, scaleX: 1}, '-=0.5')
           .to(thunder, {duration: 0.5, autoAlpha: 1}, '-=0.25')

@@ -1,5 +1,12 @@
 [
     {
+      "id": "3",
+      "intervals": [ "1", "3", "5", "7" ],
+      "symbols": "Cm7, C-",
+      "halfTones": [ "0", "3", "7", "10" ],
+      "name": "major seven"
+    },
+    {
       "id": "2",
       "intervals": [ "1", "3b", "5", "7b" ],
       "symbols": "Cm7, C-",
