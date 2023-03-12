@@ -8,40 +8,68 @@
     transition: all 0.5s ease-in-out;
     pointer-events: none;
     @media (max-width: $tablet-lg) {
-        display: none;
+        height: 100%;
+        width: 100%;
+        padding: 0 1rem;
+        min-height: fit-content;
     }
     &__head {
-        transition: all 0.5s ease-in-out;
+        position: absolute;
+        bottom: 0;
+        left: 25px;
         height: 100%;
+        transition: all 0.5s ease-in-out;
+        @media (max-width: $tablet-lg) {
+            position: fixed;
+            top: 0;
+            left: auto;
+            right: 0;
+            height: fit-content;
+        }
     }
     &__head:hover {
         .explorer__arrow {
-            left: 15px
+            left: 0;
         }
         .explorer__title {
             transform: rotate(268deg) translate(-100px,-110px);
+        }
+        @media (max-width: $tablet-lg) {
+            .explorer__title {
+                transform: rotate(0) translate(0);
+            }
         }
     }
     &__arrow {
         position: absolute;
         bottom: 20px;
-        left: -200px;
+        left: -90px;
         transition: all 0.3s ease-in-out;
+        @media (max-width: $tablet-lg) {
+            display: none;
+        }
     }
     &__title {
         position: absolute;
-        top: 0;
-        left: 25px;
+        bottom: 16rem;
+        left: 0;
         display: block;
+        font-family: "Pompiere", cursive;
         font-size: 6rem;
         letter-spacing: -8px;
         font-weight: bold;
         transform: rotate(270deg) translate(-100px,-110px);
         transition: all 0.3s ease-in-out;
         pointer-events: all;
+        @media (max-width: $tablet-lg) {
+            position: relative;
+            bottom: 0;
+            font-size: 2rem;
+            transform: rotate(0) translate(0);
+            letter-spacing: 0;
+        }
     }
     &__title:hover {
-        // color: $blue;
         cursor: pointer;
         .explorer__arrow {
             right: -15px
@@ -50,6 +78,9 @@
     &__head_les {
         transition: all 0.5s ease-in-out;
         height: 100%;
+        @media (max-width: $tablet-lg) {
+            height: fit-content;
+        }
     }
     &__head_les:hover {
         .explorer__arrow_les {
@@ -65,6 +96,9 @@
         right: -200px;
         transform: rotate(180deg);
         transition: all 0.3s ease-in-out;
+        @media (max-width: $tablet-lg) {
+            display: none;
+        }
     }
     &__title_les {
         position: absolute;
@@ -76,17 +110,22 @@
         font-weight: bold;
         transform: rotate(270deg) translate(-50px,20px);
         transition: all 0.3s ease-in-out;
+        @media (max-width: $tablet-lg) {
+            top: -50px;
+            right:10px;
+            font-size: 3rem;
+            letter-spacing: 0;
+        }
     }
     &__title_les:hover {
         cursor: pointer;
         .explorer__arrow {
-            right: -15px
+            right: -15px;
         }
     }
     &__menu {
         width: 100%;
         height: fit-content;
-        // min-height: 360px;
         padding: 0 7rem 2rem 0;
         transform: translate(-110%,0);
         transition: all 0.5s ease-in-out;
@@ -94,6 +133,13 @@
         border-radius: 0 25px 0 0;
         overflow-x: hidden;
         pointer-events: none;
+        @media (max-width: $tablet-lg) {
+            height: 100vh;
+            transform: translate(-110%,0);
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
         &_list {
             width: 100%;
             height: 100%;
@@ -101,6 +147,10 @@
             justify-content: space-between;
             align-items: stretch;
             list-style: none;
+            @media (max-width: $tablet-lg) {
+                flex-direction: column;
+                height: fit-content;
+            }
             svg{path{transition: all 0.3s ease-in-out;}}
             li {
                 max-width: 350px;
@@ -112,21 +162,33 @@
                 text-align: left;
                 border-radius: $radius-small;
                 transition: all 0.5s ease-in-out;
+                @media (max-width: $tablet-lg) {
+                    margin: 0 auto;
+                }
                 .menu_item_header {
                     display: flex;
                     align-items: center;
                     padding: 1.5rem 0 1.5rem;
+                    @media (max-width: $tablet-lg) {
+                        padding: 1.1rem 0 1.5rem;
+                    }
                     h5 {
                         padding: 0 0 0 1rem;
                         font-family: Helvetica, sans-serif;
                         font-size: 1.5rem;
                         font-weight: 500;
+                        @media (max-width: $tablet-lg) {
+                            font-size: 1.5rem;
+                        }
                     }
                 }
                 p {
                     font-family: Agrandir;
                     text-align: justify;
                     font-size: 1rem;
+                    @media (max-width: $tablet-lg) {
+                        font-size: 0.6rem;
+                    }
                 }
             }
         }
@@ -136,10 +198,6 @@
     &__red:hover {background-color:#f9e4e4; svg{path{fill:$red}}}
     &__yellow:hover {background-color:#f6f1d7; svg{path{fill:$yellow}}}
     &__grey:hover {background-color:#eae6e7; svg{path{fill:$grey}}}
-    // &__blue:hover {background-color:#91D5DD}
-    // &__red:hover {background-color:#ff7979}
-    // &__yellow:hover {background-color:#FED00E}
-    // &__grey:hover {background-color:#B7B2B4}
 }
 .explorer__expand {
     font-family: 'Pompiere', cursive;
@@ -150,9 +208,20 @@
     transform: translate(0,0);
     transition: all 0.5s ease-in-out;
     pointer-events: all;
+    @media (max-width: $tablet-lg) {
+        top: 0;
+        width: 100%;
+        height: 100vh;
+    }
     .explorer__menu {
         transform: translate(0,0);
         transition: all 0.5s ease-in-out;
         pointer-events: all;
+        @media (max-width: $tablet-lg) {
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            border-radius: 0;
+        }
     }
 }

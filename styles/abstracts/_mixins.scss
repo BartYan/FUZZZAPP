@@ -61,12 +61,15 @@
 }
 
 @mixin nav-item {
-    height: 3rem;
-    font-size: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
+    @media (max-width: $tablet-lg) {
+        display: none;
+    }
 }
 @mixin nav-item-hover($color) {
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     color: $color;
 }

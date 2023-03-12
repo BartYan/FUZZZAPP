@@ -10,7 +10,7 @@ const Nav = () => {
                     <img className={styles.nav__logo} src="/assets/images/LOGO.svg" alt="Fuzzzapp Logo" width={100} height={100}/>
                 </a>
             </Link>
-            <div className={styles.nav__appBox}>
+            <div className={styles.nav__items}>
                 <Link href={`/chordzapp`}>
                     <a>
                         <p className={styles.nav__chordzapp}>CHORDZAPP</p>
