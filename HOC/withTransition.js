@@ -6,34 +6,34 @@ const withTransition = (OriginalComponent) => {
     <>
       {/* <OriginalComponent />
       <motion.div
-        className={styles.slide_in}
+        className="slide-in"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 0 }}
         exit={{ scaleX: 1 }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       />
       <motion.div
-        className={styles.slide_out}
+        className="slide-out"
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0 }}
         exit={{ scaleX: 0 }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       /> */}
-       <motion.div
-        initial={{ x: 300, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: 300, opacity: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-        }}
-      >
-        <OriginalComponent />
-      </motion.div>
-
+                <motion.div
+          initial={{ x: 300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: 300, opacity: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+        >
+          <OriginalComponent />
+        </motion.div>
     </>
   );
 };
 
 export default withTransition;
+

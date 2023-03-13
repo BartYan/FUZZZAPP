@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import withTransition from "../HOC/withTransition";
+// import withTransition from "../HOC/withTransition";
+import Transition from '../components/transition';
 import Nav from '../components/nav/nav';
 import Explorer from '../components/nav/explorer';
 import BlogCard from '../components/blog/BlogCard';
@@ -51,28 +52,30 @@ const Blog = ({blogposts}) => {
     const posts = blogposts.data;
 
     return (
-      <main className={styles.blog}>
-        <Head>
-            <title>Fuzzzapp - it's more then play</title>
-            <meta name="description" content="Fuzzzapp - it's more then play! Application for musicians and guitar players" />
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
+      <Transition>
+        <main className={styles.blog}>
+          <Head>
+              <title>Fuzzzapp - it's more then play</title>
+              <meta name="description" content="Fuzzzapp - it's more then play! Application for musicians and guitar players" />
+              <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-        <main className={styles.main}>
-            <Nav/>
-            <div className={styles.blog__posts}>
-                {
-                    posts &&
-                    posts.map((post, index) => {
-                        return (
-                            <BlogCard post={post} key={index}/>
-                        )
-                    })
-                }
-            </div>
-            <Explorer/>
+          <main className={styles.main}>
+              <Nav/>
+              <div className={styles.blog__posts}>
+                  {
+                      posts &&
+                      posts.map((post, index) => {
+                          return (
+                              <BlogCard post={post} key={index}/>
+                          )
+                      })
+                  }
+              </div>
+              <Explorer/>
+          </main>
         </main>
-      </main>
+      </Transition>
     )
 }
 // export default withTransition(Blog);

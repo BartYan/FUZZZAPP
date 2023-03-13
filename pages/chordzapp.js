@@ -1,7 +1,8 @@
 import Head from 'next/head';
 
-import styles from '../styles/Home.module.scss'
-import withTransition from "../HOC/withTransition";
+import styles from '../styles/Home.module.scss';
+// import withTransition from "../HOC/withTransition";
+import Transition from '../components/transition';
 import AsideNav from '../components/nav/asideNav';
 import useChords from './hooks/useChords';
 import Panel from '../components/chordzapp/Panel/Panel';
@@ -12,7 +13,7 @@ const Chordzapp = () => {
     const { chords, scales } = useChords();
 
     return (
-        <>
+        <Transition>
             <Head>
                 <title>Chordzapp - Fuzzzapp chords learning tool</title>
                 <meta
@@ -32,8 +33,8 @@ const Chordzapp = () => {
                     </main>
                 </div>
             </div>
-        </>
+        </Transition>
     )
 }
 
-export default withTransition(Chordzapp);
+export default Chordzapp;

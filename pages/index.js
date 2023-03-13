@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import withTransition from "../HOC/withTransition";
+import Transition from '../components/transition';
+import withTransition from '../HOC/withTransition';
 import Nav from '../components/nav/nav';
 import Explorer from '../components/nav/explorer';
 import Hero from '../components/layout/hero';
@@ -49,7 +50,7 @@ export async function getStaticProps(context) {
 const Home = ({data}) => {
   console.log('data', data)
   return (
-    <>
+    <Transition>
       <Head>
         <title>Fuzzzapp - it's more then play</title>
         <meta name="description" content="Fuzzzapp - it's more then play! Application for musicians and guitar players" />
@@ -61,8 +62,9 @@ const Home = ({data}) => {
         <Hero/>
         <Explorer/>
       </main>
-    </>
+    </Transition>
   )
 }
 
-export default withTransition(Home);
+// export default withTransition(Home);
+export default Home;

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { selectMajorFlag, setCurrChord, halfTones } from '../../../slices/chordsSlice';
-import styles from '../../../styles/Home.module.scss'
+import styles from '../../../styles/Home.module.scss';
 
 export default function SelectorKey(props) {
     // SHOULD BE REDUX
@@ -15,12 +15,11 @@ export default function SelectorKey(props) {
     const [listActiveKey, setListActiveKey] = useState(false);
     const [selectedKey, setSelectedKey] = useState('C');
 
-
     const handleListActiveKey = (e) => {
         setListActiveKey(!listActiveKey);
     }
     const handleKey = (note) => {
-        setSelectedKey(note)
+        setSelectedKey(note);
         setListActiveKey(!listActiveKey);
     }
 
@@ -32,7 +31,7 @@ export default function SelectorKey(props) {
             if(newKey > (scale.length - 1) || newKey < 0) {
                     newKey = next ? 0 : scale.length - 1
             }
-            setSelectedKey(scale[newKey])
+            setSelectedKey(scale[newKey]);
         }
     }
 
@@ -43,14 +42,14 @@ export default function SelectorKey(props) {
             let slicedSounds = oldScale.splice(0, indexEnd);
             let newScale = oldScale.concat(slicedSounds);
 
-            let newChordSounds = []
+            let newChordSounds = [];
 
             halfTonesRedux.forEach(el => {
                 newChordSounds.push(newScale[el]);
             });
 
             console.log(' newChordSounds', newChordSounds);
-            dispatch(setCurrChord(newChordSounds))
+            dispatch(setCurrChord(newChordSounds));
         }
     }
 

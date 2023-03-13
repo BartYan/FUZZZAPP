@@ -1,6 +1,7 @@
 // import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import styles from '../../styles/Home.module.scss';
 import ReactMarkdown from 'react-markdown';
+import Transition from '../../components/transition';
 
 export async function getStaticPaths() {
     const fetchParams = {
@@ -71,9 +72,11 @@ export async function getStaticProps(params) {
 export default function Post({title, blogbody}) {
 console.log(title, blogbody)
     return (
-        <div>
-            <h1>{title}</h1>
-            <ReactMarkdown>{blogbody}</ReactMarkdown>
-        </div>
+        <Transition>
+            <div>
+                <h1>{title}</h1>
+                <ReactMarkdown>{blogbody}</ReactMarkdown>
+            </div>
+        </Transition>
     )
 }

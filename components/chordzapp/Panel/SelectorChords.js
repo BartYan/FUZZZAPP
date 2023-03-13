@@ -10,12 +10,14 @@ export default function SelectorChords(props) {
 
     const [listActive, setListActive] = useState(false);
     const [selectedChord, setSelectedChord] = useState('major');
+    const [selectedChordMode, setSelectedChordMode] = useState('major');
 
     const handleListActive = (e) => {
         setListActive(!listActive);
     }
     const handleChord = (chord) => {
         setSelectedChord(chord.name);
+        setSelectedChordMode(chord.mode);
         setListActive(!listActive);
         dispatch(setHalfTones(chord.halfTones));
         dispatch(setIntervals(chord.intervals));
@@ -26,10 +28,12 @@ export default function SelectorChords(props) {
             let names = []
             let halfTonesApi = []
             let intervalsApi = []
+            let modes = []
             apiChords.forEach((el) => {
                 names.push(el.name)
                 halfTonesApi.push(el.halfTones)
                 intervalsApi.push(el.intervals)
+                modes.push(el.mode)
             });
 
             let actualIndex = names.indexOf(selectedChord);
@@ -39,18 +43,19 @@ export default function SelectorChords(props) {
                 newIndex = next ? 0 : names.length - 1
             }
             setSelectedChord(names[newIndex])
+            setSelectedChordMode(modes[newIndex])
             dispatch(setHalfTones(halfTonesApi[newIndex]))
             dispatch(setIntervals(intervalsApi[newIndex]))
         }
     }
 
     useEffect(()=> {
-        if ( selectedChord == 'major' ) {
+        if ( selectedChordMode == 'major' || selectedChordMode == 'aug' ) {
             dispatch(setMajorKey())
-        } else if( selectedChord == 'minor' ) {
+        } else if( selectedChordMode == 'minor' || selectedChordMode == 'dim') {
             dispatch(setMinorKey())
         }
-      }, [selectedChord, halfTones]);
+      }, [selectedChordMode, selectedChord, halfTones]);
     
     return ( 
         <div className={styles.panel__selector}>
