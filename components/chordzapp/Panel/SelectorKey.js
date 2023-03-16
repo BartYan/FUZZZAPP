@@ -5,7 +5,7 @@ import { selectMajorFlag, setCurrChord, halfTones } from '../../../slices/chords
 import styles from '../../../styles/Home.module.scss';
 
 export default function SelectorKey(props) {
-    // SHOULD BE REDUX
+
     const { apiScales } = props;
     const majorFlag = useSelector(selectMajorFlag);
     const halfTonesRedux = useSelector(halfTones);
