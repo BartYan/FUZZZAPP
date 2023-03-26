@@ -73,3 +73,10 @@
     font-size: 2.1rem;
     color: $color;
 }
+@mixin section-desc {
+    font-size: 1.5rem;
+    margin: 2rem 1rem 0 0;
+}
+@mixin hover-image {
+        transform: translate(0, 0);
+}

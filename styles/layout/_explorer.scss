@@ -7,6 +7,7 @@
     min-height: 360px;
     transition: all 0.5s ease-in-out;
     pointer-events: none;
+    z-index: 9999!important;
     @media (max-width: $tablet-lg) {
         height: 100%;
         width: 100%;
@@ -29,7 +30,7 @@
     }
     &__head:hover {
         .explorer__arrow {
-            left: 0;
+            left: 1.2rem;
         }
         .explorer__title {
             transform: rotate(268deg) translate(-100px,-110px);
@@ -41,18 +42,19 @@
         }
     }
     &__arrow {
-        position: absolute;
+        position: fixed;
         bottom: 20px;
         left: -90px;
         transition: all 0.3s ease-in-out;
+        mix-blend-mode: difference;
         @media (max-width: $tablet-lg) {
             display: none;
         }
     }
     &__title {
-        position: absolute;
+        position: fixed;
         bottom: 16rem;
-        left: 0;
+        left: 1.3rem;
         display: block;
         font-family: "Pompiere", cursive;
         font-size: 6rem;
@@ -61,6 +63,9 @@
         transform: rotate(270deg) translate(-100px,-110px);
         transition: all 0.3s ease-in-out;
         pointer-events: all;
+        color: $white;
+        mix-blend-mode: difference;
+
         @media (max-width: $tablet-lg) {
             position: relative;
             bottom: 0;
@@ -71,9 +76,9 @@
     }
     &__title:hover {
         cursor: pointer;
-        .explorer__arrow {
-            right: -15px
-        }
+        // .explorer__arrow {
+        //     right: -25px;
+        // }
     }
     &__head_les {
         transition: all 0.5s ease-in-out;
@@ -208,6 +213,7 @@
     transform: translate(0,0);
     transition: all 0.5s ease-in-out;
     pointer-events: all;
+    z-index: 9999!important;
     @media (max-width: $tablet-lg) {
         top: 0;
         width: 100%;

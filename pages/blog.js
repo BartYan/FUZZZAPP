@@ -6,6 +6,7 @@ import Transition from '../components/transition';
 import Nav from '../components/nav/nav';
 import Explorer from '../components/nav/explorer';
 import BlogCard from '../components/blog/BlogCard';
+import Footer from '../components/layout/footer';
 
 // const URL = process.env.STRAPIBASEURL; //can use in res but error
 
@@ -73,6 +74,7 @@ const Blog = ({blogposts}) => {
                   }
               </div>
               <Explorer/>
+              <Footer/>
           </main>
         </main>
       </Transition>

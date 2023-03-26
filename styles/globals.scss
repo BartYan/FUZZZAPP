@@ -42,4 +42,7 @@ a {
     color: white;
     background: black;
   }
+  nav {
+    z-index: 9999!important;
+  }
 }

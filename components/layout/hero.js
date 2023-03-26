@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import Image from 'next/image';
 import styles from '../../styles/Home.module.scss';
-import gsap from 'gsap'
+import gsap from 'gsap';
 
 // import { Fuzzer } from '../../public/assets/images/fuzzer/fuzzer.svg';
 import { Fuzzer } from './images/fuzzer';

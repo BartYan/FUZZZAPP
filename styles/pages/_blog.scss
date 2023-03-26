@@ -1,19 +1,27 @@
 .blog {
-    // animation-name: pageTransition;
-    // animation-duration: 0.4s;
-    // transition: transform 0.4 ease-in, opacity 1 ease-in-out;
+    min-height: 100vh;
     &__posts {
-        width: 90%;
+        width: 80%;
+        
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
         margin: 0 auto;
+        padding-top: 10rem;
     }
     &__card {
-        width: 15rem;
-        padding: 1rem;
-        border: 1px solid $purple;
-        border-radius: $radius-small;
+        width: 20rem;
+        margin: 2rem 0 0 2rem;
+        padding: 2rem;
+        border: 1px solid $grey;
+        border-radius: $radius-xs;
         background-color: $white;
+        h3 {
+            margin: 0 0 1rem;
+
+        }
+        p {
+
+        }
     }
 }

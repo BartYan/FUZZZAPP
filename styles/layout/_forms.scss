@@ -1,0 +1,44 @@
+// newsletter
+#mlb2-5898470.ml-form-embedContainer .ml-form-embedWrapper {
+    background-color: none!important;
+    color: red!important;
+}
+#mlb2-5898470.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+    max-width: 600px!important;
+}
+
+.newsletter__form {
+    margin: 3rem 0;
+    width: 100%;
+    z-index: 1!important;
+    label {
+        color: $black!important;
+    }
+    div {
+        width: 100%!important;
+        max-width: 100%!important;
+        padding: 0!important;
+        z-index: 1!important;
+    }
+    input {
+        background-color: none!important;
+        border-top: none!important;
+        border-right: none!important;
+        border-left: none!important;
+        border-bottom: 1px solid $black!important;
+        border: 2px solid $black!important;
+        border-width: 2px!important;
+        background-color: $black!important;
+        z-index: 1!important;
+    }
+    input:active {
+        border-color: $black!important;
+    }
+    input:focus {
+        border-color: $black!important;
+    }
+    button {
+        max-width: 300px!important;
+        z-index: 1!important;
+    }
+}

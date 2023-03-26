@@ -1,5 +1,21 @@
 [
     {
+      "id": "4",
+      "intervals": [ "1", "4", "5" ],
+      "symbols": "Csus4",
+      "halfTones": [ "0", "5", "7" ],
+      "name": "SUS 4",
+      "mode": "major"
+    },
+    {
+      "id": "4",
+      "intervals": [ "1", "2", "5" ],
+      "symbols": "Csus2",
+      "halfTones": [ "0", "2", "7" ],
+      "name": "SUS 2",
+      "mode": "major"
+    },
+    {
       "id": "3",
       "intervals": [ "1", "3", "5", "7" ],
       "symbols": "Cm7, C-",

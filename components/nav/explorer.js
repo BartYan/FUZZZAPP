@@ -86,7 +86,7 @@ const Explorer = () => {
                     </ul>
                     <div className={styles.explorer__head_les} onClick={handleExplore}>
                         <span className={styles.explorer__title_les}>LES</span>
-                        <img className={styles.explorer__arrow_les} src="/assets/images/Arrowshort.svg" alt="explore more arrow" width={60} height={60}/>
+                        <img className={styles.explorer__arrow_les} src="/assets/images/Arrowshort-black.svg" alt="explore more arrow" width={60} height={60}/>
                     </div>
                 </div>
             </nav>
