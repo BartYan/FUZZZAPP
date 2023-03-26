@@ -117,7 +117,14 @@
             @include hover-image;
         }
     }
-
+    &__buttons {
+        width: 100%;
+        margin: 3rem 0 0;
+        text-align: right;
+        .cta {
+            margin-left: 1rem;
+        }
+    }
 }
 .apps {
     // padding: 0 5%;
@@ -145,7 +152,7 @@
             height: fit-content;
             overflow: hidden;
             cursor: pointer;
-            border-radius: $radius-small;
+            // border-radius: $radius-small;
             &:hover {
                 .apps__gallery_apla {
                     @include hover-image;

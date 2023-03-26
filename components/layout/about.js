@@ -38,7 +38,7 @@ const About = () => {
     return (
         <div className={styles.halves}>
 
-            <h2 className={styles.halves__title}><span>01.</span> About</h2>
+            <h2 className={styles.halves__title}><span>01.</span> About Fuzzzapp</h2>
             <div className={styles.halves__wrapper}>
                 <div className={`${styles.halves__box}`}>
                     <p className={styles.halves__head}>
@@ -58,6 +58,10 @@ const About = () => {
                             Suspendisse accumsan non felis venenatis elementum. 
                             Nullam id magna vitae arcu dapibus congue vel at diam. 
                         </p>
+                    </div>
+                    <div className={styles.halves__buttons}>
+                        <a className={styles.cta}>Read blog</a>
+                        <a className={styles.cta}>Watch vlog</a>
                     </div>
                 </div>
                 <div ref={peace} className={`${styles.halves__box} ${styles.halves__box_img}`}>

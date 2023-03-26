@@ -1,0 +1,18 @@
+.cta {
+    background-color: #1e1f24;
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    height: auto;
+    padding: 10px 4rem;
+    width: fit-content;
+    box-sizing: border-box;
+    &:hover {
+        background-color: $hover-color;
+    }
+}
