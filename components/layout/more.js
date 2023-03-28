@@ -5,18 +5,18 @@ const More = () => {
     return (
         <div className={styles.halves}>
 
-            <h2 className={styles.halves__title}><span>03.</span> More</h2>
+            <h2 className={styles.halves__title}><span>03.</span> Music</h2>
             <div className={styles.halves__wrapper}>
                 <div className={`${styles.halves__box}`}>
                     <p className={styles.halves__head}>
-                        Nullam id magna vitae arcu dapibus congue vel at diam. 
-                        Curabitur fermentum velit orci, quis pharetra diam ullamcorper tempor. 
+                        {/* It's all about the music.  */}
+                        Przede wszystkim Muzyki!
+                        Fuzzzapp powstał z pasji do grania i tworzenia.
                     </p>
                     <div className={styles.halves__columns}>
-                        Nullam id magna vitae arcu dapibus congue vel at diam. 
-                        Curabitur fermentum velit orci, quis pharetra diam ullamcorper tempor. 
-                        Suspendisse accumsan non felis venenatis elementum. 
-                        Nullam id magna vitae arcu dapibus congue vel at diam. 
+                        Dlatego chciałbym Cię zaprosić do posłuchania dźwięków spod mojej ręki i ...
+                        dasd jhdaskjh dasdjkdhaskjh dasdaskjhasdas  askjdhkask dasdjkh asd jkhas h .
+                        Miłej zabawy!
                     </div>
                 </div>
                 <div className={`${styles.halves__box} ${styles.halves__box_img}`}>

@@ -38,7 +38,7 @@ const About = () => {
     return (
         <div className={styles.halves}>
 
-            <h2 className={styles.halves__title}><span>01.</span> About Fuzzzapp</h2>
+            <h2 className={styles.halves__title}><span>01.</span> About</h2>
             <div className={styles.halves__wrapper}>
                 <div className={`${styles.halves__box}`}>
                     <p className={styles.halves__head}>

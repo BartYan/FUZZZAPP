@@ -12,6 +12,7 @@ import About from '../components/layout/about';
 import Newsletter from '../components/layout/newsletter';
 import Apps from '../components/layout/apps';
 import More from '../components/layout/more';
+import Store from '../components/layout/store';
 import Footer from '../components/layout/footer';
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
         <Apps/>
         <Newsletter/>
         <More/>
+        <Store/>
         <Footer />
       </main>
 

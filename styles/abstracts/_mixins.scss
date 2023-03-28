@@ -73,6 +73,17 @@
     font-size: 2.1rem;
     color: $color;
 }
+@mixin section-title {
+    width: 50%;
+    font-size: 2rem;
+    font-weight: 400;
+    border-bottom: 2px solid $black;
+    font-weight: 400;
+}
+@mixin section-head {
+    align-items: flex-start;
+    font-size: 3rem;
+}
 @mixin section-desc {
     font-size: 1.5rem;
     margin: 2rem 1rem 0 0;
