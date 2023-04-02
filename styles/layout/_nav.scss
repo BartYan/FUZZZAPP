@@ -19,16 +19,19 @@
         text-align: right;
     }
     &__chordzapp {
-        margin-top: -12px;
         @include nav-item;
+        margin-top: -12px;
+        font-family: $write-font;
         &:hover { @include nav-item-hover($red) }
     }
     &__blog {
         @include nav-item;
+        font-family: $write-font;
         &:hover { @include nav-item-hover($yellow) }
     }
     &__teacher {
         @include nav-item;
+        font-family: $write-font;
         &:hover { @include nav-item-hover($purple) }
     }
 

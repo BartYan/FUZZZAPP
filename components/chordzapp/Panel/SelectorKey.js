@@ -48,7 +48,7 @@ export default function SelectorKey(props) {
                 newChordSounds.push(newScale[el]);
             });
 
-            console.log(' newChordSounds', newChordSounds);
+            // console.log(' newChordSounds', newChordSounds);
             dispatch(setCurrChord(newChordSounds));
         }
     }
@@ -90,7 +90,7 @@ export default function SelectorKey(props) {
                                     <li
                                         className={styles.panel__selected_li}
                                         onClick={() => handleKey(note)}
-                                        key={note}
+                                        key={index}
                                     >
                                         {note}
                                     </li>

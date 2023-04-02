@@ -17,7 +17,7 @@ export default function Fret(props) {
   } = useChords();
 
   useEffect(()=> {
-    console.log(soundCheck(E))
+    // console.log(soundCheck(E))
   }, [E, A, D, G, B, chordSoundsRedux]);
 
   return (

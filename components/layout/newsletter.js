@@ -41,10 +41,10 @@ const Newsletter = () => {
             <h2 className={styles.halves__title}><span>02.</span> Newsletter</h2>
             <div className={styles.halves__wrapper}>
                 <div className={`${styles.halves__box}`}>
-                    <p className={styles.halves__head}>
+                    <h3 className={styles.halves__head}>
                         Dodatkowe materiały, nowości i zmiany w aplikacjach, szkolenia,
                         merch oraz ciekawe artykuły! 
-                    </p>
+                    </h3>
                     <p className={styles.halves__desc}>
                         O tym wszystkim dowiesz się z naszego newslettera.
                         Dzięki niemu będziesz na bieząco i skorzystasz z materiałów oraz aplikacji które Cię interesują:

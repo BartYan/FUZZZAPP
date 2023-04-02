@@ -25,7 +25,7 @@ export async function getStaticPaths() {
     }
     const res = await fetch(`http://localhost:1337/graphql`, fetchParams);
     const posts = await res.json();
-    console.log('posts', posts);
+    // console.log('posts', posts);
     const paths = posts.data.blogposts.data.map((post)=>{
         return { params: { slug: post.attributes.slug }}
     })
@@ -70,7 +70,7 @@ export async function getStaticProps(params) {
 }
 
 export default function Post({title, blogbody}) {
-console.log(title, blogbody)
+// console.log(title, blogbody)
     return (
         <Transition>
             <div>

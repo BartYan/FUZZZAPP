@@ -1,30 +1,56 @@
-.asides {
+.aside__container {
+    position: fixed;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3%;
+    background-color: $white;
+}
+.aside {
+    // margin-top: -5rem;
+    &__top {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+    &__text {
+        font-family: $main-font;
+        
+        &_title {
+            font-family: $main-font;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        &_desc {
+            font-family: $desc-font;
+            margin: 2rem 0 4rem;
+            letter-spacing: 1px;
+        }
+    }
+    &__nav {
+        font-family: $desc-font;
+        text-transform: capitalize;
+        &_list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        &_item {
+            margin: 0.5rem 0;
+            
+        }
+    }
+}
+
+.apps {
     position: relative;
     display: flex;
     width: 100%;
-
-    &__nav {
-        position: fixed;
-        left: 0;
-        width: 20%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        // align-items: center;
-        background-color: $white;
-    }
-
     &__content {
         position: absolute;
         right: 0;
         width: 80%;
-
-    }
-
-    &__logo {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
     }
 }

@@ -8,11 +8,11 @@ const More = () => {
             <h2 className={styles.halves__title}><span>03.</span> Music</h2>
             <div className={styles.halves__wrapper}>
                 <div className={`${styles.halves__box}`}>
-                    <p className={styles.halves__head}>
+                    <h3 className={styles.halves__head}>
                         {/* It's all about the music.  */}
                         Przede wszystkim Muzyki!
                         Fuzzzapp powstał z pasji do grania i tworzenia.
-                    </p>
+                    </h3>
                     <div className={styles.halves__columns}>
                         Dlatego chciałbym Cię zaprosić do posłuchania dźwięków spod mojej ręki i ...
                         dasd jhdaskjh dasdjkdhaskjh dasdaskjhasdas  askjdhkask dasdjkh asd jkhas h .

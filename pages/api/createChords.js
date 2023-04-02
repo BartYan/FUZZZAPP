@@ -13,7 +13,7 @@ const createChords = async (req, res) => {
         if (findChordsRecords.length !== 0) {
             const records = getMinifiedRecords(findChordsRecords)
             res.json(records)
-            console.log('records', records)
+            // console.log('records', records)
         } else {
             res.json({ message: 'nothing' })
         }

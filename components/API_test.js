@@ -37,7 +37,7 @@ const chordFunction = (chord, scale) => {
 // chordFunction(minor, chromDescending)
 chordFunction(chordsDict.major, chromAscending)
 
-console.log(newChord)
+// console.log(newChord)
 
 let chordInput = document.getElementById('chords')
 let keyInput = document.getElementById('key')
@@ -49,5 +49,5 @@ chordInput.addEventListener("input", function(){
     } else {
         chordFunction(chordsDict.value, chromDescending)
     }
-    console.log(newChord)
+    // console.log(newChord)
 });

@@ -85,6 +85,7 @@
     font-size: 3rem;
 }
 @mixin section-desc {
+    font-family: $desc-font;
     font-size: 1.5rem;
     margin: 2rem 1rem 0 0;
 }

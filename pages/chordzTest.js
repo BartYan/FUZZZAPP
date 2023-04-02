@@ -22,9 +22,9 @@ export default function ChordzTest() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className={styles.asides}>
+            <div className={styles.apps}>
                 <AsideNav />
-                <div className={styles.asides__content}>
+                <div className={styles.apps__content}>
                     TS2
                 </div>
             </div>

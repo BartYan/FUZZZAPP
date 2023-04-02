@@ -11,7 +11,7 @@ const createScales = async (req, res) => {
         if (findScalesRecords.length !== 0) {
             const records = getMinifiedRecords(findScalesRecords)
             res.json(records)
-            console.log('records', records)
+            // console.log('records', records)
         } else {
             res.json({message: 'nothing'});
         }

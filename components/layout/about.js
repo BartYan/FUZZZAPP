@@ -41,10 +41,10 @@ const About = () => {
             <h2 className={styles.halves__title}><span>01.</span> About</h2>
             <div className={styles.halves__wrapper}>
                 <div className={`${styles.halves__box}`}>
-                    <p className={styles.halves__head}>
+                    <h3 className={styles.halves__head}>
                         Hello, I'm Bart & Welcome to Fuzzzapp! 
                         Place for music and guitar lovers who, ullamcorper nibh vitae, ultrices metus. 
-                    </p>
+                    </h3>
                     <div className={styles.halves__columns}>
                         <p className={styles.halves__column}>
                             Nullam id magna vitae arcu dapibus congue vel at diam. 

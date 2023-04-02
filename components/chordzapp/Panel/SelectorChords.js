@@ -79,7 +79,7 @@ export default function SelectorChords(props) {
                                     <li
                                         className={styles.panel__selected_li}
                                         onClick={() => handleChord(chord)}
-                                        key={chord.id}
+                                        key={index}
                                     >
                                         {chord.name}
                                         {`(${chord.intervals.join(', ')})`}
