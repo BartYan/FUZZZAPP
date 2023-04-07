@@ -16,19 +16,19 @@ const AsideNav = () => {
         },
         {
           index: '1',
-          href: '/chordzTest',
-          title: 'chordz lessons',
+          href: '/chordzLessons',
+          title: 'lessons',
           textcolor: '#91D5DD',
         },
         {
           index: '2',
-          href: '/chordzTest2',
+          href: '/chordzFretboard',
           title: 'fretboard',
           textcolor: '#ff7979',
         },
         {
           index: '3',
-          href: '/chordzTest3',
+          href: '/chordzAiTeacher',
           title: 'ai teacher',
           textcolor: '#ffcb70',
         },

@@ -14,7 +14,6 @@ const Explorer = () => {
             <nav className={!explore ? styles.explorer : styles.explorer__expand}>
 
                 <div className={styles.explorer__menu}>
-                    {/* <p>Alright! Go closer to our Fuzzzapp World. Read the menu and choose your option </p> */}
                     <ul className={styles.explorer__menu_list}>
                         <Link href={`/`}>
                             <a>

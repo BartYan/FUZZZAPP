@@ -1,23 +1,19 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 
-import Nav from '../components/nav/nav';
-import AsideNav from '../components/nav/asideNav';
-import Explorer from '../components/nav/explorer'
-import useChords from './hooks/useChords'
-import Panel from '../components/chordzapp/Panel/Panel'
-import Guitar from '../components/chordzapp/Guitar/Guitar'
 
-export default function ChordzTest() {
-    const { chords, scales } = useChords()
+import AsideNav from '../components/nav/asideNav';
+import Transition from '../components/transition';
+
+export default function ChordzFretboard() {
 
     return (
-        <>
+        <Transition>
             <Head>
                 <title>Chordzapp - chords learning tool</title>
                 <meta
                     name="description"
-                    content="Chordzapp - test1"
+                    content="Chordzapp - fretboard"
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -25,9 +21,9 @@ export default function ChordzTest() {
             <div className={styles.apps}>
                 <AsideNav />
                 <div className={styles.apps__content}>
-                    TS2
+                    Chordz Fretboard
                 </div>
             </div>
-        </>
+        </Transition>
     )
 }
