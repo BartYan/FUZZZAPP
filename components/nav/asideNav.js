@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import styles from '../../styles/Home.module.scss';
 
-const AsideNav = () => {
+const AsideNav = ({title, desc}) => {
 
     const router = useRouter();
 
@@ -16,19 +16,19 @@ const AsideNav = () => {
         },
         {
           index: '1',
-          href: '/chordzLessons',
-          title: 'lessons',
+          href: '/chordzapp/chordzLessons',
+          title: 'chords lessons',
           textcolor: '#91D5DD',
         },
         {
           index: '2',
-          href: '/chordzFretboard',
-          title: 'fretboard',
+          href: '/chordzapp/chordzFretboard',
+          title: 'chords fretboard',
           textcolor: '#ff7979',
         },
         {
           index: '3',
-          href: '/chordzAiTeacher',
+          href: '/chordzapp/chordzAiTeacher',
           title: 'ai teacher',
           textcolor: '#ffcb70',
         },
@@ -42,15 +42,10 @@ const AsideNav = () => {
                             <img className={styles.nav__logo} src="/assets/images/LOGO.svg" alt="Fuzzzapp Logo" width={100} height={100}/>
                         </a>
                     </Link>
-                    {/* <h1>Chordzzapp</h1> */}
                 </div>
                 <div className={styles.aside__text}>
-                    <h1 className={styles.aside__text_title}>Chordzapp</h1>
-                    <p className={styles.aside__text_desc}>
-                        Witaj w fuzzapowym miejscu poświęconym nauce grania akordów.
-                        Znajdziesz tutaj kilka ciekawych narzędzi które
-                        pomogą Ci zrozumieć to zagadnienie:
-                    </p>
+                    <h1 className={styles.aside__text_title}>{title}</h1>
+                    <p className={styles.aside__text_desc}>{desc}</p>
                     <hr></hr>
                 </div>
                 <nav className={styles.aside__nav}>

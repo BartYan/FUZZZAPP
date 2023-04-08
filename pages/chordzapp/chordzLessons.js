@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import styles from '../../styles/Home.module.scss'
 
-import AsideNav from '../components/nav/asideNav';
-import Transition from '../components/transition';
+import useLang from '../hooks/useLang';
+import AsideNav from '../../components/nav/asideNav';
+import Transition from '../../components/transition';
 
 export default function ChordzLessons() {
 
@@ -18,7 +19,10 @@ export default function ChordzLessons() {
             </Head>
 
             <div className={styles.apps}>
-                <AsideNav />
+                <AsideNav 
+                    title={useLang('chordzappLessonsTitle')}
+                    desc={useLang('chordzappLessonsDesc')}
+                />
                 <div className={styles.apps__content}>
                     chordz lessons
                 </div>

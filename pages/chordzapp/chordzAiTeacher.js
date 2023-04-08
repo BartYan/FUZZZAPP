@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import styles from '../../styles/Home.module.scss'
 
-import AsideNav from '../components/nav/asideNav';
-import Transition from '../components/transition';
+import useLang from '../hooks/useLang';
+import AsideNav from '../../components/nav/asideNav';
+import Transition from '../../components/transition';
 
 // export async function getStaticProps(context) {
 //     const fetchParams = {
@@ -150,7 +151,10 @@ export default function ChordzAiTeacher() {
             </Head>
 
             <div className={styles.apps}>
-                <AsideNav />
+                <AsideNav
+                    title={useLang('chordzappAiTitle')}
+                    desc={useLang('chordzappAiDesc')}
+                />
                 <div className={styles.apps__content}>
                     Ai teacher
                     {/* <form action="http://localhost:8080/api/predict" method="post">

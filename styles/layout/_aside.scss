@@ -52,5 +52,65 @@
         position: absolute;
         right: 0;
         width: 80%;
+        padding: 4rem 0;
+
+        .halves__wrapper {
+            padding: 3rem 0;
+            justify-content: space-between;
+        }
+        .halves__box {
+            width: 70%;
+            padding: 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .halves__title {
+            transition: all 0.2s ease-in-out;
+        }
+        .halves__box_img {
+            width: 10%;
+        }
+        .halves__desc {
+            margin: 0;
+            transition: all 0.2s ease-in-out;
+        }
+        .halves__image {
+            width: 100%;
+            svg {
+                height: fit-content;
+            }
+        }
+        .hoverMenuItems {
+            // transition: all 0.3s ease-in-out;
+            &:hover {
+                
+                
+                
+            }
+        }
+    }
+}
+.red__hover {
+    &:hover {
+        .halves__title {
+            color: $red;
+            border-bottom: 2px solid$red;
+        }
+    }
+}
+.blue__hover {
+    &:hover {
+        .halves__title {
+            color: $blue;
+            border-bottom: 2px solid $blue;
+        }
+    }
+}
+.yellow__hover {
+    &:hover {
+        .halves__title {
+            color: $yellow;
+            border-bottom: 2px solid $yellow;
+        }
     }
 }

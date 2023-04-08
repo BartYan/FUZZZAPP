@@ -75,10 +75,10 @@
 }
 @mixin section-title {
     width: 50%;
+    font-family: Helvetica Neue, sans-serif;
     font-size: 2rem;
     font-weight: 400;
     border-bottom: 2px solid $black;
-    font-weight: 400;
 }
 @mixin section-head {
     align-items: flex-start;
