@@ -1,4 +1,6 @@
 const pl = {
+
+    // CHORDZAPP 
     chordzappTitle: 'Chordzapp',
     chordzappDesc: 'Witaj w fuzzapowym miejscu poświęconym nauce grania akordów. Znajdziesz tutaj kilka ciekawych narzędzi które pomogą Ci zrozumieć to zagadnienie:',
     chordzappLessonsTitle: 'Chords Lessons',

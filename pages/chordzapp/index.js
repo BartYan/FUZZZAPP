@@ -8,7 +8,6 @@ import useLang from '../hooks/useLang';
 import Transition from '../../components/transition';
 import AsideNav from '../../components/nav/asideNav';
 import {Peace} from '../../components/layout/images/peace'
-import { useEffect } from 'react';
 
 const Chordzapp = () => {
 
