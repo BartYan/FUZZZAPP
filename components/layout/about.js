@@ -60,8 +60,8 @@ const About = () => {
                         </p>
                     </div>
                     <div className={styles.halves__buttons}>
-                        <a className={styles.cta}>Read blog</a>
-                        <a className={styles.cta}>Watch vlog</a>
+                        <a href='/' className={styles.cta}>Read blog</a>
+                        <a href='/' className={styles.cta}>Watch vlog</a>
                     </div>
                 </div>
                 <div ref={peace} className={`${styles.halves__box} ${styles.halves__box_img}`}>
