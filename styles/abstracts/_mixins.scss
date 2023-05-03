@@ -61,16 +61,17 @@
 }
 
 @mixin nav-item {
-    height: 2.5rem;
-    font-size: 2rem;
-    font-weight: bold;
+    font-family: $main-font;
+    font-size: 1rem;
+    text-transform: capitalize;
     transition: all 0.3s ease-in-out;
+
     @media (max-width: $tablet-lg) {
         display: none;
     }
 }
 @mixin nav-item-hover($color) {
-    font-size: 2.1rem;
+    font-size: 1.05rem;
     color: $color;
 }
 @mixin section-title {

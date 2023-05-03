@@ -22,6 +22,20 @@ const More = () => {
                 <div className={`${styles.halves__box} ${styles.halves__box_img}`}>
                     <div className={styles.halves__image}>
                         <img src="assets/images/photos/jaTest.jpg" className={`${styles.halves__column} ${styles.halves__photo}`}/>
+                        <div className={styles.halves__mediabox}>
+                            <a href='https://www.youtube.com/watch?v=TwdBGV0DM14&ab_channel=BartYan%26SzymonKu%C5%9Bnierz' target='_blank'>
+                                <div className={`${styles.halves__media} ${styles.halves__media_top}`}>
+                                    <img src="assets/images/bent-arrow.svg" className={styles.halves__media_arrows}/>
+                                    <img src="assets/images/photos/bluejay.jpg" className={styles.halves__media_image}/>
+                                </div>
+                            </a>
+                            <a href='https://www.youtube.com/watch?v=6yrV2_Z-Z8E&list=RD6yrV2_Z-Z8E&start_radio=1&ab_channel=BartYan%26WojtekCzyrnek' target='_blank'>
+                                <div className={`${styles.halves__media} ${styles.halves__media_bottom}`}>
+                                    <img src="assets/images/photos/french2.png" className={styles.halves__media_image}/>
+                                    <img src="assets/images/bent-arrow.svg" className={styles.halves__media_arrows}/>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

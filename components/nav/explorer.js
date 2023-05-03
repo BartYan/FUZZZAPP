@@ -10,6 +10,9 @@ const Explorer = () => {
             <div className={styles.explorer__head} onClick={handleExplore}>
                 <span className={styles.explorer__title}>EXPLORER</span>
                 <img className={styles.explorer__arrow} src="/assets/images/Arrowshort.svg" alt="explore more arrow" width={60} height={60}/>
+                <div className={styles.explorer__cta}>
+                    <p className={styles.explorer__cta_txt}>(Kind of Menu)</p>
+                </div>
             </div>
             <nav className={!explore ? styles.explorer : styles.explorer__expand}>
 

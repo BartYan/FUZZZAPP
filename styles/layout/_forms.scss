@@ -8,6 +8,7 @@
 }
 
 .newsletter__form {
+    position: relative;
     margin: 3rem 0;
     width: 100%;
     z-index: 1!important;
@@ -43,10 +44,7 @@
             max-width: 300px!important;
             &:hover {
                 animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both!important;
-                transform: translate3d(0, 0, 0)!important;
-                perspective: 1000px!important;
             }
         }
     }
-    
 }

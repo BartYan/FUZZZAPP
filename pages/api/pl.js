@@ -1,5 +1,10 @@
 const pl = {
 
+    // HOMEPAGE
+    fuzz: 'fuzz',
+    zapp: 'zapp',
+    fuzzzappTitle: 'fuzzzapp',
+
     // CHORDZAPP 
     chordzappTitle: 'Chordzapp',
     chordzappDesc: 'Witaj w fuzzapowym miejscu poświęconym nauce grania akordów. Znajdziesz tutaj kilka ciekawych narzędzi które pomogą Ci zrozumieć to zagadnienie:',

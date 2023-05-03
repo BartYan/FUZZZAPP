@@ -17,6 +17,7 @@
 .hero {
     width: 70%;
     height: 100vh;
+    max-height: 1200px;
     max-width: $laptop-lg;
     margin: 0 auto;
     display: flex;
@@ -29,6 +30,8 @@
     }
     &__header {
         width: 45%;
+        animation-name: fadeIn;
+        animation-duration: $duration-normal;
         @media (max-width: $tablet-lg) {
             width: 100%;
         }
@@ -61,7 +64,11 @@
         &_desc {  font-family: $desc-font; text-align: justify; font-size: 1.5rem; margin: 2rem 0 0 0;}
     }
     &__image {
-        width: 50%;
+        width: 55%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @media (max-width: $tablet-lg) {
             width: 80%;
             margin: 3rem auto;
@@ -82,7 +89,9 @@
 }
 
 .halves {
+    position: relative;
     padding: 0 5%;
+    z-index: 10;
     
     &__title {
         @include section-title;
@@ -98,6 +107,7 @@
         padding: 4rem 0;
     }
     &__box {
+        position: relative;
         width:50%;
         display: flex;
         align-items: center;
@@ -140,9 +150,45 @@
             margin-left: 1rem;
         }
     }
+
+    &__mediabox {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+    }
+    &__media {
+        position: absolute;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+        }
+        &_image { max-width: 200px;}
+
+    }
+    &__media_top {
+        top: 0;
+        right: -20%;
+        margin-top: -6rem;
+        .halves__media_arrows {
+            width: 80px;
+            transform: rotate(45deg);
+            margin: 0 0 -2rem;
+        }
+    }
+    &__media_bottom {
+        display: flex;
+        align-items: flex-start;
+        bottom: 0;
+        left: -50%;
+        margin-top: 2rem;
+        .halves__media_arrows {
+            width: 100px;
+            transform: rotate(220deg);
+            margin: -2rem 0 0;
+        }
+    }
 }
 .cards {
-    // padding: 0 5%;
     &__title {
         @include section-title;
     }
@@ -160,42 +206,31 @@
             position: relative;
             width: 30%;
             height: fit-content;
+            padding: 2rem 2rem 4rem;
             overflow: hidden;
+            border: 0.3rem solid $black;
+            transition: transform 0.3s ease-in-out;
+            -webkit-box-shadow: 8px 8px 0px 1px $black;
+            -moz-box-shadow: 8px 8px 0px 1px $black;
+            box-shadow: 8px 8px 0px 1px $black;
+            transform: rotate(5deg);
             cursor: pointer;
-            // border-radius: $radius-small;
+            
             &:hover {
-                .cards__gallery_apla {
-                    @include hover-image;
-                }
+                transform: rotate(0);
             }
-        }  
+        }
         &_photo {
             width: 100%;
+            object-fit: cover;
+            border: 0.3rem solid $black;
         }
-        &_apla {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            // justify-content: center;
-            padding: 2rem;
-            transition: transform 0.2s ease-in-out,;
-            transform: translate(-100%, 0);
-            font-size: 1.5rem;
-            h5 {
-                font-weight: 500;
-                border-bottom: 1px solid $black;
-                text-transform: capitalize;
-                margin-bottom: 2rem;
-            }
-            p {
-                font-family: $desc-font;
-            }
+        &_txt {
+            padding: 1rem 0 0;
+            text-transform: uppercase;
         }
     }
+
     &__box {
         width:50%;
         display: flex;
@@ -280,5 +315,23 @@
         display: flex;
         justify-content: flex-end;
         margin: 2rem 0 0;
+    }
+}
+
+.taste_group {
+    @include section-head;
+
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    text-align: center;
+    p {
+        width: 80%;
+    }
+    q {
+        font-style: italic;
     }
 }

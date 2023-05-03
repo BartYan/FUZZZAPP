@@ -15,24 +15,15 @@ const Cards = () => {
                 <div className={styles.cards__gallery}>
                     <div className={`${styles.cards__gallery_item}`}>
                         <img src="assets/images/photos/test.jpg" className={`${styles.cards__gallery_photo}`}/>
-                        <div className={`${styles.cards__gallery_apla} ${styles.bg_red}`}>
-                            <h5>fretboard</h5>
-                            <p>uspendisse accumsan non felis venenatis elementum.Nullam id magna vitae arcu dapibus congue vel at diam.</p>
-                        </div>
+                        <p className={styles.cards__gallery_txt}>#chords fretboard</p>
                     </div>
                     <div className={`${styles.cards__gallery_item}`}>
                         <img src="assets/images/photos/test.jpg" className={`${styles.cards__gallery_photo}`}/>
-                        <div className={`${styles.cards__gallery_apla} ${styles.bg_purple}`}>
-                            <h5>Ai Teacher</h5>
-                            <p>uspendisse accumsan non felis venenatis elementum.Nullam id magna vitae arcu dapibus congue vel at diam.</p>
-                        </div>
+                        <p className={styles.cards__gallery_txt}>#chords lessons</p>
                     </div>
                     <div className={`${styles.cards__gallery_item}`}>
                         <img src="assets/images/photos/test.jpg" className={`${styles.cards__gallery_photo}`}/>
-                        <div className={`${styles.cards__gallery_apla} ${styles.bg_yellow}`}>
-                            <h5>Chords Lessons</h5>
-                            <p>uspendisse accumsan non felis venenatis elementum.Nullam id magna vitae arcu dapibus congue vel at diam.</p>
-                        </div>
+                        <p className={styles.cards__gallery_txt}>#ai virtual teacher</p>
                     </div>
                 </div>
             </article>

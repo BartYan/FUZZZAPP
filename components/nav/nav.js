@@ -11,21 +11,38 @@ const Nav = () => {
                 </a>
             </Link>
             <div className={styles.nav__items}>
+                <p className={styles.nav__items_title}>shortcuts</p>
                 <Link href={`/chordzapp`}>
-                    <a>
-                        <p className={styles.nav__chordzapp}>CHORDZAPP</p>
+                    <a className={`${styles.nav__items_link} ${styles.nav__items_link_one}`}>
+                        <p className={styles.nav__items_link_text}>chordzapp</p>
+                        <img className={styles.nav__items_link_img} src="/assets/images/arrow_forward.svg" alt="explore more arrow" width={60} height={60}/>
                     </a>
                 </Link>
                 <Link href={`/blog`}>
-                    <a>
-                        <p className={styles.nav__blog}>BLOG</p>
+                    <a className={`${styles.nav__items_link} ${styles.nav__items_link_two}`}>
+                        <p className={styles.nav__items_link_text}>blog</p>
+                        <img className={styles.nav__items_link_img} src="/assets/images/arrow_forward.svg" alt="explore more arrow" width={60} height={60}/>
                     </a>
                 </Link>
                 <Link href={`/virtual-teacher`}>
-                    <a>
-                        <p className={styles.nav__teacher}>AI TEACHER</p>
+                    <a className={`${styles.nav__items_link} ${styles.nav__items_link_three}`}>
+                        <p className={styles.nav__items_link_text}>ai teacher</p>
+                        <img className={styles.nav__items_link_img} src="/assets/images/arrow_forward.svg" alt="explore more arrow" width={60} height={60}/>
                     </a>
                 </Link>
+                <div className={styles.nav__items_socials}>
+                    <a href="/">
+                        <img className={styles.nav__items_socials_store} src="/assets/images/store-logo.png" alt="taste with it store" width={60} height={60}/>
+                    </a>
+                    <div>
+                        <a href="/">
+                            <img className={styles.nav__items_socials_icon} src="/assets/images/yt-logo.svg" alt="fuzzzapp youtube" width={60} height={60}/>
+                        </a>
+                        <a href="/">
+                            <img className={styles.nav__items_socials_icon} src="/assets/images/instagram-logo.svg" alt="fuzzzapp insta" width={60} height={60}/>
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
     )
