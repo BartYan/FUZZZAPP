@@ -66,7 +66,7 @@ const Footer = () => {
                             The sky's alight with a guitar bite,
                             Heads will roll and rock tonight,
                             For those about to rock,
-                            we salute you
+                            We Salute You
                         </q> 
                         - AC/DC
                     </p>
