@@ -26,6 +26,7 @@
         border-radius: 0 0 $radius-small $radius-small;
         animation-name: slideInFromTop;
         animation-duration: $duration-normal;
+        z-index: 999;
 
         &_title {
             width: 100%;

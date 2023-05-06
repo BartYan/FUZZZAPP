@@ -16,6 +16,7 @@
 @import 'pages/home';
 @import 'pages/chordzapp';
 @import 'pages/blog';
+@import 'pages/post';
 
 .main {
   position: relative;
@@ -28,3 +29,8 @@
   font-family: $main-font;
   color: $black;
 }
+
+.bg_grey { background: $grey; }
+.bg_green { background: $green; }
+.bg_purple { background: $purple; }
+.bg_red { background: $red; }

@@ -94,6 +94,33 @@
     transform: translate(0, 0);
 }
 
+@mixin insta-card {
+    position: relative;
+    width: 30%;
+    height: fit-content;
+    padding: 2rem 2rem 4rem;
+    overflow: hidden;
+    border: 0.3rem solid $black;
+    transition: transform 0.3s ease-in-out;
+    -webkit-box-shadow: 8px 8px 0px 1px $black;
+    -moz-box-shadow: 8px 8px 0px 1px $black;
+    box-shadow: 8px 8px 0px 1px $black;
+    transform: rotate(5deg);
+    // background-color: $white;
+    background-color: $bg-color;
+    cursor: pointer;
+    
+    &:hover {
+        transform: rotate(0);
+    }
+}
+
+@mixin tag {
+    border-radius: $radius-xs;
+    padding: 0.2rem 0.5rem;
+    color: $white;
+}
+
 @mixin shaking {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);

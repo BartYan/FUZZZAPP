@@ -1,0 +1,41 @@
+.post {
+    position: relative;
+    width: 80%;
+    min-height: 100vh;
+    padding: 8rem 0;
+
+    &__title {
+        @include section-title;
+        margin-bottom: 2rem;
+    }
+
+    &__categories {
+        display: flex;
+        margin: 0 0 1rem;
+        span {
+            @include tag;
+
+            margin: 0 10px 0 0;
+        }
+    }
+
+    &__body {
+        width: 80%;
+        font-size: 1.5rem;
+
+        h2,h3,h4,h5 {
+            margin: 2rem 0;
+        }
+        p {
+            margin: 1rem 0;
+        }
+
+        ul, ol {
+            padding: 0 0 0 3rem;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

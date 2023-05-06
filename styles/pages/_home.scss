@@ -203,22 +203,7 @@
         justify-content: space-between;
         margin: 6rem 0;
         &_item {
-            position: relative;
-            width: 30%;
-            height: fit-content;
-            padding: 2rem 2rem 4rem;
-            overflow: hidden;
-            border: 0.3rem solid $black;
-            transition: transform 0.3s ease-in-out;
-            -webkit-box-shadow: 8px 8px 0px 1px $black;
-            -moz-box-shadow: 8px 8px 0px 1px $black;
-            box-shadow: 8px 8px 0px 1px $black;
-            transform: rotate(5deg);
-            cursor: pointer;
-            
-            &:hover {
-                transform: rotate(0);
-            }
+            @include insta-card;
         }
         &_photo {
             width: 100%;
