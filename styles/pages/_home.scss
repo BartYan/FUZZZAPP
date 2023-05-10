@@ -16,7 +16,8 @@
 
 .hero {
     width: 70%;
-    height: 100vh;
+    height: 50rem;
+    min-height: 100vh;
     max-height: 1200px;
     max-width: $laptop-lg;
     margin: 0 auto;
@@ -25,6 +26,7 @@
     align-items: center;
     @media (max-width: $tablet-lg) {
         width: 90%;
+        height: 100%;
         margin: 4rem auto 0;
         flex-direction: column-reverse;
     }
@@ -45,6 +47,9 @@
             margin: 0 auto;
             @media (max-width: 1600px) {
                 font-size: 5rem;
+            }
+            @media (max-width: $laptop) {
+                font-size: 3rem;
             }
             @media (max-width: $phone) {
                 font-size: $font-h-small;

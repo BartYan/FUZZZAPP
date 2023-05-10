@@ -31,12 +31,12 @@ const Home = () => {
         <Nav/>
         <Explorer/>
         <Hero/>
-        <About/>
+        {/* <About/>
         <Cards/>
         <Newsletter/>
         <More/>
         <Store/>
-        <Footer />
+        <Footer /> */}
       </main>
 
     </Transition>

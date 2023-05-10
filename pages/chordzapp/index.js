@@ -85,7 +85,25 @@ const Chordzapp = () => {
                                 </div>
                             </a>
                         </Link>
-                    
+                        <Link href={'/chordzapp/chordzGame'}>
+                            <a className={styles.blue__hover}>
+                                <div className={styles.halves}>
+                                    <h2 className={styles.halves__title}><span>01.</span> game</h2>
+                                    <div className={styles.halves__wrapper}>
+                                        <div className={styles.halves__box}>
+                                            <p className={styles.halves__desc}>
+                                                game
+                                            </p>
+                                        </div>
+                                        <div className={`${styles.halves__box} ${styles.halves__box_img}`}>
+                                            <div className={styles.halves__image}>
+                                                <Peace />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
                 </div>
             </div>
         </Transition>
