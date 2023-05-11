@@ -1,24 +1,8 @@
-
-.wrapper {
-    width: 100%;
-    padding: 0 5%;
-    margin: 4rem auto;
-}
-.article {
-    width: 100%;
-    padding: 0 6rem;
-    margin: 6rem auto;
-}
-.bg_red {background-color: $red;}
-.bg_yellow {background-color: $yellow;}
-.bg_purple {background-color: $purple;}
-.bg_blue {background-color: $blue;}
-
 .hero {
     width: 70%;
-    height: 50rem;
-    min-height: 100vh;
-    max-height: 1200px;
+    height: 100vh;
+    min-height: 800px;
+    max-height: 1000px;
     max-width: $laptop-lg;
     margin: 0 auto;
     display: flex;
@@ -27,7 +11,9 @@
     @media (max-width: $tablet-lg) {
         width: 90%;
         height: 100%;
-        margin: 4rem auto 0;
+        min-height: fit-content;
+        max-height: fit-content;
+        margin: 6rem auto 0;
         flex-direction: column-reverse;
     }
     &__header {
@@ -49,10 +35,13 @@
                 font-size: 5rem;
             }
             @media (max-width: $laptop) {
-                font-size: 3rem;
+                font-size: 4rem;
             }
             @media (max-width: $phone) {
-                font-size: $font-h-small;
+                font-size: 3.3rem;
+            }
+            @media (max-width: 290px) {
+                font-size: 2rem;
             }
             span {
                 color: $yellow;
@@ -61,12 +50,24 @@
         &_subtitle {
             text-align: center; 
             letter-spacing:17px;
-            @media (max-width: $phone) {
-                font-size: $font-subTitle-small;
+            @media (max-width: 1600px) {
+                font-size: 2rem;
+            }
+            @media (max-width: $laptop) {
+                font-size: 1rem;
+                letter-spacing:9px;
             }
         }
         // &_desc {font-family: Agrandir; text-align: justify; font-size: 1.5rem; margin: 2rem 0 0 0;}
-        &_desc {  font-family: $desc-font; text-align: justify; font-size: 1.5rem; margin: 2rem 0 0 0;}
+        &_desc {  
+            font-family: $desc-font; 
+            text-align: justify; 
+            font-size: 1.5rem; 
+            margin: 2rem 0 0 0;
+            @media (max-width: $laptop) {
+                font-size: 1rem;
+            }
+        }
     }
     &__image {
         width: 55%;

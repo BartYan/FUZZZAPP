@@ -17,6 +17,10 @@ const Explorer = () => {
             <nav className={!explore ? styles.explorer : styles.explorer__expand}>
 
                 <div className={styles.explorer__menu}>
+                    <div className={styles.explorer__head_les} onClick={handleExplore}>
+                        <span className={styles.explorer__title_les}>LES</span>
+                        <img className={styles.explorer__arrow_les} src="/assets/images/Arrowshort-black.svg" alt="explore more arrow" width={60} height={60}/>
+                    </div>
                     <ul className={styles.explorer__menu_list}>
                         <Link href={`/`}>
                             <a>
@@ -86,9 +90,30 @@ const Explorer = () => {
                             </a>
                         </Link>
                     </ul>
-                    <div className={styles.explorer__head_les} onClick={handleExplore}>
-                        <span className={styles.explorer__title_les}>LES</span>
-                        <img className={styles.explorer__arrow_les} src="/assets/images/Arrowshort-black.svg" alt="explore more arrow" width={60} height={60}/>
+                    <div className={styles.explorer__menu_more}>
+                        <p>More from us:</p>
+                        <ul>
+                            <a>
+                                <li>
+                                    <img src="/assets/images/wd-logo.svg" alt="taste with it logo" width={60} height={60}/>
+                                </li>
+                            </a>
+                            <a>
+                                <li>
+                                    <img src="/assets/images/store-logo.png" alt="taste with it store logo" width={60} height={60}/>
+                                </li>
+                            </a>
+                            <a>
+                                <li>
+                                    <img src="/assets/images/yt-logo.svg" alt="fuzzzapp youtube" width={60} height={60}/>
+                                </li>
+                            </a>
+                            <a>
+                                <li>
+                                    <img src="/assets/images/instagram-logo.svg" alt="fuzzzapp insta" width={60} height={60}/>
+                                </li>
+                            </a>
+                        </ul>
                     </div>
                 </div>
             </nav>

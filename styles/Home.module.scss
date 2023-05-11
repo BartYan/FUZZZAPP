@@ -30,6 +30,20 @@
   color: $black;
 }
 
+
+.wrapper {
+  width: 100%;
+  padding: 0 5%;
+  margin: 4rem auto;
+}
+.article {
+  width: 100%;
+  padding: 0 6rem;
+  margin: 6rem auto;
+}
+
+.bg_yellow {background: $yellow;}
+.bg_blue {background: $blue;}
 .bg_grey { background: $grey; }
 .bg_green { background: $green; }
 .bg_purple { background: $purple; }

@@ -8,15 +8,18 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 12px;
+
     &__logo {
         transform: none;
         transition: all 0.3s ease-in-out;
         animation-name: fadeIn;
         animation-duration: $duration-normal;
     }
+    
     &__logo:hover {
         transform: scale(1.1);
     }
+
     &__items {
         position: absolute;
         top: 0;
@@ -28,9 +31,12 @@
         animation-duration: $duration-normal;
         z-index: 999;
 
+        @media (max-width: $tablet-lg) {
+           display: none;
+        }
+
         &_title {
             width: 100%;
-            // border-bottom: 1px solid $grey;
             font-family: $main-font;
             font-size: 0.8rem;
             text-align: right;
@@ -47,11 +53,13 @@
             &_text {
                 @include nav-item;
             }
+
             &_img {
                 width: 20px;
                 height: 20px;
                 transition: transform 0.3s ease-in-out;
             }
+            
             &:hover {.nav__items_link_img {transform: translateX(0.5rem);}}
         }
         &_link_one:hover {.nav__items_link_text {@include nav-item-hover($red)}}
