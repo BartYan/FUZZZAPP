@@ -31,7 +31,7 @@
         &_title {
             font-size: $h1-size;
             margin: 0 auto;
-            @media (max-width: 1600px) {
+            @media (max-width: 1850px) {
                 font-size: 5rem;
             }
             @media (max-width: $laptop) {
@@ -50,8 +50,9 @@
         &_subtitle {
             text-align: center; 
             letter-spacing:17px;
-            @media (max-width: 1600px) {
-                font-size: 2rem;
+            @media (max-width: 1850px) {
+                font-size: 1.5rem;
+                letter-spacing:12px;
             }
             @media (max-width: $laptop) {
                 font-size: 1rem;
