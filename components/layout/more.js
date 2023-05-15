@@ -3,7 +3,7 @@ import styles from '../../styles/Home.module.scss';
 const More = () => {
 
     return (
-        <div className={styles.halves}>
+        <div className={`${styles.halves} ${styles.section__more}`}>
 
             <h2 className={styles.halves__title}><span>03.</span> Music</h2>
             <div className={styles.halves__wrapper}>

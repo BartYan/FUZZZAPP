@@ -12,6 +12,9 @@
     margin: 3rem 0;
     width: 100%;
     z-index: 1!important;
+    @media (max-width: $laptop) {
+        margin: 1rem 0;
+    }
     label {
         color: $black!important;
     }
@@ -42,6 +45,9 @@
         text-align: none!important;
         button {
             max-width: 300px!important;
+            @media (max-width: $tablet) {
+                max-width: 100%!important;
+            }
             &:hover {
                 animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both!important;
             }

@@ -15,6 +15,7 @@
         max-height: fit-content;
         margin: 6rem auto 0;
         flex-direction: column-reverse;
+        padding: 0 0 4rem;
     }
     &__header {
         width: 45%;
@@ -96,12 +97,21 @@
 }
 
 .halves {
-    position: relative;
-    padding: 0 5%;
-    z-index: 10;
+    @include section;
     
     &__title {
         @include section-title;
+    }
+    &__wrapper {
+        display: flex;
+        padding: 4rem 0 0;
+
+        @media (max-width: $tablet-lg) {
+            flex-direction: column;
+        }
+        @media (max-width: $tablet) {
+            padding: 3rem 0;
+        }
     }
     &__head {
         @include section-head;
@@ -109,52 +119,88 @@
     &__desc {
         @include section-desc;
     }
-    &__wrapper {
-        display: flex;
-        padding: 4rem 0;
-    }
     &__box {
         position: relative;
         width:50%;
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
         padding: 0 3rem 0 6rem;
         
         @media (max-width: $tablet-lg) {
             width: 100%;
+            padding: 0;
+            margin: 0 auto;
         }
         &_img {
             padding: 4rem;
+            @media (max-width: $phone) {
+                padding: 2rem;
+
+                .section__more & {
+                    padding: 0;
+                }
+            }
         }
     }
     &__columns {
-        display: flex;
         @include section-desc;
+        display: flex;
+
+        @media (max-width: $desktop) {
+            flex-direction: column;
+        }
     }
     &__column {
         @include section-desc;
         width: 50%;
+        padding-right: 1rem;
+
+        @media (max-width: $desktop) {
+            width: 100%;
+            margin: 1rem 0;
+            padding-right: 0;
+        }
     }
     &__image {
         display: flex;
         justify-content: center;
+
+        @media (max-width: $tablet) {
+           svg {
+                width: 100%;
+                height: auto;
+
+                .section__about & {
+                    max-width: 400px;
+                }
+           }
+        }
     }
     &__photo {
         width: 50%;
+        @media (max-width: $tablet) {
+            display: none;
+        }
         &:hover {
             @include hover-image;
         }
     }
     &__buttons {
         width: 100%;
-        margin: 3rem 0 0;
+        margin: 4rem 0 0;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+        flex-wrap: wrap;
+
+        @media (max-width: $laptop-lg) {
+            margin: 2rem 0 0;
+        }
+        @media (max-width: $laptop) {
+            margin: 0;
+        }
         .cta {
-            margin-left: 1rem;
+            margin: 0 0 1rem 1rem;
         }
     }
 
@@ -162,6 +208,11 @@
         position: absolute;
         width: 50%;
         height: 100%;
+
+        @media (max-width: $tablet) {
+            position: relative;
+            width: 100%;
+        }
     }
     &__media {
         position: absolute;
@@ -169,29 +220,56 @@
         &:hover {
             transform: scale(1.05);
         }
-        &_image { max-width: 200px;}
+        &_image { 
+            max-width: 200px;
 
+            @media (max-width: $tablet) {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: $tablet) {
+            position: relative;
+        }
     }
     &__media_top {
         top: 0;
-        right: -20%;
+        right: -30%;
         margin-top: -6rem;
+        @media (max-width: $tablet) {
+            margin-top: 0;
+            right: 0;
+        }
         .halves__media_arrows {
             width: 80px;
             transform: rotate(45deg);
             margin: 0 0 -2rem;
+
+            @media (max-width: $tablet) {
+               display: none;
+            }
         }
     }
     &__media_bottom {
         display: flex;
         align-items: flex-start;
-        bottom: 0;
-        left: -50%;
+        bottom: 5%;
+        left: -30%;
         margin-top: 2rem;
+
+        @media (max-width: $tablet) {
+            position: relative;
+            left: 0;
+        }
+
         .halves__media_arrows {
             width: 100px;
             transform: rotate(220deg);
             margin: -2rem 0 0;
+
+            @media (max-width: $tablet) {
+                display: none;
+             }
         }
     }
 }

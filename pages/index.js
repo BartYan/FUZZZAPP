@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Script from 'next/script'
-import Link from 'next/link';
 
 import styles from '../styles/Home.module.scss';
 import Transition from '../components/transition';
@@ -31,12 +30,12 @@ const Home = () => {
         <Nav/>
         <Explorer/>
         <Hero/>
-        {/* <About/>
-        <Cards/>
+        <About/>
+        {/* <Cards/> */}
         <Newsletter/>
         <More/>
-        <Store/>
-        <Footer /> */}
+        {/* <Store/> */}
+        {/* <Footer /> */}
       </main>
 
     </Transition>

@@ -36,7 +36,7 @@ const About = () => {
 
     }, []);
     return (
-        <div className={styles.halves}>
+        <div className={`${styles.halves} ${styles.section__about}`}>
 
             <h2 className={styles.halves__title}><span>01.</span> About</h2>
             <div className={styles.halves__wrapper}>
