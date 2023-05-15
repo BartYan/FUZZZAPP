@@ -13,7 +13,7 @@
         height: 100%;
         min-height: fit-content;
         max-height: fit-content;
-        margin: 6rem auto 0;
+        margin: 6rem auto 2rem;
         flex-direction: column-reverse;
         padding: 0 0 4rem;
     }
@@ -330,17 +330,21 @@
         @media (max-width: $tablet-lg) {
             width: 100%;
         }
+
         &_img {
             padding: 4rem;
         }
     }
+
     &__columns {
         display: flex;
     }
+
     &__column {
         @include section-desc;
         width: 50%;
     }
+
     &__image {
         width: 100%;
         display: flex;
@@ -353,18 +357,22 @@
 
 .store {
     margin-bottom: 0;
+
     &__title {
         @include section-title;
         position: relative;
         z-index: 10;
     }
+
     &__head {
         @include section-head;
     }
+
     &__logo {
         height: auto;
         width: 8rem;
     }
+    
     .baner {
         position: relative;
         min-height: 400px;
@@ -377,9 +385,23 @@
     padding: 4rem 6rem;
     border-radius: $radius-big;
 
+    @media (max-width: $tablet-lg) {
+        min-height: fit-content;
+        padding-bottom: 15rem;
+    }
+    @media (max-width: $tablet) {
+        padding-bottom: 20rem;
+        padding: 0 2rem 25rem;
+    }
+
     &__wrapp {
         width: 50%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
     }
+
     &__desc {
         @include section-desc;
         position: relative;
@@ -387,6 +409,7 @@
         margin: 0;
         z-index: 10;
     }
+
     &__image {
         position: absolute;
         right: -15rem;
@@ -397,12 +420,25 @@
         transform: rotate(-30deg);
         filter: drop-shadow(20px 5px 10px $black);
         // filter: drop-shadow(0 5mm 8mm $black);
+        @media (max-width: $tablet-lg) {
+            top: unset;
+            bottom: -30%;
+            right: -38%;
+            height: 40rem;
+        }
+        @media (max-width: $phone) {
+            right: unset;
+            left: -82%;
+        }
     }
+
     &__button {
+        position: relative;
         width: 100%;
         display: flex;
         justify-content: flex-end;
         margin: 2rem 0 0;
+        z-index: 10;
     }
 }
 
