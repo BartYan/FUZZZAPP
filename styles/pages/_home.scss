@@ -110,7 +110,7 @@
             flex-direction: column;
         }
         @media (max-width: $tablet) {
-            padding: 3rem 0;
+            padding: 3rem 0 0;
         }
     }
     &__head {
@@ -287,8 +287,26 @@
         display: flex;
         justify-content: space-between;
         margin: 6rem 0;
+
+        @media (max-width: $tablet-lg) {
+           flex-direction: column
+        }
+
         &_item {
             @include insta-card;
+
+            @media (max-width: $tablet-lg) {
+                width: 80%;
+                margin: 2rem auto;
+            }
+            @media (max-width: $tablet) {
+                width: 90%;
+                margin: 0 auto 4rem;
+
+                &:last-child {
+                    margin: 0 auto;
+                }
+            }
         }
         &_photo {
             width: 100%;

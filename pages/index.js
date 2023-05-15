@@ -31,7 +31,7 @@ const Home = () => {
         <Explorer/>
         <Hero/>
         <About/>
-        {/* <Cards/> */}
+        <Cards/>
         <Newsletter/>
         <More/>
         {/* <Store/> */}
