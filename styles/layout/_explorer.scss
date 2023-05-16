@@ -31,6 +31,9 @@
             .explorer__title {
                 transform: rotate(268deg) translate(-100px,-110px);
             }
+            .explorer__cta_txt {
+                transform: translate(0rem, -2.2rem) rotate(0deg);
+            }
             @media (max-width: $tablet-lg) {
                 .explorer__title {
                     transform: rotate(0) translate(0);
@@ -107,7 +110,9 @@
             font-family: $write-font;
             font-weight: bold;
             text-transform: uppercase;
-            transform: translate(0rem, -2.2rem) rotate(10deg);
+            transition: transform $transition-fast;
+            transform: translate(0rem, -2.2rem) rotate(15deg);
+            cursor: pointer;
         }
         &_arrow {
             display: none;

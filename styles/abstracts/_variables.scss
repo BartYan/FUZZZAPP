@@ -38,9 +38,13 @@ $transition-medium: 0.5s ease-in-out;
 $duration-normal: 1s;
 $duration-slow: 2s;
 
+//layout
+$secion-max-width: 2200px;
+
 //media queries
 $phone-sm: 325px;
 $phone: 450px;
+$phone-lg: 700px; //footer
 $tablet: 768px;
 $tablet-lg: 1024px;
 $laptop: 1280px;

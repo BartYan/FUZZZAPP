@@ -5,11 +5,20 @@
     &__title {
         @include section-title;
         margin-bottom: 2rem;
+
+        @media (max-width: $tablet) {
+            margin: 4rem 0 2rem;
+        }
     }
 
     &__posts {
         width: 80%;
         padding: 8rem 0 10em;
+        max-width: $secion-max-width;
+
+        @media (max-width: $tablet) {
+            width: 90%;
+        }
 
         &_content {
             display: flex;
@@ -17,14 +26,27 @@
             justify-content: space-between;
             flex-wrap: wrap;
             margin: 0 auto;
+
+            @media (max-width: $tablet-lg) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     }
 
     &__card {
         @include insta-card;
 
+        min-width: 220px;
         max-width: 440px;
-        margin: 2rem 0;
+        margin: 2rem 1rem 2rem 0;
+
+        @media (max-width: $tablet-lg) {
+            width: 48%;
+        }
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
 
         &_head {
             margin: 0 0 1rem;

@@ -4,9 +4,19 @@
     min-height: 100vh;
     padding: 8rem 0;
 
+    @media (max-width: $tablet-lg) {
+        margin: 4rem 0 0;
+    }
+    @media (max-width: $phone-lg) {
+        width: 90%;
+    }
+
     &__title {
         @include section-title;
         margin-bottom: 2rem;
+        @media (max-width: $phone) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__categories {
@@ -23,6 +33,10 @@
         width: 80%;
         font-size: 1.5rem;
 
+        @media (max-width: $tablet-lg) {
+            width: 100%;
+        }
+
         h2,h3,h4,h5 {
             margin: 2rem 0;
         }
@@ -36,6 +50,30 @@
         img {
             width: 100%;
             height: auto;
+        }
+    }
+
+    &__back {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+        font-size: 1rem;
+        transition: font-size $transition-fast;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $grey;
+
+        &:hover {
+            font-size: 1.05rem;
+            img {transform: translateX(-0.5rem) rotate(180deg);}
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            transition: transform $transition-fast;
+            transform: rotate(180deg);
         }
     }
 }

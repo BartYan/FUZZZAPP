@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 // import Script from 'next/script'
 import ReactMarkdown from 'react-markdown';
 
@@ -74,6 +75,12 @@ export default function Post({currentPost}) {
                     <div className={styles.post__body}>
                         <ReactMarkdown>{currentPost.blogbody}</ReactMarkdown>
                     </div>
+                    <Link href={`/blog`}>
+                        <a className={styles.post__back}>
+                            <img src="/assets/images/arrow_forward.svg" alt="explore more arrow" width={30} height={30}/>
+                            <p>Back in Blog</p>
+                        </a>
+                    </Link>
                 </div>
                 <Explorer/>
                 {/* <Newsletter/> */}

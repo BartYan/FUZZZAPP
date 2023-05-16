@@ -274,7 +274,7 @@
     }
 }
 .cards {
-    max-width: 2200px;
+    max-width: $secion-max-width;
     
     &__title {
         @include section-title;
@@ -359,7 +359,7 @@
 
 .store {
     margin-bottom: 0;
-    max-width: 2200px;
+    max-width: $secion-max-width;
 
     &__title {
         @include section-title;

@@ -12,7 +12,7 @@ const Footer = () => {
                 </Link>
                 <ul className={styles.footer__list}>
                     <li className={styles.footer__list_item_title}>Navigation</li>
-                    <Link href={`/`}>
+                    <Link href={`/blog`}>
                         <a>
                             <li className={styles.footer__list_item}>Blog</li>
                         </a>
@@ -106,11 +106,11 @@ const Footer = () => {
                                     <img className={styles.nav__items_more_icon} src="/assets/images/wd-logo.svg" alt="taste with it logo" width={60} height={60}/>
                                 </li>
                             </a>
-                            <a>
+                            {/* <a>
                                 <li className={styles.footer__list_item}>
                                     <img className={styles.nav__items_more_icon} src="/assets/images/store-logo.png" alt="taste with it store logo" width={60} height={60}/>
                                 </li>
-                            </a>
+                            </a> */}
                             <a>
                                 <li className={styles.footer__list_item}>
                                     <img className={styles.nav__items_more_icon} src="/assets/images/yt-logo.svg" alt="fuzzzapp youtube" width={60} height={60}/>

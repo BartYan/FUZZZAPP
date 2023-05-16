@@ -6,7 +6,7 @@ const Store = () => {
 
     return (
         <div className={`${styles.wrapper} ${styles.store}`}>
-            <h2 className={styles.store__title}><span>08.</span> Store</h2>
+            <h2 className={styles.store__title}><span>08.</span> Merch</h2>
             <article className={styles.article}>
                 <div className={styles.baner}>
                     <div className={styles.baner__wrapp}>

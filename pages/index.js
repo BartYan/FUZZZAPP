@@ -35,7 +35,7 @@ const Home = () => {
         <Newsletter/>
         <More/>
         <Store/>
-        {/* <Footer /> */}
+        <Footer />
       </main>
 
     </Transition>

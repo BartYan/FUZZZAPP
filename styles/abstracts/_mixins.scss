@@ -80,7 +80,7 @@
     padding: 0 5%;
     margin: 2rem 0;
     z-index: 10;
-    max-width: 2200px;
+    max-width: $secion-max-width;
 
     @media (max-width: $tablet-lg) {
         margin: 1rem 0;
