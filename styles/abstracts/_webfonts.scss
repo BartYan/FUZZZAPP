@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Neusa-Bold';
+    src:
+        // url('../fonts/Helvetica.woff2') format('woff2'),
+        // url('../fonts/Helvetica.woff') format('woff'),
+        // url('../fonts/Helvetica.ttf') format('truetype');
+        url('../../public/assets/fonts/Neusa-Bold.otf') format('otf'),
+        url('../../public/assets/fonts/Neusa-Bold.otf') format('ttf'),
+        url('../../public/assets/fonts/Neusa-Bold.otf') format('woff'),
+        url('../../public/assets/fonts/Neusa-Bold.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
