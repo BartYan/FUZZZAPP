@@ -1,0 +1,30 @@
+.apps {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    @media (max-width: $laptop-lg) {
+        flex-direction: column;
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        padding: 0 0 0 20%;
+
+        @media (max-width: $laptop-lg) {
+            padding: 0;
+        }
+    }
+
+    &__main {
+        width: 100%;
+        padding: 4rem 2rem 0 4%;
+        font-family: $main-font;
+        overflow: auto;
+
+        @media (max-width: $laptop-lg) {
+            padding: 6rem 4%;
+        }
+    }
+}

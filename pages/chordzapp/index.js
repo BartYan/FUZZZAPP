@@ -28,6 +28,11 @@ const Chordzapp = () => {
                     desc={useLang('chordzappDesc')}
                 />
                 <div className={styles.apps__content}>
+                    <h3 className={styles.apps__head}>{useLang('appsTitle')}</h3>
+                    <div className={styles.apps__items}>
+                    </div>
+                </div>
+                {/* <div className={styles.apps__content}>
                         <Link href={'/chordzapp/chordzLessons'}>
                             <a className={styles.blue__hover}>
                                 <div className={styles.halves}>
@@ -104,7 +109,7 @@ const Chordzapp = () => {
                                 </div>
                             </a>
                         </Link>
-                </div>
+                </div> */}
             </div>
         </Transition>
     )

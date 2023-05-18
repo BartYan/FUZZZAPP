@@ -3,6 +3,8 @@
 @import 'abstracts/mixins';
 @import 'abstracts/webfonts';
 
+@import 'layout/apps';
+@import 'layout/adds-aside';
 @import 'layout/aside';
 @import 'layout/nav';
 @import 'layout/explorer';
@@ -45,7 +47,7 @@
   @media (max-width: $tablet-lg) {
     margin: 4rem 0;
     padding: 0;
-}
+  }
 }
 
 .bg_yellow {background: $yellow;}
@@ -54,3 +56,28 @@
 .bg_green { background: $green; }
 .bg_purple { background: $purple; }
 .bg_red { background: $red; }
+
+.red__hover {
+  &:hover {
+      .halves__title {
+          color: $red;
+          border-bottom: 2px solid$red;
+      }
+  }
+}
+.blue__hover {
+  &:hover {
+      .halves__title {
+          color: $blue;
+          border-bottom: 2px solid $blue;
+      }
+  }
+}
+.yellow__hover {
+  &:hover {
+      .halves__title {
+          color: $yellow;
+          border-bottom: 2px solid $yellow;
+      }
+  }
+}

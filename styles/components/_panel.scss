@@ -7,10 +7,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
+    min-width: 850px;
     height: 123px; 
 
-    margin: 0 auto 6rem auto;
+    margin: 0 0 6rem;
     border-radius: 25px;
 
     &:before {

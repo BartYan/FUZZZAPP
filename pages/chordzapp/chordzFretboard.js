@@ -8,7 +8,7 @@ import useChords from '../hooks/useChords';
 import Panel from '../../components/chordzapp/Panel/Panel';
 import Guitar from '../../components/chordzapp/Guitar/Guitar';
 import Piano from '../../components/chordzapp/Piano/Piano';
-
+import NavShorts from '../../components/nav/nav-shorts';
 
 export default function ChordzFretboard() {
     const { chords, scales } = useChords();
@@ -25,16 +25,20 @@ export default function ChordzFretboard() {
             </Head>
 
             <div className={styles.apps}>
+                <NavShorts/>
                 <AsideNav 
                     title={useLang('chordzappFretboardTitle')}
                     desc={useLang('chordzappFretboardDesc')}
                 />
                 <div className={styles.apps__content}>
-                    <main className={styles.chordzapp}>
+                    
+                    <main className={styles.apps__main}>
                         <Panel chords={chords} scales={scales} />
                         <Guitar />
                         <Piano />
                     </main>
+                    <div className={styles.adds__aside}>
+                    </div>
                 </div>
             </div>
         </Transition>

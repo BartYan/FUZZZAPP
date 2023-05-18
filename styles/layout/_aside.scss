@@ -8,6 +8,12 @@
     justify-content: center;
     padding: 0 3%;
     background-color: $white;
+
+    @media (max-width: $laptop-lg) {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+    }
 }
 .aside {
     // margin-top: -5rem;
@@ -15,10 +21,19 @@
         position: absolute;
         top: 1rem;
         left: 1rem;
+
+        @media (max-width: $laptop-lg) {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin: 1rem 0;
+        }
     }
     &__text {
         font-family: $main-font;
-        
+        @media (max-width: $laptop-lg) {
+            margin: 2rem 0 0;
+        }
         &_title {
             font-family: $main-font;
             font-size: 2.5rem;
@@ -28,6 +43,10 @@
             font-family: $desc-font;
             margin: 2rem 0 4rem;
             letter-spacing: 1px;
+
+            @media (max-width: $laptop-lg) {
+                margin: 3rem 0 1rem;
+            }
         }
     }
     &__nav {
@@ -36,81 +55,20 @@
         &_list {
             list-style: none;
             margin-top: 1rem;
+
+            @media (max-width: $laptop-lg) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            @media (max-width: $phone-sm) {
+                flex-direction: column;
+            }
         }
         &_item {
             margin: 0.5rem 0;
-            
-        }
-    }
-}
-
-.apps {
-    position: relative;
-    display: flex;
-    width: 100%;
-    &__content {
-        position: absolute;
-        right: 0;
-        width: 80%;
-        padding: 4rem 0;
-
-        .halves__wrapper {
-            padding: 3rem 0;
-            justify-content: space-between;
-        }
-        .halves__box {
-            width: 70%;
-            padding: 0;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-        .halves__title {
-            transition: all 0.2s ease-in-out;
-        }
-        .halves__box_img {
-            width: 10%;
-        }
-        .halves__desc {
-            margin: 0;
-            transition: all 0.2s ease-in-out;
-        }
-        .halves__image {
-            width: 100%;
-            svg {
-                height: fit-content;
+            @media (max-width: $laptop-lg) {
+                margin: 0 2rem 1rem 0;
             }
-        }
-        .hoverMenuItems {
-            // transition: all 0.3s ease-in-out;
-            &:hover {
-                
-                
-                
-            }
-        }
-    }
-}
-.red__hover {
-    &:hover {
-        .halves__title {
-            color: $red;
-            border-bottom: 2px solid$red;
-        }
-    }
-}
-.blue__hover {
-    &:hover {
-        .halves__title {
-            color: $blue;
-            border-bottom: 2px solid $blue;
-        }
-    }
-}
-.yellow__hover {
-    &:hover {
-        .halves__title {
-            color: $yellow;
-            border-bottom: 2px solid $yellow;
         }
     }
 }
