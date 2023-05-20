@@ -1,0 +1,124 @@
+.accordion {
+    list-style-type: none;
+    margin: 4rem 0;
+
+    &__item {
+        @include section-title;
+
+        width: 100%;
+        padding: 0 0 2rem;
+        cursor: pointer;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 2rem;
+        }
+        @media (max-width: $phone) {
+            font-size: 1.3rem;
+        }
+        @media (max-width: $phone-sm) {
+            font-size: 1rem;
+        }
+
+        .active & {
+            .accordion__item_desc {
+                max-height: 20rem;
+                opacity: 1;
+                visibility: visible;
+                // margin: 1rem 0 0;
+            }
+        }
+
+        &_panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_title {
+            display: flex;
+
+            &::before {
+                content: '+';
+                display: block;
+                min-width: 20px;
+                margin: -3px 2rem 0 0;
+                transition: all $transition-fast;
+
+                @media (max-width: $tablet) {
+                    margin-right: 1rem;
+                }
+            }
+
+            .active & {
+                &::before {
+                    content: '-';
+                }
+            }
+        }
+
+        &_arrow {
+            transition: all $transition-fast;
+            transform: rotate(90deg);
+
+            .active & {
+                transform: rotate(0deg)
+            }
+        }
+
+        &_desc {
+            @include section-desc;
+
+            display: flex;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+            transition: opacity $transition-fast, max-height $transition-fast, visibility $transition-fast, margin $transition-fast;
+
+            @media (max-width: $laptop) {
+                margin: 0;
+            }
+            @media (max-width: $tablet) {
+                flex-direction: column;
+            }
+
+            .active & {
+                max-height: 30rem;
+                opacity: 1;
+                visibility: visible;
+                @media (max-width: $tablet) {
+                    max-height: 60rem;
+                    margin: 2rem auto 0;
+                }
+            }
+
+            &_right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 100%;
+                padding: 2rem;
+            }
+
+            img {
+                @include insta-card;
+                
+                padding: 0;
+                margin: 2rem 1rem 2rem 0;
+                pointer-events: none;
+
+                @media (max-width: $tablet) {
+                    width: 80%;
+                    height: auto;
+                    margin: 2rem auto 0;
+                }
+            }
+            p {
+                padding: 2rem 0;
+                pointer-events: none;
+            }
+        }
+    }
+}

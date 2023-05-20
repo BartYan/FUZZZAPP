@@ -196,9 +196,11 @@
         @media (max-width: $laptop-lg) {
             margin: 2rem 0 0;
         }
+
         @media (max-width: $laptop) {
             margin: 0;
         }
+
         .cta {
             margin: 0 0 1rem 1rem;
         }
@@ -232,6 +234,7 @@
             position: relative;
         }
     }
+
     &__media_top {
         top: 0;
         right: -30%;

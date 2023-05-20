@@ -31,7 +31,6 @@ export default function ChordzFretboard() {
                     desc={useLang('chordzappFretboardDesc')}
                 />
                 <div className={styles.apps__content}>
-                    
                     <main className={styles.apps__main}>
                         <Panel chords={chords} scales={scales} />
                         <Guitar />

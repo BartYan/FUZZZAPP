@@ -5,8 +5,17 @@ const pl = {
     zapp: 'zapp',
     fuzzzappTitle: 'fuzzzapp',
 
-    //APPS
-    appsTitle: 'Apps',
+    //Chordzapp APPS
+    chordzappHomeTitle: '01. Chordzapp Home',
+    chordzappHomeDesc: 'Cześć! To tutaj zaczynamy naszą wspólną przygodę z akordami. W sekcji lekcje przybliżysz sobie temat akordów oraz dowiesz się jak używać inne moduły do nauki i ćwiczeń. Oczywiście możesz też odkrywać appki w dowolnej kolejności i wg swoich potrzeb :) Mam nadzieję, że narzędzia te będą pomocne i będziesz się dobrze bawić. Dzięki, że jesteś i do dzieła!',
+    chordzAccordionOneTitle: 'Chordzapp Lessons',
+    chordzAccordionOneDesc: 'Cześć! To tutaj zaczynamy naszą wspólną przygodę z akordami. Pamiętaj, że kolejność nie jest przypadkowa i w sekcji lekcje przybliżysz sobie temat akordów oraz jak używać inne moduły do nauki i ćwiczeń.',
+    chordzAccordionTwoTitle: 'Interval Fretboard',
+    chordzAccordionTwoDesc: 'Cześć! To tutaj zaczynamy naszą wspólną przygodę z akordami',
+    chordzAccordionThreeTitle: 'Chords Fretboard',
+    chordzAccordionThreeDesc: 'Cześć! To tutaj zaczynamy naszą wspólną przygodę z akordami',
+    chordzAccordionFourTitle: 'Ai Teacher',
+    chordzAccordionFourDesc: 'Cześć! To tutaj zaczynamy naszą wspólną przygodę z akordami',
 
     // CHORDZAPP 
     chordzappTitle: 'Chordzapp',
