@@ -51,6 +51,10 @@
   }
 }
 
+.markdownReset {
+  @include markdownReset;
+}
+
 .bg_yellow {background: $yellow;}
 .bg_blue {background: $blue;}
 .bg_grey { background: $grey; }

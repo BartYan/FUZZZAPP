@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useRef } from 'react'
 
 import styles from '../../styles/Home.module.scss';
 import useLang from '../hooks/useLang';
@@ -46,7 +45,7 @@ const Chordzapp = () => {
     return (
         <Transition>
             <Head>
-                <title>Chordzapp - Fuzzzapp chords learning tool</title>
+                <title>Chordzapp - Fuzzzapp chords learning tools</title>
                 <meta
                     name="description"
                     content="Chordzapp - chords learning tool! Application for musicians and guitar players"
@@ -57,8 +56,8 @@ const Chordzapp = () => {
             <div className={styles.apps}>
                 <NavShorts/>
                 <AsideNav
-                    title={useLang('chordzappTitle')}
-                    desc={useLang('chordzappDesc')}
+                    title={useLang('chordzappMenuTitle')}
+                    desc={useLang('chordzappMenuDesc')}
                 />
                 <div className={styles.apps__content}>
                     <main className={styles.apps__main}>

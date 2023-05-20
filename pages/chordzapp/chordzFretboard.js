@@ -24,7 +24,7 @@ export default function ChordzFretboard() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className={styles.apps}>
+            <div className={`${styles.apps} ${styles.apps__boards}`}>
                 <NavShorts/>
                 <AsideNav 
                     title={useLang('chordzappFretboardTitle')}

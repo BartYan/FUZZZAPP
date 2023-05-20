@@ -14,6 +14,15 @@
         width: 100%;
         height: fit-content;
     }
+
+    .apps__tallnav & {
+        padding: 10% 3% 5%;
+        justify-content: flex-start;
+        overflow: auto;
+        @media (max-width: $laptop-lg) {
+            padding: 3%;
+        }
+    }
 }
 .aside {
     // margin-top: -5rem;
@@ -46,6 +55,14 @@
 
             @media (max-width: $laptop-lg) {
                 margin: 3rem 0 1rem;
+            }
+        }
+
+        .aside__nav_list {
+            margin: -2rem 0 2rem;
+
+            @media (max-width: $laptop) {
+                margin: 1rem 0 0;
             }
         }
     }

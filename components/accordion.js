@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useState } from 'react'
 
 import styles from '../styles/Home.module.scss';
+import useLang from '../pages/hooks/useLang';
 
 const Accordion = ({ items }) => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -29,7 +30,7 @@ const Accordion = ({ items }) => {
                     <p>{item.desc}</p>
                     <Link href={item.url}>
                         <a className={styles.cta}>
-                            Let's go!
+                            {useLang('accordionCta')}
                         </a>
                     </Link>
                 </div>

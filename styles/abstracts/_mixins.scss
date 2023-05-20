@@ -156,3 +156,20 @@
     transform: translate3d(0, 0, 0);
     perspective: 1000px;
 }
+
+@mixin markdownReset {
+    h2,h3,h4,h5 {
+        margin: 2rem 0;
+    }
+    p {
+        margin: 1rem 0;
+    }
+
+    ul, ol {
+        padding: 0 0 0 3rem;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

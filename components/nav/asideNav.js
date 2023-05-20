@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import styles from '../../styles/Home.module.scss';
 
-const AsideNav = ({title, desc}) => {
+const AsideNav = ({title, desc, subNav}) => {
 
     const router = useRouter();
 
@@ -46,6 +46,20 @@ const AsideNav = ({title, desc}) => {
                 <div className={styles.aside__text}>
                     <h1 className={styles.aside__text_title}>{title}</h1>
                     <p className={styles.aside__text_desc}>{desc}</p>
+                    {
+                        subNav &&
+                        <ul className={styles.aside__nav_list}>
+                        {subNav.map((item, index) => {
+                            return (
+                                <li className={styles.aside__nav_item} key={index}>
+                                    <a href={`#${item.id}`}>
+                                        {item.name}
+                                    </a>
+                                </li>
+                            )
+                        })}
+                        </ul>
+                    }
                     <hr></hr>
                 </div>
                 <nav className={styles.aside__nav}>
@@ -54,7 +68,7 @@ const AsideNav = ({title, desc}) => {
                         <li className={styles.aside__nav_item} style={{color: `${router.pathname == href ? textcolor : ''}`}} key={index}>
                         <Link href={href}>
                             <a className={``}>
-                            {title}
+                                {title}
                             </a>
                         </Link>
                         </li>
