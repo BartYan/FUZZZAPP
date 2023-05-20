@@ -9,18 +9,18 @@ import Panel from '../../components/chordzapp/Panel/Panel';
 import Guitar from '../../components/chordzapp/Guitar/Guitar';
 import Piano from '../../components/chordzapp/Piano/Piano';
 import NavShorts from '../../components/nav/nav-shorts';
-import dataChords from '../api/chords.json';
+import dataIntervals from '../api/intervals.json';
 
-export default function ChordzFretboard() {
-    const { chords, scales } = useChords(dataChords);
+export default function IntervalFretboard() {
+    const { chords, scales } = useChords(dataIntervals);
 
     return (
         <Transition>
             <Head>
-                <title>Chordzapp - chords learning tool</title>
+                <title>Chordzapp - intervals learning tool</title>
                 <meta
                     name="description"
-                    content="Chordzapp - fretboard"
+                    content="Chordzapp - intervals fretboard"
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -28,8 +28,8 @@ export default function ChordzFretboard() {
             <div className={`${styles.apps} ${styles.apps__boards}`}>
                 <NavShorts/>
                 <AsideNav 
-                    title={useLang('chordzappFretboardMenuTitle')}
-                    desc={useLang('chordzappFretboardMenuDesc')}
+                    title={useLang('chordzappIntervalFretboardMenuTitle')}
+                    desc={useLang('chordzappIntervalFretboardMenuDesc')}
                 />
                 <div className={styles.apps__content}>
                     <main className={styles.apps__main}>

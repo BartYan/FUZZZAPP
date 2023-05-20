@@ -152,8 +152,8 @@ export default function ChordzAiTeacher() {
 
             <div className={styles.apps}>
                 <AsideNav
-                    title={useLang('chordzappAiTitle')}
-                    desc={useLang('chordzappAiDesc')}
+                    title={useLang('chordzappAiMenuTitle')}
+                    desc={useLang('chordzappAiMenuDesc')}
                 />
                 <div className={styles.apps__content}>
                     Ai teacher

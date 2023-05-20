@@ -77,8 +77,6 @@ export default function ChordzLessons() {
                 />
                 <div className={styles.apps__content}>
                     <main className={styles.apps__main}>
-                        <h3 className={styles.apps__main_head}>{useLang('chordzappLessonsTitle')}</h3>
-                        <p className={styles.apps__main_desc}>{useLang('chordzappLessonsDesc')}</p>
                         <div className={styles.apps__main_content}>
                             {
                                 lessons &&

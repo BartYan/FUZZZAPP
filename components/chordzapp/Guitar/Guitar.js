@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import styles from '../../../styles/Home.module.scss';
 
 import Fret from './Fret';

@@ -9,7 +9,7 @@ export default function SelectorChords(props) {
     const dispatch = useDispatch();
 
     const [listActive, setListActive] = useState(false);
-    const [selectedChord, setSelectedChord] = useState('major');
+    const [selectedChord, setSelectedChord] = useState('select name');
     const [selectedChordMode, setSelectedChordMode] = useState('major');
 
     const handleListActive = (e) => {
@@ -95,7 +95,7 @@ export default function SelectorChords(props) {
                     <button onClick={() => handleListActive()}>list</button>
                 </div>
             </div>
-            <p className={styles.panel__item_description}>chord</p>
+            <p className={styles.panel__item_description}>name</p>
         </div>
     )
 }

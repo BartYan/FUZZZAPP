@@ -14,30 +14,30 @@ const Chordzapp = () => {
     const accordion = [
         {
             "id": "0",
-            "title": useLang('chordzAccordionOneTitle'),
+            "title": useLang('chordzappLessonsMenuTitle'),
             "desc": useLang('chordzAccordionOneDesc'),
             "url": "/chordzapp/chordzLessons",
             "imgUrl": "assets/images/photos/test.jpg"
         },
         {
             "id": "1",
-            "title": useLang('chordzAccordionTwoTitle'),
+            "title": useLang('chordzappIntervalFretboardMenuTitle'),
             "desc": useLang('chordzAccordionTwoDesc'),
-            "url": "/",
+            "url": "/chordzapp/intervalFretboard",
             "imgUrl": "assets/images/photos/test.jpg"
         },
         {
             "id": "2",
-            "title": useLang('chordzAccordionThreeTitle'),
-            "desc": useLang('chordzAccordionThreeDesc'),
-            "url": "/",
+            "title": useLang('chordzappFretboardMenuTitle'),
+            "desc": useLang('chordzAccordionTwoDesc'),
+            "url": "/chordzapp/chordzFretboard",
             "imgUrl": "assets/images/photos/test.jpg"
         },
         {
             "id": "3",
-            "title": useLang('chordzAccordionFourTitle'),
+            "title": useLang('chordzappAiMenuTitle'),
             "desc": useLang('chordzAccordionFourDesc'),
-            "url": "/",
+            "url": "/chordzapp/chordzAiTeacher",
             "imgUrl": "assets/images/photos/test.jpg"
         },
     ]
@@ -61,7 +61,6 @@ const Chordzapp = () => {
                 />
                 <div className={styles.apps__content}>
                     <main className={styles.apps__main}>
-                        <h3 className={styles.apps__main_head}>{useLang('chordzappHomeTitle')}</h3>
                         <p className={styles.apps__main_desc}>{useLang('chordzappHomeDesc')}</p>
                         <Accordion items={accordion} />
                     </main>

@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { marksFlag, currChordSounds, intervals, halfTones } from '../../slices/chordsSlice';
 
-import dataChords from '../api/chords.json';
+// import dataChords from '../api/chords.json';
 import dataScales from '../api/scales.json';
 
-const useChords = (callback) => {
+const useChords = (dataChords) => {
     const [chords, setChords] = useState();
     const [scales, setScales] = useState();
 

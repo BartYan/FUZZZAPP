@@ -1,0 +1,34 @@
+[
+    {
+      "id": "3",
+      "intervals": [ "1", "3b" ],
+      "symbols": "Minor Third",
+      "halfTones": [ "0", "3" ],
+      "name": "Minor Third",
+      "mode": "major"
+    },
+    {
+      "id": "2",
+      "intervals": [ "1", "2" ],
+      "symbols": "Major Second",
+      "halfTones": [ "0", "2" ],
+      "name": "Major Second",
+      "mode": "major"
+    },
+    {
+      "id": "1",
+      "intervals": [ "1", "2b" ],
+      "symbols": "Minor Second",
+      "halfTones": [ "0", "1" ],
+      "name": "Minor Second",
+      "mode": "major"
+    },
+    {
+      "id": "0",
+      "intervals": [ "1" ],
+      "symbols": "unison",
+      "halfTones": [ "0" ],
+      "name": "Unison",
+      "mode": "major"
+    }
+]
