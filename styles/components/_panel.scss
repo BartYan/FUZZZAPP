@@ -9,9 +9,10 @@
     align-items: center;
     width: 100%;
     min-width: 850px;
-    height: 123px; 
+    height: fit-content; 
 
     margin: 0 0 6rem;
+    padding: 2rem 0;
     border-radius: 25px;
 
     &:before {
@@ -62,6 +63,20 @@
     &__buttons {
         display: flex;
         flex-direction: column;
+
+        &_double {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                &:first-child {
+                    margin-right: 0.5rem
+                }
+            }
+        }
+        button {
+            @include panelButton;
+        }
     }
     &__selected {
         position: relative;

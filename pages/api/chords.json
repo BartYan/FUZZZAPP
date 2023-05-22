@@ -25,7 +25,7 @@
     },
     {
       "id": "2",
-      "intervals": [ "1", "b3", "5", "7b" ],
+      "intervals": [ "1", "b3", "5", "b7" ],
       "symbols": "Cm7, C-",
       "halfTones": [ "0", "3", "7", "10" ],
       "name": "minor seven",

@@ -173,3 +173,46 @@
         height: auto;
     }
 }
+
+@mixin panelButton {
+    background-color: #f1f1f1;
+    border-radius: 0.5rem;
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin: 0.5rem 0 0;
+    font-size: 0.8rem;
+    line-height: 15px;
+    font-family: $write-font;
+    text-transform: uppercase;
+    transition: box-shadow 0.08s, border 0.08s;
+    color: $black;
+
+    border-top: 3px inset $white;
+    border-right: 3px inset $black;
+
+    -webkit-box-shadow: inset 0px 0px 25px -5px rgb(199, 199, 199);
+    -moz-box-shadow: inset 0px 0px 25px -5px rgb(199, 199, 199);
+    box-shadow: inset 0px 0px 25px -5px rgb(199, 199, 199);
+
+    &:hover {
+        cursor: pointer;
+        background-color: #7efcd2;
+        border-top: 3px inset #7efcd2;
+        border-right: 3px inset rgb(41, 114, 85);
+    }
+
+    &:active {
+        border-top: 1px inset #7efcd2;
+        border-bottom: 1px inset $grey;
+        border-left: 1px inset $white;
+        border-right: 1px inset rgb(41, 114, 85);
+        -webkit-box-shadow: inset 0px 0px 15px -5px rgb(199, 199, 199);
+        -moz-box-shadow: inset 0px 0px 15px -5px rgb(199, 199, 199);
+        box-shadow: inset 0px 0px 15px -5px rgb(199, 199, 199);
+    }
+
+    &.long_button {
+        width: 100%;
+    }
+}

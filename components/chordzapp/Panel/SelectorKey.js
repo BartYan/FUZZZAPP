@@ -100,9 +100,11 @@ export default function SelectorKey(props) {
                     </ul>
                 </div>
                 <div className={styles.panel__buttons}>
-                    <button onClick={() => handleNextKey(true)}>+</button>
-                    <button onClick={() => handleNextKey(false)}>-</button>
-                    <button onClick={() => handleListActiveKey()}>list</button>
+                    <div className={styles.panel__buttons_double}>
+                        <button onClick={() => handleNextKey(false)}>prev</button>
+                        <button onClick={() => handleNextKey(true)}>next</button>
+                    </div>
+                    <button className={styles.long_button} onClick={() => handleListActiveKey()}>list</button>
                 </div>
             </div>
             <p className={styles.panel__item_description}>key</p>

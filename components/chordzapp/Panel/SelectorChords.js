@@ -90,9 +90,11 @@ export default function SelectorChords(props) {
                     </ul>
                 </div>
                 <div className={styles.panel__buttons}>
-                    <button onClick={() => handleNextChord(true)}>+</button>
-                    <button onClick={() => handleNextChord(false)}>-</button>
-                    <button onClick={() => handleListActive()}>list</button>
+                    <div className={styles.panel__buttons_double}>
+                        <button onClick={() => handleNextChord(false)}>prev</button>
+                        <button onClick={() => handleNextChord(true)}>next</button>
+                    </div>
+                    <button className={styles.long_button} onClick={() => handleListActive()}>list</button>
                 </div>
             </div>
             <p className={styles.panel__item_description}>name</p>
