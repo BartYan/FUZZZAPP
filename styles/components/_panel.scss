@@ -56,6 +56,9 @@
         position: absolute;
         top: 1rem;
         right: 1.5rem;
+        width: fit-content;
+        padding: 0 1rem;
+        background-color: $bg-color;
         
         span {
             margin-left: 0.5rem;
@@ -68,6 +71,7 @@
         justify-content: space-between;
         align-items: center;
         width: 80%;
+        max-width: 880px;
     }
     
     //Panel item with buttons
@@ -177,5 +181,6 @@
         @include panelMarks;
         width: 100%;
         text-align: center;
+        background-color: $bg-color;
     }
 }
