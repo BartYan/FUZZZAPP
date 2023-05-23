@@ -70,7 +70,7 @@ export default function SelectorKey(props) {
     }, [majorFlag]);
 
     return ( 
-        <div className={styles.panel__selector}>
+        <div className={`${styles.panel__selector} ${styles.panel__selector_small}`}>
             <div className={styles.panel__selector_row}>
                 <div className={styles.panel__selected}>
                     <span

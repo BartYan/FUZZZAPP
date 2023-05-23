@@ -16,17 +16,20 @@ export default function Knob(props) {
     
     
     return ( 
-        <div className={styles.panel__knob}>
-            <div className={styles.panel__knob_options}>
-                <p>notes</p>
-                <p>intervals</p>
-            </div>
-            <div className={styles.panel__knob_el}>
-                <span 
-                    className={mode ? styles.panel__knob_modeOn : null}
-                    onClick={() => handleMode()}
-                >
-                </span>
+        
+        <div className={styles.panel__selector}>
+            <div className={styles.panel__knob}>
+                <div className={styles.panel__knob_options}>
+                    <p>notes</p>
+                    <p>intervals</p>
+                </div>
+                <div className={styles.panel__knob_el}>
+                    <span 
+                        className={mode ? styles.panel__knob_modeOn : null}
+                        onClick={() => handleMode()}
+                    >
+                    </span>
+                </div>
             </div>
             <p className={styles.panel__item_description}>marks</p>
         </div>
