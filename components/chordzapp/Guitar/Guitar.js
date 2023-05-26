@@ -6,6 +6,14 @@ export default function Guitar() {
 
   return (
     <div className={styles.guitar__container}>
+      <div className={styles.guitar__nut}>
+        <span>E</span>
+        <span>B</span>
+        <span>G</span>
+        <span>D</span>
+        <span>A</span>
+        <span>E</span>
+      </div>
       <div className={styles.guitar}>
         <Fret E='F'       A="Bb A#"   D="D# Eb"   G="G# Ab"   B="C"       id='1'/>
         <Fret E='F# Gb'   A="B"       D="E"       G="A"       B="C# Db"   id='2'/>

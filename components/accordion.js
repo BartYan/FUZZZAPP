@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.scss';
 import useLang from '../pages/hooks/useLang';
 
 const Accordion = ({ items }) => {
+    
     const [activeIndex, setActiveIndex] = useState(null);
   
     const handleClick = (index) => {
@@ -15,7 +16,7 @@ const Accordion = ({ items }) => {
       const isActive = index === activeIndex;
   
       return (
-        <div 
+        <div
             onClick={() => handleClick(index)} 
             className={`${styles.accordion__item} ${isActive ? styles.active : ''}`} 
             key={index}
@@ -24,7 +25,7 @@ const Accordion = ({ items }) => {
                 <p className={styles.accordion__item_title}>{item.title}</p>
                 <img className={styles.accordion__item_arrow} src="/assets/images/arrow_forward.svg" alt="explore more arrow" width={35} height={35}/>
             </div>
-            <div className={`${styles.accordion__item_desc} ${isActive ? 'active' : ''}`}>
+            <div className={`${styles.accordion__item_desc}`}>
                 <img src={item.imgUrl} width={135} height={135}/>
                 <div className={styles.accordion__item_desc_right}>
                     <p>{item.desc}</p>

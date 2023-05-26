@@ -260,10 +260,14 @@
     }
 }
 
-
 @mixin panelMarks {
     font-size: 0.9rem;
     font-family: $desc-font;
     color: $hover-color;
     letter-spacing: 3px;
+}
+
+@mixin instruments {
+    min-width: 850px;
+    max-width: 1200px;
 }

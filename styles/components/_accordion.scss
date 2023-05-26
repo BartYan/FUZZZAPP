@@ -19,15 +19,6 @@
             font-size: 1rem;
         }
 
-        .active & {
-            .accordion__item_desc {
-                max-height: 20rem;
-                opacity: 1;
-                visibility: visible;
-                // margin: 1rem 0 0;
-            }
-        }
-
         &_panel {
             display: flex;
             justify-content: space-between;

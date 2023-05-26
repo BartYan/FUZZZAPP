@@ -1,7 +1,8 @@
 .piano__container {
+    @include instruments;
+    
     margin: 4rem 0;
     width: 100%;
-    min-width: 850px;
     overflow: auto;
 
     .piano {
