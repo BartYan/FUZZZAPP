@@ -74,8 +74,7 @@
         width: 90%;
         max-width: 880px;
     }
-    
-    //Panel item with buttons
+
     &__selector {
         width: fit-content;
 
@@ -123,30 +122,59 @@
             font-size:1.2rem;
             width: 8rem;
             padding: 0 5px;
+            text-transform: uppercase;
+            font-weight: 400;
         }
         &_list {
             position: absolute;
             top: 0;
             left: -3rem;
+            width: fit-content;
+            padding: 1rem;
+            border-radius: $radius-xs;
+            background: $white;
+            -webkit-box-shadow: 0px 0px 24px 0px rgba(69, 202, 255, 0.5);
+            -moz-box-shadow: 0px 0px 24px 0px rgba(69, 202, 255, 0.5);
+            box-shadow: 0px 0px 24px 0px rgba(69, 202, 255, 0.5);
+            z-index: 9999;
 
             max-height: 0;
             opacity: 0;
             visibility: hidden;
+            transition: opacity $transition-fast;
+
             &.list__active {
-                max-height: 40rem;
+                max-height: fit-content;
                 opacity: 1;
                 visibility: visible;
             }
         }
         &_li {
+            display: flex;
+            flex-direction: column;
             list-style: none;
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: $radius-xs;
+            font-size: 0.8rem;
+            font-weight: 500;
+
             &:hover{
-                background-color: $grey;
+                background-color: rgba(69, 202, 255, 0.5);
                 cursor: pointer;
             }
+
+            &_chords {
+                text-transform: uppercase;
+            }
+            span {
+                text-transform: lowercase;
+                font-size: 0.8rem;
+                font-weight: normal;
+            }
+
         }
     }
-    //Panel item with buttons the end
 
     //Panel knobs
     &__knob {

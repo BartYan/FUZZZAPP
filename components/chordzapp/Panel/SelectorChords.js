@@ -77,12 +77,12 @@ export default function SelectorChords(props) {
                             apiChords.map((chord, index) => {
                                 return (
                                     <li
-                                        className={styles.panel__selected_li}
+                                        className={`${styles.panel__selected_li} ${styles.panel__selected_li_chords}`}
                                         onClick={() => handleChord(chord)}
                                         key={index}
                                     >
                                         {chord.name}
-                                        {`(${chord.intervals.join(', ')})`}
+                                        <span>{`(${chord.intervals.join(', ')})`}</span>
                                     </li>
                                 )
                             })
