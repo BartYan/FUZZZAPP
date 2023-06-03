@@ -4,6 +4,7 @@ $yellow: #ffcb70;
 // $yellow: #f3e885;
 $red: #ff7979;
 $blue: #91D5DD;
+$grey-dark: #939393;
 $grey: #B7B2B4;
 $grey-two: #ebebeb;
 $grey-light: #e1e1e1;
@@ -32,6 +33,7 @@ $desc-font: Agrandir;
 $write-font: "Pompiere", cursive;
 
 // Radio
+$radius-circle: 50%;
 $radius-big: 25px;
 $radius-small: 15px;
 $radius-xs: 5px;
@@ -39,6 +41,7 @@ $radius-xs: 5px;
 // Transitions
 $transition-fast: 0.3s ease-in-out;
 $transition-medium: 0.5s ease-in-out;
+$transition-slow: 1s ease-in-out;
 
 //duration
 $duration-normal: 1s;

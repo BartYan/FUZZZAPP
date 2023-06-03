@@ -22,18 +22,28 @@ const Accordion = ({ items }) => {
             key={index}
         >
             <div className={styles.accordion__item_panel}>
-                <p className={styles.accordion__item_title}>{item.title}</p>
+                <div className={styles.accordion__item_panel_left}>
+                    <div className={styles.accordion__item_panel_thumb}>
+                        <img src={item.imgUrl} width={135} height={135}/>
+                    </div>
+                    <div className={styles.accordion__item_panel_titles}>
+                        <p className={styles.accordion__item_title}>{item.title}</p>
+                        <p className={styles.accordion__item_subtitle}>{item.subtitle}</p>
+                    </div>
+                </div>
                 <img className={styles.accordion__item_arrow} src="/assets/images/arrow_forward.svg" alt="explore more arrow" width={35} height={35}/>
             </div>
             <div className={`${styles.accordion__item_desc}`}>
-                <img src={item.imgUrl} width={135} height={135}/>
+                {/* <img src={item.imgUrl} width={135} height={135}/> */}
                 <div className={styles.accordion__item_desc_right}>
                     <p>{item.desc}</p>
-                    <Link href={item.url}>
-                        <a className={styles.cta}>
-                            {useLang('accordionCta')}
-                        </a>
-                    </Link>
+                    <div>
+                        <Link href={item.url}>
+                            <a className={styles.cta}>
+                                {useLang('accordionCta')}
+                            </a>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

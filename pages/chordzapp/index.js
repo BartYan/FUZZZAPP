@@ -15,6 +15,7 @@ const Chordzapp = () => {
         {
             "id": "0",
             "title": useLang('chordzappLessonsMenuTitle'),
+            "subtitle": useLang('chordzappLessonsMenuSubTitle'),
             "desc": useLang('chordzAccordionOneDesc'),
             "url": "/chordzapp/chordzLessons",
             "imgUrl": "assets/images/photos/test.jpg"
@@ -22,6 +23,7 @@ const Chordzapp = () => {
         {
             "id": "1",
             "title": useLang('chordzappIntervalFretboardMenuTitle'),
+            "subtitle": useLang('chordzappIntervalFretboardMenuSubTitle'),
             "desc": useLang('chordzAccordionTwoDesc'),
             "url": "/chordzapp/intervalFretboard",
             "imgUrl": "assets/images/photos/test.jpg"
@@ -29,6 +31,7 @@ const Chordzapp = () => {
         {
             "id": "2",
             "title": useLang('chordzappFretboardMenuTitle'),
+            "subtitle": useLang('chordzappFretboardMenuSubTitle'),
             "desc": useLang('chordzAccordionTwoDesc'),
             "url": "/chordzapp/chordzFretboard",
             "imgUrl": "assets/images/photos/test.jpg"
@@ -36,6 +39,7 @@ const Chordzapp = () => {
         {
             "id": "3",
             "title": useLang('chordzappAiMenuTitle'),
+            "subtitle": useLang('chordzappAiMenuSubTitle'),
             "desc": useLang('chordzAccordionFourDesc'),
             "url": "/chordzapp/chordzAiTeacher",
             "imgUrl": "assets/images/photos/test.jpg"

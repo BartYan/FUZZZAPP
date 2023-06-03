@@ -19,20 +19,24 @@ const pl = {
 
     //chordzapp lessons page
     chordzappLessonsMenuTitle: 'Chords Lessons',
+    chordzappLessonsMenuSubTitle: 'i już wiesz jak',
     chordzappLessonsMenuDesc: 'Lekcje Chordzapp przybliżą Ci tematykę akordów. Zobaczysz też, jak użyć inne appki by zrozumieć i wykorzystać potencjał naszych instrumentów! Zaczynamy?',
     chordzappLessonsOneName: 'Wprowadzenie',
     chordzappLessonsOne: '# Nagłówek\n\n \n To jest **pogrubiony** tekst, a to jest _pochylony_.\n\n- To jest lista\n- Z elementami\n- Wypunktowanymi\n\n1. To jest lista\n2. Z elementami\n3. Numerowanymi\n\n> To jest blok cytatu.\n\n![Obrazek](ścieżka/do/obrazka.jpg)\n\n[A to jest link](https://www.example.com)',
 
     //chordzapp interval fretboard page
     chordzappIntervalFretboardMenuTitle: 'Interval Fretboard',
+    chordzappIntervalFretboardMenuSubTitle: 'filtruj dźwięki interwałów',
     chordzappIntervalFretboardMenuDesc: "Zobacz jak rozmieszczone są interwały na Twoim instrumencie. Wybierz nazwę - żółty to pryma, niebieski to dany interwał oddalony od prymy.",
 
     //chordzapp fretboard page
     chordzappFretboardMenuTitle: 'Chords Fretboard',
+    chordzappFretboardMenuSubTitle: 'filtruj dźwięki akordów',
     chordzappFretboardMenuDesc: "Wybierz nazwę i filtruj dźwięki akordów w poszukiwaniu nowych przewrotów, arpeggios, skal oraz dźwięków których szukasz i potrzebujesz!",
 
     //chordzapp ai page
     chordzappAiMenuTitle: 'Ai Teacher',
+    chordzappAiMenuSubTitle: 'wykrywacz pozycji akordów',
     chordzappAiMenuDesc: 'test',
 
     // Accordion
