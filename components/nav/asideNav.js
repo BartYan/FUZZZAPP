@@ -44,13 +44,13 @@ const AsideNav = ({title, desc, subNav}) => {
     ];
 
     // if you swap page to the fretboard, clear fretboard from last filtering results 
-    const handleFretboardsClear = (index) => {
-        if(index == '2' || index == '3') {
-            console.log('yo');
-            dispatch(setIntervals([]));
-            dispatch(setHalfTones([]));
-        }
-    }
+    // const handleFretboardsClear = (index) => {
+    //     if(index == '2' || index == '3') {
+    //         console.log('yo');
+    //         dispatch(setIntervals([]));
+    //         dispatch(setHalfTones([]));
+    //     }
+    // }
     return (
         <header className={styles.aside__container}>
             <aside className={styles.aside}>
@@ -85,7 +85,8 @@ const AsideNav = ({title, desc, subNav}) => {
                     {menuItems.map(({ href, title, textcolor, index }) => (
                         <li className={styles.aside__nav_item} style={{color: `${router.pathname == href ? textcolor : ''}`}} key={index}>
                         <Link href={href}>
-                            <a onClick={()=> handleFretboardsClear(index)}>
+                            {/* <a onClick={()=> handleFretboardsClear(index)}> */}
+                            <a>
                                 {title}
                             </a>
                         </Link>

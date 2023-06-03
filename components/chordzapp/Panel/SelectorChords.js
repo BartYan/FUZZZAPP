@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
+import useLang from '../../../pages/hooks/useLang';
 import styles from '../../../styles/Home.module.scss';
 import { setMajorKey, setMinorKey, setIntervals, halfTones, setHalfTones } from '../../../slices/chordsSlice';
 
@@ -9,7 +10,7 @@ export default function SelectorChords(props) {
     const dispatch = useDispatch();
 
     const [listActive, setListActive] = useState(false);
-    const [selectedChord, setSelectedChord] = useState('select name');
+    const [selectedChord, setSelectedChord] = useState('major');
     const [selectedChordMode, setSelectedChordMode] = useState('major');
 
     const handleListActive = (e) => {
@@ -68,10 +69,13 @@ export default function SelectorChords(props) {
                         {selectedChord}
                     </span>
                     <ul
-                        className={`${styles.panel__selected_list} ${
+                        className={`${styles.panel__selected_list} ${styles.panel__selected_list_wrap} ${
                             listActive ? styles.list__active : null
                         }`}
                     >
+                        <span className={styles.panel__selected_list_close} onClick={() => handleListActive()}>
+                            {useLang('close')}
+                        </span>
                         {
                             apiChords &&
                             apiChords.map((chord, index) => {

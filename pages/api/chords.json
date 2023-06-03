@@ -1,10 +1,34 @@
 [
     {
-      "id": "5",
-      "intervals": [ "1", "4", "5" ],
-      "symbols": "Csus4",
-      "halfTones": [ "0", "5", "7" ],
-      "name": "SUS 4",
+      "id": "0",
+      "intervals": [ "1", "3", "5" ],
+      "symbols": "C, C dur, CM, C major, C maj,",
+      "halfTones": [ "0", "4", "7" ],
+      "name": "major",
+      "mode": "major"
+    },
+    {
+      "id": "1",
+      "intervals": [ "1", "b3", "5" ],
+      "symbols": "Cm, C mol, c, C minor, C min,",
+      "halfTones": [ "0", "3", "7" ],
+      "name": "minor",
+      "mode": "minor"
+    },
+    {
+      "id": "2",
+      "intervals": [ "1", "b3", "5", "b7" ],
+      "symbols": "Cm7, C-",
+      "halfTones": [ "0", "3", "7", "10" ],
+      "name": "minor seven",
+      "mode": "minor"
+    },
+    {
+      "id": "3",
+      "intervals": [ "1", "3", "5", "7" ],
+      "symbols": "Cm7, C-",
+      "halfTones": [ "0", "4", "7", "11" ],
+      "name": "major seven",
       "mode": "major"
     },
     {
@@ -16,35 +40,11 @@
       "mode": "major"
     },
     {
-      "id": "3",
-      "intervals": [ "1", "3", "5", "7" ],
-      "symbols": "Cm7, C-",
-      "halfTones": [ "0", "4", "7", "11" ],
-      "name": "major seven",
-      "mode": "major"
-    },
-    {
-      "id": "2",
-      "intervals": [ "1", "b3", "5", "b7" ],
-      "symbols": "Cm7, C-",
-      "halfTones": [ "0", "3", "7", "10" ],
-      "name": "minor seven",
-      "mode": "minor"
-    },
-    {
-      "id": "1",
-      "intervals": [ "1", "b3", "5" ],
-      "symbols": "Cm, C mol, c, C minor, C min,",
-      "halfTones": [ "0", "3", "7" ],
-      "name": "minor",
-      "mode": "minor"
-    },
-    {
-      "id": "0",
-      "intervals": [ "1", "3", "5" ],
-      "symbols": "C, C dur, CM, C major, C maj,",
-      "halfTones": [ "0", "4", "7" ],
-      "name": "major",
+      "id": "5",
+      "intervals": [ "1", "4", "5" ],
+      "symbols": "Csus4",
+      "halfTones": [ "0", "5", "7" ],
+      "name": "SUS 4",
       "mode": "major"
     }
 ]

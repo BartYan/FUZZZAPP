@@ -3,12 +3,12 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   majorFlag: true,
   marksFlag: true,
-  // intervals: [ '1', '3', '5' ], //major on load
-  // halfTones: [0, 4, 7], //major on load
-  // currChordSounds: ['C', 'E', 'G'] //major on load
-  intervals: [], //on load
-  halfTones: [], //on load
-  currChordSounds: [] //on load
+  intervals: [ '1', '3', '5' ], //major on load
+  halfTones: [0, 4, 7], //major on load
+  currChordSounds: ['C', 'E', 'G'] //major on load
+  // intervals: [], //on load
+  // halfTones: [], //on load
+  // currChordSounds: [] //on load
 }
 
 export const chordsSlice = createSlice({

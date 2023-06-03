@@ -2,6 +2,7 @@ const pl = {
 
     //GENERAL
     cta: "Let's go!",
+    close: 'close',
 
     // HOMEPAGE
     fuzz: 'fuzz',
