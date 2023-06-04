@@ -44,5 +44,16 @@
             }
             
         }
+
+        &_article {
+            margin-top: 5rem;
+            &_title {
+                @include section-title;
+            }
+            &_desc {
+                @include section-desc;
+            }
+            
+        }
     }
 }

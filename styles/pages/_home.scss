@@ -446,6 +446,32 @@
         margin: 2rem 0 0;
         z-index: 10;
     }
+
+    &__info {
+        position: relative;
+        background-color: $yellow;
+
+        @media (max-width: $laptop) {
+            padding: 4rem 2rem 2rem 2rem;
+        }
+
+        .baner__wrapp {
+            width: 100%;
+        }
+
+        .baner__desc {
+            width: 100%;
+            @media (max-width: $laptop) {
+                margin-bottom: 0;
+            }
+        }
+
+        svg {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+    }
 }
 
 .taste_group {
