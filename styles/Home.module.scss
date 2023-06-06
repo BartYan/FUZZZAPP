@@ -12,6 +12,7 @@
 @import 'layout/footer';
 
 @import 'components/accordion';
+@import 'components/aibox';
 @import 'components/buttons';
 @import 'components/panel';
 @import 'components/piano';
@@ -33,7 +34,6 @@
   font-family: $main-font;
   color: $black;
 }
-
 
 .wrapper {
   width: 100%;
