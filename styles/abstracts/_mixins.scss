@@ -23,7 +23,7 @@
 
 @mixin fret($grow: 1) {
 	flex-grow: $grow;
-	border: 2px solid rgba(0, 0, 0, 0.2);
+	border: 2px solid a(0, 0, 0, 0.2);
 }
 
 @mixin fretNum($content: '') {

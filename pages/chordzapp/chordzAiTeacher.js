@@ -42,7 +42,7 @@ export default function ChordzAiTeacher() {
                             </div>
                         </div>
                         <article className={styles.apps__main_article}>
-                            <h2 className={styles.apps__main_article_title}><span>01.</span> Major Seven</h2>
+                            <h2 className={styles.apps__main_article_title}><span>01.</span> Major Seven - E string</h2>
                             <p className={styles.apps__main_article_desc}>
                                 Nullam id magna vitae arcu dapibus congue vel at diam. 
                                 Curabitur fermentum velit orci, quis pharetra diam ullamcorper tempor. 
@@ -53,7 +53,7 @@ export default function ChordzAiTeacher() {
                                 <div className={styles.aibox__left}>
                                     <div className={styles.aibox__left_image}>
                                         <p className={styles.aibox__left_image_caption}>
-                                            position from unison
+                                            Basic chord
                                         </p>
                                         <Image
                                             src="/../public/assets/images/testChord.png"
@@ -65,7 +65,7 @@ export default function ChordzAiTeacher() {
                                     </div>
                                     <div className={styles.aibox__left_image}>
                                         <p className={styles.aibox__left_image_caption}>
-                                            position from third
+                                            chord inversion from third
                                         </p>
                                         <Image
                                             src="/../public/assets/images/testChord.png"

@@ -1,14 +1,20 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.scss'
-
+import { useState, useRef, useEffect } from 'react';
+import Webcam from 'react-webcam';
 import { Holistic } from '@mediapipe/holistic';
 import * as holistic from '@mediapipe/holistic';
 import * as cam from '@mediapipe/camera_utils';
-import Webcam from 'react-webcam';
-import { useRef, useEffect } from 'react';
 import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
 
+import styles from '../styles/Home.module.scss'
+
 export default function MediapipeCam() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [IsModelLoaded, setIsModelLoaded] = useState(false);
+
+  const handlePlayClick = () => {
+    setIsPlaying(true); // Ustaw stan isPlaying na true po kliknięciu przycisku "Play"
+  };
+
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
 
@@ -115,6 +121,7 @@ export default function MediapipeCam() {
       camera = new cam.Camera(webcamRef.current.video, {
         onFrame: async () => {
           await holistic.send({ image: webcamRef.current.video });
+          await setIsModelLoaded(true);
         },
         width: 600,
         height: 600,
@@ -122,10 +129,12 @@ export default function MediapipeCam() {
 
       camera.start();
     }
-  }, []);
+  }, [isPlaying]);
 
   return (
       <div className={styles.webcam}>
+        {isPlaying ? (
+        <>
         <Webcam
           ref={webcamRef}
           style={{
@@ -134,13 +143,9 @@ export default function MediapipeCam() {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             margin: '0 auto',
-            // left: 0,
-            // right: 0,
-            // bottom: 0,
             textAlign: 'center',
             width: '100%',
             height: 'fit-content',
-
           }}
         />
 
@@ -152,14 +157,24 @@ export default function MediapipeCam() {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             margin: '0 auto',
-            // left: 0,
-            // right: 0,
-            // bottom: 0,
             textAlign: 'center',
             width: '100%',
             height: 'fit-content',
           }}
         />
+        {
+          !IsModelLoaded &&
+          <div className={styles.webcam__loading}>
+            <span>loading</span>
+          </div>
+        }
+        </>
+        ) : (
+        // {/* <div className={styles.webcam__showreel}>
+        //   <svg xmlns="http://www.w3.org/2000/svg" fill='#fff' height="48" viewBox="0 -960 960 960" width="48"><path d="m392-313 260-169-260-169v338ZM140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680v-520H140v520Zm0 0v-520 520Z"/></svg>
+        // </div> */}
+          <button onClick={handlePlayClick}>Play</button> // Przycisk "Play" wyświetlany, gdy isPlaying jest false
+        )}
       </div>
   );
 }
