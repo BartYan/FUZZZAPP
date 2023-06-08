@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { useState } from 'react'
+import Image from 'next/image';
+import { useState } from 'react';
 
 import styles from '../styles/Home.module.scss';
 import useLang from '../pages/hooks/useLang';
@@ -24,7 +25,8 @@ const Accordion = ({ items }) => {
             <div className={styles.accordion__item_panel}>
                 <div className={styles.accordion__item_panel_left}>
                     <div className={styles.accordion__item_panel_thumb}>
-                        <img src={item.imgUrl} width={135} height={135}/>
+                        <Image src={item.imgUrl} width={135} height={135} loading="lazy"/>
+                        {/* <img src={item.imgUrl} width={135} height={135}/> */}
                     </div>
                     <div className={styles.accordion__item_panel_titles}>
                         <p className={styles.accordion__item_title}>{item.title}</p>

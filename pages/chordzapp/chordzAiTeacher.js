@@ -62,6 +62,7 @@ export default function ChordzAiTeacher() {
                                             height={180}
                                             alt="chord drop"
                                             style={{ width: '50%' }}
+                                            loading="lazy"
                                         />
                                     </div>
                                     <div className={styles.aibox__left_image}>
