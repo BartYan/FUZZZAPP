@@ -10,9 +10,14 @@ import styles from '../styles/Home.module.scss'
 export default function MediapipeCam() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [IsModelLoaded, setIsModelLoaded] = useState(false);
+  const [leftHandResults, setLeftHandResults] = useState([]);
 
   const handlePlayClick = () => {
     setIsPlaying(true); // Ustaw stan isPlaying na true po kliknięciu przycisku "Play"
+  };
+  const handleStopClick = () => {
+    setIsPlaying(false); // Ustaw stan isPlaying na false po kliknięciu przycisku "Wyłącz kamerę"
+    setIsModelLoaded(false);
   };
 
   const webcamRef = useRef(null);
@@ -29,14 +34,18 @@ export default function MediapipeCam() {
     const canvasCtx = canvasElement.getContext('2d');
     canvasCtx.save();
     canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
-    canvasCtx.drawImage(
+
+    if(results.segmentationMask instanceof Image || results.segmentationMask instanceof HTMLCanvasElement || results.segmentationMask instanceof HTMLImageElement || results.segmentationMask instanceof HTMLVideoElement) {
+      //draw image after check if person is vissible for camera
+      canvasCtx.drawImage(
       // results.image,
       results.segmentationMask,
       0,
       0,
       canvasElement.width,
       canvasElement.height
-    );
+      );
+    }
     // if (connect) {
     // Only overwrite existing pixels.
     canvasCtx.globalCompositeOperation = 'source-in';
@@ -73,7 +82,8 @@ export default function MediapipeCam() {
       {
         color: '#fff',
         lineWidth: 5,
-      }
+      },
+      setLeftHandResults(results.leftHandLandmarks)
     );
     drawLandmarks(canvasCtx, results.leftHandLandmarks, {
       color: '#fff',
@@ -116,12 +126,15 @@ export default function MediapipeCam() {
 
     if (
       typeof webcamRef.current !== 'undefined' &&
-      webcamRef.current !== null
+      webcamRef.current !== null &&
+      isPlaying
     ) {
       camera = new cam.Camera(webcamRef.current.video, {
         onFrame: async () => {
-          await holistic.send({ image: webcamRef.current.video });
-          await setIsModelLoaded(true);
+          if(webcamRef.current) {
+            await holistic.send({ image: webcamRef.current.video });
+            await setIsModelLoaded(true);
+          }
         },
         width: 600,
         height: 600,
@@ -130,6 +143,24 @@ export default function MediapipeCam() {
       camera.start();
     }
   }, [isPlaying]);
+
+  // useEffect(() => {
+  //   const cleanup = () => {
+  //     const webcam = webcamRef.current;
+  //     if (webcam && webcam.video) {
+  //       // Wyłączanie kamery
+  //       webcam.video.srcObject.getTracks().forEach((track) => track.stop());
+  //     }
+  //   };
+
+  //   // Subskrypcja i inne logika związana z kamerą
+
+  //   return cleanup;
+  // }, []);
+
+  // useEffect(() => {
+  //   console.log(leftHandResults);
+  // }, [leftHandResults]);
 
   return (
       <div className={styles.webcam}>
@@ -166,6 +197,19 @@ export default function MediapipeCam() {
           !IsModelLoaded &&
           <div className={styles.webcam__loading}>
             <span>loading</span>
+          </div>
+        }
+        {
+           IsModelLoaded &&
+           <div className={styles.webcam__loading}>
+            <button onClick={handleStopClick}>Wyłącz kamerę</button>
+            {leftHandResults &&
+            leftHandResults.map((result, index) => (
+              <div key={index}>
+                <p>x: {result.x}</p>
+                <p>y: {result.y}</p>
+              </div>
+            ))}
           </div>
         }
         </>
