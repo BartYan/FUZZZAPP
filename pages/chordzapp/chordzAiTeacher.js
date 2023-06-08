@@ -41,6 +41,74 @@ export default function ChordzAiTeacher() {
                                 </p>
                             </div>
                         </div>
+
+                        <article className={styles.apps__main_article}>
+                            <h2 className={styles.apps__main_article_title}><span>01.</span> Major Seven - E string</h2>
+                            <p className={styles.apps__main_article_desc}>
+                                Nullam id magna vitae arcu dapibus congue vel at diam. 
+                                Curabitur fermentum velit orci, quis pharetra diam ullamcorper tempor. 
+                                Suspendisse accumsan non felis venenatis elementum. 
+                                Nullam id magna vitae arcu dapibus congue vel at diam. 
+                            </p>
+                            <div className={styles.aibox}>
+                                <div className={styles.aibox__left}>
+                                    <div className={styles.aibox__left_image}>
+                                        <p className={styles.aibox__left_image_caption}>
+                                            Basic chord
+                                        </p>
+                                        <Image
+                                            src="/../public/assets/images/testChord.png"
+                                            width={250}
+                                            height={180}
+                                            alt="chord drop"
+                                            style={{ width: '50%' }}
+                                        />
+                                    </div>
+                                    <div className={styles.aibox__left_image}>
+                                        <p className={styles.aibox__left_image_caption}>
+                                            chord inversion from third
+                                        </p>
+                                        <Image
+                                            src="/../public/assets/images/testChord.png"
+                                            width={250}
+                                            height={180}
+                                            alt="chord drop"
+                                            style={{ width: '50%' }}
+                                        />
+                                    </div>
+                                    <div className={styles.aibox__left_image}>
+                                        <p className={styles.aibox__left_image_caption}>
+                                            position from fifth
+                                        </p>
+                                        <Image
+                                            src="/../public/assets/images/testChord.png"
+                                            width={250}
+                                            height={180}
+                                            alt="chord drop"
+                                            style={{ width: '50%' }}
+                                        />
+                                    </div>
+                                    <div className={styles.aibox__left_image}>
+                                        <p className={styles.aibox__left_image_caption}>
+                                            position from third
+                                        </p>
+                                        <Image
+                                            src="/../public/assets/images/testChord.png"
+                                            width={250}
+                                            height={180}
+                                            alt="chord drop"
+                                            style={{ width: '50%' }}
+                                        />
+                                    </div>
+                                    
+                                   
+                                </div>
+                                <div className={styles.aibox__right}>
+                                    <MediapipeCam/>
+                                </div>
+                                
+                            </div>
+                        </article>
                         <article className={styles.apps__main_article}>
                             <h2 className={styles.apps__main_article_title}><span>01.</span> Major Seven - E string</h2>
                             <p className={styles.apps__main_article_desc}>

@@ -13,10 +13,10 @@ export default function MediapipeCam() {
   const [leftHandResults, setLeftHandResults] = useState([]);
 
   const handlePlayClick = () => {
-    setIsPlaying(true); // Ustaw stan isPlaying na true po kliknięciu przycisku "Play"
+    setIsPlaying(true);
   };
   const handleStopClick = () => {
-    setIsPlaying(false); // Ustaw stan isPlaying na false po kliknięciu przycisku "Wyłącz kamerę"
+    setIsPlaying(false);
     setIsModelLoaded(false);
   };
 
@@ -144,24 +144,6 @@ export default function MediapipeCam() {
     }
   }, [isPlaying]);
 
-  // useEffect(() => {
-  //   const cleanup = () => {
-  //     const webcam = webcamRef.current;
-  //     if (webcam && webcam.video) {
-  //       // Wyłączanie kamery
-  //       webcam.video.srcObject.getTracks().forEach((track) => track.stop());
-  //     }
-  //   };
-
-  //   // Subskrypcja i inne logika związana z kamerą
-
-  //   return cleanup;
-  // }, []);
-
-  // useEffect(() => {
-  //   console.log(leftHandResults);
-  // }, [leftHandResults]);
-
   return (
       <div className={styles.webcam}>
         {isPlaying ? (
@@ -170,13 +152,14 @@ export default function MediapipeCam() {
           ref={webcamRef}
           style={{
             position: 'absolute',
-            top: '50%',
+            top: '53%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
             margin: '0 auto',
             textAlign: 'center',
-            width: '100%',
+            width: '90%',
             height: 'fit-content',
+            borderRadius: '15px',
           }}
         />
 
@@ -184,40 +167,44 @@ export default function MediapipeCam() {
           ref={canvasRef}
           style={{
             position: 'absolute',
-            top: '50%',
+            top: '53%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
             margin: '0 auto',
             textAlign: 'center',
-            width: '100%',
+            width: '90%',
             height: 'fit-content',
+            borderRadius: '15px',
           }}
         />
         {
           !IsModelLoaded &&
           <div className={styles.webcam__loading}>
-            <span>loading</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#000" height="48" viewBox="0 -960 960 960" width="48"><path d="M196-331q-20-36-28-72.5t-8-74.5q0-131 94.5-225.5T480-798h43l-80-80 39-39 149 149-149 149-40-40 79-79h-41q-107 0-183.5 76.5T220-478q0 29 5.5 55t13.5 49l-43 43ZM476-40 327-189l149-149 39 39-80 80h45q107 0 183.5-76.5T740-479q0-29-5-55t-15-49l43-43q20 36 28.5 72.5T800-479q0 131-94.5 225.5T480-159h-45l80 80-39 39Z"/></svg>
           </div>
         }
         {
            IsModelLoaded &&
-           <div className={styles.webcam__loading}>
-            <button onClick={handleStopClick}>Wyłącz kamerę</button>
-            {leftHandResults &&
+           <div className={styles.webcam__info}>
+            <div className={styles.webcam__info_results}>
+                <p className={styles.webcam__info_results_text}>result:</p>
+                <p className={styles.webcam__info_results_text}>D7</p>
+            </div>
+            <button className={styles.webcam__info_stop} onClick={handleStopClick}>stop</button>
+            {/* {leftHandResults &&
             leftHandResults.map((result, index) => (
               <div key={index}>
                 <p>x: {result.x}</p>
                 <p>y: {result.y}</p>
               </div>
-            ))}
+            ))} */}
           </div>
         }
         </>
         ) : (
-        // {/* <div className={styles.webcam__showreel}>
-        //   <svg xmlns="http://www.w3.org/2000/svg" fill='#fff' height="48" viewBox="0 -960 960 960" width="48"><path d="m392-313 260-169-260-169v338ZM140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680v-520H140v520Zm0 0v-520 520Z"/></svg>
-        // </div> */}
-          <button onClick={handlePlayClick}>Play</button> // Przycisk "Play" wyświetlany, gdy isPlaying jest false
+        <div className={styles.webcam__showreel} onClick={handlePlayClick}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill='#000' height="48" viewBox="0 -960 960 960" width="48"><path d="m392-313 260-169-260-169v338ZM140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680v-520H140v520Zm0 0v-520 520Z"/></svg>
+        </div>
         )}
       </div>
   );

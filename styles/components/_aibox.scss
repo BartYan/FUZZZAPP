@@ -4,71 +4,136 @@
     margin: 2rem 0;
     min-height: 500px;
 
+    @media (max-width: $desktop) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
     &__left {
         width: 50%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+
+        @media (max-width: $desktop) {
+            width: 100%;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        @media (max-width: $phone-lg) {
+            flex-wrap: wrap;
+            
+        }
 
         &_image {
             display: flex;
             flex-direction: column;
             padding: 0 1rem 0 0;
+            font-family: $desc-font;
+
             img {
                 width: 100%!important;
                 height: auto!important;
+            }
+
+            @media (max-width: $phone-lg) {
+                margin-top: 1rem;
             }
         }
     }
 
     &__right {
         width: 50%;
+        height: 520px;
+        max-width: 600px;
+        max-height: 520px;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: $radius-big;
+        border: 0.5rem solid #000;
+        background-color: $white;
+        -webkit-box-shadow: 0px 0px 14px -5px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 0px 0px 14px -5px rgba(66, 68, 90, 1);
+        box-shadow: 0px 0px 14px -5px rgba(66, 68, 90, 1);
+
+        @media (max-width: $desktop) {
+            width: 100%;
+            margin: 1rem 0 2rem;
+        }
+        @media (max-width: $phone) {
+            height: 350px;
+        }
 
         .webcam {
             width: 100%;
             height: 100%;
-           
-            video {
-                -webkit-box-shadow: 8px 8px 0px 1px $purple;
-                -moz-box-shadow: 8px 8px 0px 1px $purple;
-                box-shadow: 8px 8px 0px 1px $purple;
+
+            svg {
+                width: 30%;
+                height: auto;
+                transition: $transition-fast;
             }
 
             &__showreel {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: $black;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 100;
+                @include webcamOverlay;
+
+                background-color: $white;
                 cursor: pointer;
-                svg {
-                    width: 50%;
-                    height: auto;
+
+                &:hover {
+                    svg {
+                        // @include shaking;
+                        transform: scale(1.05);
+                    }
                 }
             }
 
             &__loading {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgb(255, 99, 71, 0.8);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 100;
+                @include webcamOverlay;
+
+                background-color: rgba(173, 173, 173, 0.8);
+
+                svg {
+                    animation: rotate 2s linear infinite;
+                }
             }
+
+            &__info {
+                width: 90%;
+                height: fit-content;
+                display: flex;
+                justify-content: space-between;
+                margin: 1rem auto;
+                font-family: $desc-font;
+                font-size: 1.5rem;
+
+                &_results {
+                    display: flex;
+                    
+                    &_text {
+                        margin-right: 0.5rem;
+                    }
+                }
+
+                &_stop {
+                    font-family: $desc-font;
+                    font-size: 1.5rem;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+
+
+                }
+            }
+
+            // video {
+            //     // -webkit-box-shadow: 8px 8px 0px 1px $purple;
+            //     // -moz-box-shadow: 8px 8px 0px 1px $purple;
+            //     // box-shadow: 8px 8px 0px 1px $purple;
+            // }
         }
     }
 }

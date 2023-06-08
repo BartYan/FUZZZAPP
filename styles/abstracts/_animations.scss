@@ -49,6 +49,15 @@
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 // aternate page transition for moving color divs
 .slide_in {
     position: fixed;
